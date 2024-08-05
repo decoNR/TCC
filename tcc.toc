@@ -1,0 +1,71 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Informações gerais do projeto}{3}{section.1}%
+\contentsline {section}{\numberline {2}Resumo do projeto proposto}{4}{section.2}%
+\contentsline {section}{\numberline {3}Resumo das atividades realizadas}{5}{section.3}%
+\contentsline {section}{\numberline {4}Realizações do período}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Princípios da computação quântica}{6}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Relevâncias da computação quântica}{6}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Qubit}{6}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Modelo Matemático}{6}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Portas lógicas}{6}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Desafios}{7}{subsubsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.2}Propriedades da física quântica aplicadas à computação}{7}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Leitura}{7}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Superposição e Entrelaçamento quântico}{7}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Algoritmos e circuitos mais complexos}{7}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Algoritmo de Shor}{7}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Algoritmo de Grover}{8}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Linguagem de programação voltada para computação quântica (qiskit)}{8}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Dois programas introdutórios}{8}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Protocolo de teletransporte de informação}{8}{subsubsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.5}Trabalho com circuitos e programas quânticos}{9}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Implementação}{9}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Estudo}{9}{subsubsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.6}Princípios da comunicação quântica}{10}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Outras atividades realizadas}{10}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Plano de atividades para o próximo período}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Cronograma}{12}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Referências Bibliográficas}{13}{section.6}%
+\contentsline {section}{\numberline {7}Informações gerais do projeto}{14}{section.7}%
+\contentsline {section}{\numberline {8}Resumo do projeto proposto}{15}{section.8}%
+\contentsline {section}{\numberline {9}Resumo das atividades realizadas}{16}{section.9}%
+\contentsline {section}{\numberline {10}Realizações do período}{17}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Princípios da computação quântica}{17}{subsection.10.1}%
+\contentsline {paragraph}{Relevâncias da computação quântica.}{17}{section*.5}%
+\contentsline {paragraph}{Qubit.}{17}{section*.6}%
+\contentsline {paragraph}{Modelo Matemático.}{17}{section*.7}%
+\contentsline {paragraph}{Portas lógicas.}{17}{section*.8}%
+\contentsline {paragraph}{Desafios.}{18}{section*.9}%
+\contentsline {subsection}{\numberline {10.2}Propriedades da física quântica aplicadas à computação}{18}{subsection.10.2}%
+\contentsline {paragraph}{Leitura.}{18}{section*.10}%
+\contentsline {paragraph}{Superposição e Entrelaçamento quântico.}{18}{section*.11}%
+\contentsline {subsection}{\numberline {10.3}Algoritmos e circuitos mais complexos}{18}{subsection.10.3}%
+\contentsline {paragraph}{Algoritmo de Shor.}{18}{section*.12}%
+\contentsline {paragraph}{Algoritmo de Grover.}{19}{section*.13}%
+\contentsline {subsection}{\numberline {10.4}Linguagem de programação voltada para computação quântica (qiskit)}{19}{subsection.10.4}%
+\contentsline {paragraph}{Dois programas introdutórios.}{19}{section*.14}%
+\contentsline {paragraph}{Protocolo de teletransporte de informação.}{19}{section*.15}%
+\contentsline {subsection}{\numberline {10.5}Trabalho com circuitos e programas quânticos}{19}{subsection.10.5}%
+\contentsline {paragraph}{Implementação.}{19}{section*.16}%
+\contentsline {paragraph}{Estudo.}{19}{section*.17}%
+\contentsline {subsection}{\numberline {10.6}Comunicação quântica}{21}{subsection.10.6}%
+\contentsline {paragraph}{Princípios.}{21}{section*.20}%
+\contentsline {paragraph}{Estados de Bell.}{21}{section*.21}%
+\contentsline {paragraph}{Vantagens da comunicação quântica.}{22}{section*.22}%
+\contentsline {paragraph}{\emph {Entaglement swapping} e \emph {Quantum Key Distribution}.}{22}{section*.23}%
+\contentsline {paragraph}{Internet quântica.}{23}{section*.26}%
+\contentsline {subsection}{\numberline {10.7}Seminários Bern}{23}{subsection.10.7}%
+\contentsline {subsection}{\numberline {10.8}Outras atividades realizadas}{24}{subsection.10.8}%
+\contentsline {subsection}{\numberline {10.9}Bepe}{24}{subsection.10.9}%
+\contentsline {section}{\numberline {11}Referências Bibliográficas}{25}{section.11}%
+\contentsline {section}{\numberline {12}Abstract}{25}{section.12}%
+\contentsline {section}{\numberline {13}The fundamentals of quantum walks, quantum information, and simulation}{25}{section.13}%
+\contentsline {section}{\numberline {14}Quantum walk algorithms and their implementations}{33}{section.14}%
+\contentsline {section}{\numberline {15}Simulation development and experiments}{34}{section.15}%
+\contentsline {section}{\numberline {16}Refinements to the quantum walk protocol}{34}{section.16}%
+\contentsline {section}{\numberline {17}Design the outline of a scientific paper}{36}{section.17}%
+\contentsline {section}{\numberline {18}Future work}{37}{section.18}%
+\contentsline {section}{\numberline {19}Resumo do projeto proposto}{37}{section.19}%
+\contentsline {section}{\numberline {20}Realizações do período}{37}{section.20}%
+\contentsline {section}{\numberline {21}Participação em eventos}{39}{section.21}%
+\contentsline {section}{\numberline {22}Anexos}{39}{section.22}%

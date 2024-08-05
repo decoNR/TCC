@@ -1,0 +1,307 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{quantccompquantinfo}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2168cb3878218a45b68ffdb53f7e26c9}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={C.\bibnamedelimi I.},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod},
+           suffix={Michael\bibnamedelima A.},
+           suffixi={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{fullhash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{bibnamehash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{authorbibnamehash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{authornamehash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{authorfullhash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum computation and quantum information: 10th Anniversary Edition.}
+      \field{year}{2010}
+    \endentry
+    \entry{portugal}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fee49bcd3414fcd88750e80bd04f4c9d}{%
+           family={Portugal},
+           familyi={P\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Switzerland}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature}%
+      }
+      \strng{namehash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{fullhash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{bibnamehash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{authorbibnamehash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{authornamehash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{authorfullhash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum Walks, and Search Algorithms}
+      \field{year}{2018}
+    \endentry
+    \entry{routing_entanglement}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d3de5ea8aac2efa8f0584c7bbe887acf}{%
+           family={M.},
+           familyi={M\bibinitperiod},
+           given={Pant},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bc2d734542ac482ec265f80a2cef315c}{%
+           family={H.},
+           familyi={H\bibinitperiod},
+           given={Krovi},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3bf7f7be8156738f24f12da4fee41ef9}{%
+           family={Towsley},
+           familyi={T\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{038b9ca61afa69ab23d3eb82a58cfba5}
+      \strng{fullhash}{038b9ca61afa69ab23d3eb82a58cfba5}
+      \strng{bibnamehash}{038b9ca61afa69ab23d3eb82a58cfba5}
+      \strng{authorbibnamehash}{038b9ca61afa69ab23d3eb82a58cfba5}
+      \strng{authornamehash}{038b9ca61afa69ab23d3eb82a58cfba5}
+      \strng{authorfullhash}{038b9ca61afa69ab23d3eb82a58cfba5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npj Quantum Inf 5}
+      \field{title}{Routing entanglement in the quantum internet}
+      \field{year}{2019}
+    \endentry
+    \entry{experimental}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1542325aa16e9768a297ec59d9d8ec40}{%
+           family={Acasiete},
+           familyi={A\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1e4dad455292eda11cd691634b9b5f68}{%
+           family={Agostini},
+           familyi={A\bibinitperiod},
+           given={Flavia\bibnamedelima P.},
+           giveni={F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=3177648cbc5c3066c3665e370911417d}{%
+           family={Moqadam},
+           familyi={M\bibinitperiod},
+           given={Jalil\bibnamedelima Khatibi},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=86115df2cb850b949dd39ce43866b630}{%
+           family={Portugal},
+           familyi={P\bibinitperiod},
+           given={Renato},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{1a339e530f88b4641f0cf738b2cc8a2d}
+      \strng{fullhash}{8aa119d8e7b37e366015ef615c2d2a67}
+      \strng{bibnamehash}{1a339e530f88b4641f0cf738b2cc8a2d}
+      \strng{authorbibnamehash}{1a339e530f88b4641f0cf738b2cc8a2d}
+      \strng{authornamehash}{1a339e530f88b4641f0cf738b2cc8a2d}
+      \strng{authorfullhash}{8aa119d8e7b37e366015ef615c2d2a67}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{title}{Experimental Implementation of Quantum Walks on IBM Quantum Computers}
+      \field{year}{2020}
+    \endentry
+    \entry{relationship}{article}{}
+      \name{author}{1}{}{%
+        {{hash=23d1179ea51738336fa0799e05ae4f7b}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={Matheus\bibnamedelima Guedes},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{23d1179ea51738336fa0799e05ae4f7b}
+      \strng{fullhash}{23d1179ea51738336fa0799e05ae4f7b}
+      \strng{bibnamehash}{23d1179ea51738336fa0799e05ae4f7b}
+      \strng{authorbibnamehash}{23d1179ea51738336fa0799e05ae4f7b}
+      \strng{authornamehash}{23d1179ea51738336fa0799e05ae4f7b}
+      \strng{authorfullhash}{23d1179ea51738336fa0799e05ae4f7b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rio de Janeiro:UFRJ/COPPE}
+      \field{title}{Characterizing the inherent relationship between unitary quantum walks and non-homogeneous random walks on finite graphs}
+      \field{year}{2020}
+    \endentry
+    \entry{equivalence}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5339ca22cff602c428dffcb6b3444439}{%
+           family={M.G.\bibnamedelimi de\bibnamedelima Andrade},
+           familyi={M\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={F.\bibnamedelimi de\bibnamedelimb Lima\bibnamedelima Marquezino},
+           giveni={F\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=346ccd126ccae158ec3175b59962c8d5}{%
+           family={Figueiredo},
+           familyi={F\bibinitperiod},
+           given={D.R.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{78d8e8f92b81815a76c14eb7130262c3}
+      \strng{fullhash}{78d8e8f92b81815a76c14eb7130262c3}
+      \strng{bibnamehash}{78d8e8f92b81815a76c14eb7130262c3}
+      \strng{authorbibnamehash}{78d8e8f92b81815a76c14eb7130262c3}
+      \strng{authornamehash}{78d8e8f92b81815a76c14eb7130262c3}
+      \strng{authorfullhash}{78d8e8f92b81815a76c14eb7130262c3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On the equivalence between quantum and random walks on finite graphs in Quantum Information Processing}
+      \field{year}{2020}
+    \endentry
+    \entry{controlplane}{article}{}
+      \name{author}{4}{}{%
+        {{hash=23d1179ea51738336fa0799e05ae4f7b}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={Matheus\bibnamedelima Guedes},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=e71856544013998a6afdb111ae37b021}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=518de0514d4ef504487ee43873527268}{%
+           family={Guha},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3bf7f7be8156738f24f12da4fee41ef9}{%
+           family={Towsley},
+           familyi={T\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c4849e101fce96ced62ab81b6d13f5d}
+      \strng{fullhash}{d5dec065dc0b5cc955fecfc2e221129c}
+      \strng{bibnamehash}{2c4849e101fce96ced62ab81b6d13f5d}
+      \strng{authorbibnamehash}{2c4849e101fce96ced62ab81b6d13f5d}
+      \strng{authornamehash}{2c4849e101fce96ced62ab81b6d13f5d}
+      \strng{authorfullhash}{d5dec065dc0b5cc955fecfc2e221129c}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE International Conference on Quantum Computing and Engineering (QCE)}
+      \field{title}{A quantum walk control plane for distributed quantum computing in quantum networks}
+      \field{year}{2021}
+    \endentry
+    \entry{implementation}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bb84a59cae11dc12c56de78980e93b76}{%
+           family={Puengtambol},
+           familyi={P\bibinitperiod},
+           given={Warat},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb84a59cae11dc12c56de78980e93b76}
+      \strng{fullhash}{bb84a59cae11dc12c56de78980e93b76}
+      \strng{bibnamehash}{bb84a59cae11dc12c56de78980e93b76}
+      \strng{authorbibnamehash}{bb84a59cae11dc12c56de78980e93b76}
+      \strng{authornamehash}{bb84a59cae11dc12c56de78980e93b76}
+      \strng{authorfullhash}{bb84a59cae11dc12c56de78980e93b76}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Phys.: Conf.}
+      \field{title}{Implementation of quantum random walk on a real quantum computer}
+      \field{year}{2021}
+    \endentry
+    \entry{universalcontrolplane}{article}{}
+      \name{author}{5}{}{%
+        {{hash=23d1179ea51738336fa0799e05ae4f7b}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={Matheus\bibnamedelima Guedes},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=8ec69b5bf7fd17aad717a0afd5c911f7}{%
+           family={Panigrahy},
+           familyi={P\bibinitperiod},
+           given={Nitish\bibnamedelima K},
+           giveni={N\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=225b4622f68b04b45fb92a812abba8b0}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Wenhan},
+           giveni={W\bibinitperiod}}}%
+        {{hash=785e26cc90a2bd2d74724e8c7786bf09}{%
+           family={Guha},
+           familyi={G\bibinitperiod},
+           given={Saikat},
+           giveni={S\bibinitperiod}}}%
+        {{hash=294e701b042477b3b60dee2c602a0be7}{%
+           family={Towsley},
+           familyi={T\bibinitperiod},
+           given={Don},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c4849e101fce96ced62ab81b6d13f5d}
+      \strng{fullhash}{d47fe7c875244d283204ccd0f9f3a994}
+      \strng{bibnamehash}{2c4849e101fce96ced62ab81b6d13f5d}
+      \strng{authorbibnamehash}{2c4849e101fce96ced62ab81b6d13f5d}
+      \strng{authornamehash}{2c4849e101fce96ced62ab81b6d13f5d}
+      \strng{authorfullhash}{d47fe7c875244d283204ccd0f9f3a994}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2307.06492}
+      \field{title}{Universal Quantum Walk Control Plane for Quantum Networks}
+      \field{year}{2023}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
