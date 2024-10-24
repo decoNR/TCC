@@ -16,5 +16,66 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{quantccompquantinfo}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2168cb3878218a45b68ffdb53f7e26c9}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={C.\bibnamedelimi I.},
+           giveni={C\bibinitperiod\bibinitdelim I\bibinitperiod},
+           suffix={Michael\bibnamedelima A.},
+           suffixi={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{fullhash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{bibnamehash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{authorbibnamehash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{authornamehash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \strng{authorfullhash}{2168cb3878218a45b68ffdb53f7e26c9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum computation and quantum information: 10th Anniversary Edition.}
+      \field{year}{2010}
+    \endentry
+    \entry{portugal}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fee49bcd3414fcd88750e80bd04f4c9d}{%
+           family={Portugal},
+           familyi={P\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Switzerland}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature}%
+      }
+      \strng{namehash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{fullhash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{bibnamehash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{authorbibnamehash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{authornamehash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \strng{authorfullhash}{fee49bcd3414fcd88750e80bd04f4c9d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quantum Walks, and Search Algorithms}
+      \field{year}{2018}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

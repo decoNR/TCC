@@ -1,11 +1,14 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Abstract}{2}{section.1}%
-\contentsline {section}{\numberline {2}Introduction to Quantum Computing}{2}{section.2}%
-\contentsline {paragraph}{Qubit}{2}{section*.2}%
-\contentsline {paragraph}{Mathematical Model.}{2}{section*.3}%
-\contentsline {paragraph}{Quantum Gates}{3}{section*.5}%
-\contentsline {section}{\numberline {3}Quantum Algorithms}{4}{section.3}%
-\contentsline {section}{\numberline {4}Introduction to Quantum Information}{4}{section.4}%
-\contentsline {section}{\numberline {5}Introduction to Quantum Walks}{4}{section.5}%
-\contentsline {section}{\numberline {6}Distributed Quantum Walk Control Plane for Quantum Networks}{4}{section.6}%
-\contentsline {section}{\numberline {7}Future Possibilities}{4}{section.7}%
+\contentsline {section}{\numberline {2}Important Concepts}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Linear Algebra}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Quantum Computation and Quantum Information}{3}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Introduction to Quantum Computing}{4}{section.3}%
+\contentsline {paragraph}{Qubit}{4}{section*.2}%
+\contentsline {paragraph}{Mathematical Model.}{5}{section*.3}%
+\contentsline {paragraph}{Quantum Gates}{5}{section*.5}%
+\contentsline {section}{\numberline {4}Quantum Algorithms}{7}{section.4}%
+\contentsline {section}{\numberline {5}Introduction to Quantum Information}{7}{section.5}%
+\contentsline {section}{\numberline {6}Introduction to Quantum Walks}{7}{section.6}%
+\contentsline {section}{\numberline {7}Distributed Quantum Walk Control Plane for Quantum Networks}{7}{section.7}%
+\contentsline {section}{\numberline {8}Future Possibilities}{7}{section.8}%
