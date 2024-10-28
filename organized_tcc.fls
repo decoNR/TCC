@@ -971,6 +971,11 @@ INPUT ./images/BlochSphere.png
 INPUT images/BlochSphere.png
 INPUT ./images/BlochSphere.png
 INPUT ./images/BlochSphere.png
+INPUT ./images/dj.png
+INPUT ./images/dj.png
+INPUT images/dj.png
+INPUT ./images/dj.png
+INPUT ./images/dj.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT organized_tcc.aux
 INPUT ./organized_tcc.out

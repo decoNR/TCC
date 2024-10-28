@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  23 OCT 2024 23:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  25 OCT 2024 21:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -735,12 +735,12 @@ Package biblatex Info: ... file 'organized_tcc.bbl' found.
  (./organized_tcc.bbl)
 Package biblatex Info: Reference section=0 on input line 36.
 Package biblatex Info: Reference segment=0 on input line 36.
-<images/logo_ime.png, id=44, 1018.80624pt x 209.78375pt>
+<images/logo_ime.png, id=64, 1018.80624pt x 209.78375pt>
 File: images/logo_ime.png Graphic file (type png)
 <use images/logo_ime.png>
 Package pdftex.def Info: images/logo_ime.png  used on input line 42.
 (pdftex.def)             Requested size: 354.86412pt x 73.07008pt.
-<images/umass_logo.png, id=46, 359.3425pt x 141.52875pt>
+<images/umass_logo.png, id=66, 359.3425pt x 141.52875pt>
 File: images/umass_logo.png Graphic file (type png)
 <use images/umass_logo.png>
 Package pdftex.def Info: images/umass_logo.png  used on input line 51.
@@ -756,36 +756,42 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.65 \newpage
               [1] [2] [3] [4]
-<images/BlochSphere.png, id=105, 641.39626pt x 481.8pt>
+<images/BlochSphere.png, id=130, 641.39626pt x 481.8pt>
 File: images/BlochSphere.png Graphic file (type png)
 <use images/BlochSphere.png>
 Package pdftex.def Info: images/BlochSphere.png  used on input line 149.
 (pdftex.def)             Requested size: 192.42035pt x 144.5411pt.
- [5 <./images/BlochSphere.png>]
-Overfull \hbox (1.55266pt too wide) in paragraph at lines 231--231
+ [5 <./images/BlochSphere.png>] [6] [7]
+<images/dj.png, id=155, 404.51125pt x 125.46875pt>
+File: images/dj.png Graphic file (type png)
+<use images/dj.png>
+Package pdftex.def Info: images/dj.png  used on input line 304.
+(pdftex.def)             Requested size: 369.88582pt x 114.73001pt.
+
+Overfull \hbox (1.55266pt too wide) in paragraph at lines 318--318
 []\OT1/cmr/bx/n/14.4 Distributed Quan-tum Walk Con-trol Plane for Quan-tum Net-
  []
 
-[6] [7] [8] (./organized_tcc.aux)
+[8 <./images/dj.png>] [9] (./organized_tcc.aux)
 Package rerunfilecheck Info: File `organized_tcc.out' has not changed.
-(rerunfilecheck)             Checksum: 165870BDAE4509B7BCDE7E8AB5A16763;1916.
+(rerunfilecheck)             Checksum: 798C395FE0BD75C53B398B1A6F5975F4;2666.
 Package logreq Info: Writing requests to 'organized_tcc.run.xml'.
 \openout1 = `organized_tcc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27347 strings out of 478287
- 494634 string characters out of 5849288
- 1191936 words of memory out of 5000000
- 45185 multiletter control sequences out of 15000+600000
+ 27376 strings out of 478287
+ 494991 string characters out of 5849288
+ 1192941 words of memory out of 5000000
+ 45199 multiletter control sequences out of 15000+600000
  472518 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,117p,1073b,1810s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on organized_tcc.pdf (9 pages, 381298 bytes).
+Output written on organized_tcc.pdf (10 pages, 393811 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

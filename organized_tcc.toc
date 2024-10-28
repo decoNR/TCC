@@ -7,8 +7,13 @@
 \contentsline {paragraph}{Qubit}{4}{section*.2}%
 \contentsline {paragraph}{Mathematical Model.}{5}{section*.3}%
 \contentsline {paragraph}{Quantum Gates}{5}{section*.5}%
-\contentsline {section}{\numberline {4}Quantum Algorithms}{7}{section.4}%
-\contentsline {section}{\numberline {5}Introduction to Quantum Information}{7}{section.5}%
-\contentsline {section}{\numberline {6}Introduction to Quantum Walks}{7}{section.6}%
-\contentsline {section}{\numberline {7}Distributed Quantum Walk Control Plane for Quantum Networks}{7}{section.7}%
-\contentsline {section}{\numberline {8}Future Possibilities}{7}{section.8}%
+\contentsline {section}{\numberline {4}Quantum Algorithms}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Deutsch's algorithm}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Deutsch's algorithm}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Simon's algorithm}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Grover's algorithm}{8}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Shor's algorithm}{8}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Introduction to Quantum Information}{8}{section.5}%
+\contentsline {section}{\numberline {6}Introduction to Quantum Walks}{8}{section.6}%
+\contentsline {section}{\numberline {7}Distributed Quantum Walk Control Plane for Quantum Networks}{8}{section.7}%
+\contentsline {section}{\numberline {8}Future Possibilities}{8}{section.8}%

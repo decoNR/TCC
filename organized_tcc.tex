@@ -221,8 +221,95 @@ sorting=ynt
 	\]
 
 
+	!!!!!adicionar exemplos de circuitos e operacoes mais simples indicando a notacao utilizada
+
     
 \section{Quantum Algorithms}
+
+	Quantum algorithms are computational processes designed to harness the unique properties of quantum mechanics to solve certain problems more efficiently than classical algorithms.
+
+	One of the primary goals in developing quantum algorithms is to identify processes that can be executed with a polynomial number of quantum gates. In quantum computing, gates are the operations that manipulate qubits and thus form the steps of an algorithm. Algorithms requiring a polynomial number of gates are desirable because they remain efficient as problem sizes grow, ensuring that the quantum resources needed stay manageable.
+
+	By focusing on algorithms that require polynomial resources, researchers aim to make practical quantum computing a reality, enabling breakthroughs in fields such as cryptography, optimization, and materials science. In this section I will present some fundamentals and important quantum algorithms.
+
+	\subsection{Deutsch's algorithm}
+
+		Deutsch's algorithm is one of the earliest and simplest quantum algorithms, showcasing how quantum computing can solve certain types of problems more efficiently than classical computing. The problem it addresses is a simple example that demonstrates the power of quantum parallelism.
+		
+		Imagine a black-box function, \( f(x) \), that takes a single binary input \( x \) (either 0 or 1) and returns either 0 or 1. So, \( f(x) \) has two possible inputs (0 and 1) and two possible outputs (0 or 1). There are four possible types of functions \( f(x) \):
+		
+		\begin{enumerate}
+			\item \( f(0) = 0 \) and \( f(1) = 0 \) (constant function returning 0 for both inputs)
+			\item \( f(0) = 1 \) and \( f(1) = 1 \) (constant function returning 1 for both inputs)
+			\item \( f(0) = 0 \) and \( f(1) = 1 \) (balanced function returning different values for each input)
+			\item \( f(0) = 1 \) and \( f(1) = 0 \) (also a balanced function)
+		\end{enumerate}
+		
+		The goal is to determine whether \( f(x) \) is constant (both outputs are the same) or balanced (outputs are different).
+		
+		Classically, we would need to check both inputs of \( f(x) \) (i.e., \( f(0) \) and \( f(1) \)) to determine if it is constant or balanced. This requires two function evaluations.
+		
+		Quantumly, however, Deutsch’s algorithm allows us to determine if \( f(x) \) is constant or balanced with just one evaluation of \( f(x) \). This efficiency comes from the ability of a qubit to exist in a superposition, allowing us to evaluate both inputs simultaneously.
+		Below is a step-by-step example.
+		
+		\begin{enumerate}
+			\item We start with two qubits:
+			\begin{itemize}
+				\item The first qubit, in state \( \ket{0} \), will hold the input to the function \( f(x) \).
+				\item The second qubit, in state \( \ket{1} \), is used to store the result of the function evaluation.
+			\end{itemize}
+			
+			So, our initial state is:
+			\[
+			\ket{\psi_0} = \ket{0} \otimes \ket{1} = \ket{0,1}
+			\]
+		
+			\item Next, we apply the Hadamard gate to both qubits. The Hadamard gate creates a superposition state by transforming:
+			\begin{itemize}
+				\item \( \ket{0} \) to \( \frac{1}{\sqrt{2}} (\ket{0} + \ket{1}) \)
+				\item \( \ket{1} \) to \( \frac{1}{\sqrt{2}} (\ket{0} - \ket{1}) \)
+			\end{itemize}
+			
+			After applying Hadamard gates to both qubits, our state becomes:
+			\[
+			\ket{\psi_1} = \frac{1}{2} (\ket{0} + \ket{1}) \otimes (\ket{0} - \ket{1})
+			\]
+			This sets up the first qubit in a superposition of inputs 0 and 1, allowing us to evaluate both cases simultaneously.
+		
+			\item Now, we apply the "oracle" or function gate, which encodes \( f(x) \) into the second qubit. This operation, called the quantum oracle, flips the second qubit’s sign based on the value of \( f(x) \) without collapsing the state:
+			\[
+			\ket{\psi_2} = \frac{1}{2} \left( \ket{0} \otimes (\ket{0 \oplus f(0)} - \ket{1 \oplus f(0)}) + \ket{1} \otimes (\ket{0 \oplus f(1)} - \ket{1 \oplus f(1)}) \right)
+			\]
+		
+			\item Next, we apply a Hadamard gate to the first qubit again. This final Hadamard gate transforms the state in such a way that, if \( f(x) \) is constant, the first qubit will return to \( \ket{0} \); if \( f(x) \) is balanced, it will end up in \( \ket{1} \).
+		
+			After applying this Hadamard gate, we measure the first qubit:
+			\begin{itemize}
+				\item If the measurement outcome is 0, \( f(x) \) is constant.
+				\item If the measurement outcome is 1, \( f(x) \) is balanced.
+			\end{itemize}
+		\end{enumerate}
+		
+		The magic of Deutsch's algorithm lies in the ability of the quantum oracle and superposition to use interference (through the Hadamard gates) to reveal whether \( f(x) \) is constant or balanced with just one evaluation. This is impossible in classical computing, where we would need at least two evaluations to determine the nature of \( f(x) \). 
+
+	\subsection{Deutsch's algorithm}
+		It is important to state that the function can have more than two inputs in a generic scenario. Suppose the function has n inputs and again we want to know if it is balanced or constant. 
+			
+		!!!! No caso clássico deve-se chamar a função pelo menos metade dos inputs mais um, ou seja 2 elevado a (n-1) mais uma vezes, ao passo que um string de n bits possibilita 2 elevado a n entradas. Já para o caso quântico resolve-se o problema com apenas uma chamada da função e utiliza-se de que a função balanceada não altera a fase global do estado nos qubits de entrada.
+		
+		Below is the quantum circuit associated with Deutsch's algorithm.
+
+	\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=13cm]{images/dj.png}
+	\end{center}
+	\end{figure}
+
+
+	\subsection{Simon's algorithm}
+	\subsection{Grover's algorithm}
+	\subsection{Shor's algorithm}
+		
 
 \section{Introduction to Quantum Information}
 
