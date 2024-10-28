@@ -230,7 +230,7 @@ sorting=ynt
 
 	One of the primary goals in developing quantum algorithms is to identify processes that can be executed with a polynomial number of quantum gates. In quantum computing, gates are the operations that manipulate qubits and thus form the steps of an algorithm. Algorithms requiring a polynomial number of gates are desirable because they remain efficient as problem sizes grow, ensuring that the quantum resources needed stay manageable.
 
-	By focusing on algorithms that require polynomial resources, researchers aim to make practical quantum computing a reality, enabling breakthroughs in fields such as cryptography, optimization, and materials science. In this section I will present some fundamentals and important quantum algorithms.
+	By focusing on algorithms that require polynomial resources, researchers aim to make practical quantum computing a reality, enabling breakthroughs in fields such as cryptography, optimization, and materials science. In this section I will present some fundamentals and important quantum algorithms. Some of this content was based on learning provided by the IBM quantum material 
 
 	\subsection{Deutsch's algorithm}
 
@@ -250,7 +250,7 @@ sorting=ynt
 		Classically, we would need to check both inputs of \( f(x) \) (i.e., \( f(0) \) and \( f(1) \)) to determine if it is constant or balanced. This requires two function evaluations.
 		
 		Quantumly, however, Deutsch’s algorithm allows us to determine if \( f(x) \) is constant or balanced with just one evaluation of \( f(x) \). This efficiency comes from the ability of a qubit to exist in a superposition, allowing us to evaluate both inputs simultaneously.
-		Below is a step-by-step example.
+		Below is how it works.
 		
 		\begin{enumerate}
 			\item We start with two qubits:
@@ -292,19 +292,55 @@ sorting=ynt
 		
 		The magic of Deutsch's algorithm lies in the ability of the quantum oracle and superposition to use interference (through the Hadamard gates) to reveal whether \( f(x) \) is constant or balanced with just one evaluation. This is impossible in classical computing, where we would need at least two evaluations to determine the nature of \( f(x) \). 
 
-	\subsection{Deutsch's algorithm}
-		It is important to state that the function can have more than two inputs in a generic scenario. Suppose the function has n inputs and again we want to know if it is balanced or constant. 
-			
-		!!!! No caso clássico deve-se chamar a função pelo menos metade dos inputs mais um, ou seja 2 elevado a (n-1) mais uma vezes, ao passo que um string de n bits possibilita 2 elevado a n entradas. Já para o caso quântico resolve-se o problema com apenas uma chamada da função e utiliza-se de que a função balanceada não altera a fase global do estado nos qubits de entrada.
+	\subsection{Deutsch-Jozsa algorithm}
+
+		The Deutsch-Jozsa algorithm is an extension of Deutsch’s algorithm. It deals with a specific type of function. Suppose we have a function \( f : \{0, 1\}^n \rightarrow \{0, 1\} \), meaning it takes an \( n \)-bit binary string as input and outputs either 0 or 1. The function \( f(x) \), again, can be of two types: constant or balanced. In this case balanced means that the function outputs 0 for half of the inputs and 1 for the other half. Constant has the same meaning as before.
+		
+		The goal is to determine if \( f(x) \) is constant or balanced. Classically, we would need to evaluate \( f(x) \) up to \( 2^{n-1} + 1 \) times in the worst case to be certain, because we’d need to check enough inputs to ensure that it’s not alternating between 0s and 1s.
+		
+		In contrast, the Deutsch-Jozsa algorithm can determine whether \( f(x) \) is constant or balanced with just one evaluation of the function, demonstrating an exponential speedup over classical approaches. Below is how it works
+		
+		\begin{enumerate}
+			\item We start with \( n + 1 \) qubits. The first \( n \) qubits represent the input to the function \( f(x) \), and the last qubit will help with the evaluation:
+			\begin{itemize}
+				\item Set the first \( n \) qubits to \( \ket{0} \).
+				\item Set the last qubit to \( \ket{1} \).
+			\end{itemize}
+			So our initial state is:
+			\[
+			\ket{\psi_0} = \ket{0}^{\otimes n} \otimes \ket{1}
+			\]
+		
+			\item Apply the Hadamard gate to each of the \( n + 1 \) qubits. The Hadamard gate puts each qubit into a superposition, so we end up with all possible inputs (for the first \( n \) qubits) in superposition simultaneously. This transforms the state to:
+			\[
+			\ket{\psi_1} = \frac{1}{\sqrt{2^n}} \sum_{x=0}^{2^n - 1} \ket{x} \otimes \frac{1}{\sqrt{2}}(\ket{0} - \ket{1})
+			\]
+			The first \( n \) qubits are now in a superposition of all possible inputs, while the last qubit is in a superposition that allows it to act as a phase kickback in the next step.
+		
+			\item Apply the Oracle (Quantum Function): Now we use a quantum oracle that applies the function \( f(x) \) to the superposition state. The oracle is a black-box function that, for each input \( x \), flips the phase of the state if \( f(x) = 1 \), but does nothing if \( f(x) = 0 \). This modifies our state to:
+			\[
+			\ket{\psi_2} = \frac{1}{\sqrt{2^n}} \sum_{x=0}^{2^n - 1} (-1)^{f(x)} \ket{x} \otimes \frac{1}{\sqrt{2}} (\ket{0} - \ket{1})
+			\]
+			Here, \( (-1)^{f(x)} \) introduces a phase factor based on the value of \( f(x) \), changing the amplitude of each input state in a way that allows us to determine whether \( f(x) \) is constant or balanced.
+		
+			\item Apply the Hadamard gate again to the first \( n \) qubits, transforming our state once more. This step is crucial, as it amplifies the amplitudes in a way that depends on whether \( f(x) \) is constant or balanced. After this transformation, the state will collapse into one of two distinct results based on the type of \( f(x) \).
+		
+			\item Finally, we measure the first \( n \) qubits:
+			\begin{itemize}
+				\item If the measurement outcome is \( \ket{0}^{\otimes n} \), \( f(x) \) is constant.
+				\item If the measurement outcome is anything other than \( \ket{0}^{\otimes n} \), \( f(x) \) is balanced.
+			\end{itemize}
+		\end{enumerate}
+		
+		The Deutsch-Jozsa algorithm exploits quantum parallelism and interference. By putting the input qubits in a superposition, we can evaluate \( f(x) \) for all possible inputs at once. The phase kickback and interference through the Hadamard gates allow us to detect whether the function outputs are the same (constant) or balanced across the inputs, without needing multiple evaluations.
 		
 		Below is the quantum circuit associated with Deutsch's algorithm.
 
-	\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=13cm]{images/dj.png}
-	\end{center}
-	\end{figure}
-
+		\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=13cm]{images/dj.png}
+		\end{center}
+		\end{figure}
 
 	\subsection{Simon's algorithm}
 	\subsection{Grover's algorithm}
