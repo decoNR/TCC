@@ -406,10 +406,121 @@ sorting=ynt
 		\begin{figure}[h]
 		\begin{center}
 		\includegraphics[width=10cm]{images/simons.png}
+		\caption{$https://medium.com/@_monitsharma/learn-quantum-computing-with-qiskit-simons-algorithm-8525adecd091$}
 		\end{center}
 		\end{figure}
 	
 	\subsection{Grover's algorithm}
+
+		Grover's algorithm is a quantum search algorithm that provides a quadratic speedup over classical search algorithms. It is used to search an unsorted database or solve search problems, where the goal is to locate a specific "marked" item among \( N \) possible entries. While a classical search requires \( O(N) \) operations to find the item in the worst case, Grover’s algorithm can find it in \( O(\sqrt{N}) \) operations.
+		
+		The problem assumes a black-box function (oracle) \( f(x) \) defined as:
+		\[
+		f(x) = \begin{cases} 
+			1 & \text{if } x \text{ is the marked item,} \\
+			0 & \text{otherwise.} 
+		\end{cases}
+		\]
+
+		The oracle function identifies the marked item by returning 1 for the correct input \( x = x_0 \) and 0 otherwise. The goal is to find \( x_0 \) using as few queries to the oracle as possible.
+		
+		Grover's algorithm is optimal for problems where the marked item needs to be located within an unstructured search space, making it useful for various applications in cryptography, optimization, and more.
+		
+		\begin{enumerate}
+			\item Begin with \( n \) qubits in the \( \ket{0} \) state. Apply a Hadamard gate to each qubit to create an equal superposition of all possible states:
+			\[
+			\ket{\psi_0} = \frac{1}{\sqrt{N}} \sum_{x=0}^{N-1} \ket{x}
+			\]
+			where \( N = 2^n \), the total number of possible states for \( n \) qubits.
+		
+			\item \textbf Apply the oracle to flip the phase of the marked item. The oracle changes the amplitude of the target state \( \ket{x_0} \) by introducing a phase of -1. The state after the oracle application becomes:
+			\[
+			\ket{\psi_1} = \frac{1}{\sqrt{N}} \sum_{x \neq x_0} \ket{x} - \frac{1}{\sqrt{N}} \ket{x_0}
+			\]
+			This marks the target item by shifting its amplitude, setting it up for amplification in the next steps.
+		
+			\item Apply the Grover diffusion operator, which increases the amplitude of the marked state while decreasing the amplitudes of the other states. This operator consists of three steps:
+			\begin{itemize}
+				\item Apply a Hadamard transform to all qubits.
+				\item Perform a phase flip on the \( \ket{0} \) state (invert the amplitudes about the average).
+				\item Apply the Hadamard transform to all qubits again.
+			\end{itemize}
+			After the amplitude amplification step, the state evolves closer to the target state. The diffusion operator is represented by:
+			\[
+			D = 2\ket{\psi_0}\bra{\psi_0} - I
+			\]
+		
+			\item Repeat the oracle and diffusion steps approximately \( O(\sqrt{N}) \) times. Each iteration increases the amplitude of the marked state and decreases the amplitudes of the unmarked states, converging on the solution.
+		
+			\item After performing the oracle and amplitude amplification steps \( O(\sqrt{N}) \) times, measure the qubits. With high probability, the result will be the marked item \( x_0 \).
+		\end{enumerate}
+		
+		The oracle marks the target state by inverting its phase, and the diffusion operator amplifies the amplitude of the marked state by rotating it closer to the target. By iterating these steps \( O(\sqrt{N}) \) times, Grover’s algorithm amplifies the target state's amplitude, making it significantly more likely to be observed upon measurement.
+		
+		Grover’s algorithm illustrates the power of quantum computing for search problems. By reducing the search complexity from \( O(N) \) to \( O(\sqrt{N}) \), it provides a quadratic speedup over classical methods. Although it is not an exponential improvement, this quadratic speedup is highly valuable for large search spaces and has potential applications in cryptography, database searching, and optimization.
+
+		\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=12cm]{images/grover.png}
+		\caption{$https://towardsdatascience.com/grovers-quantum-search-algorithm-54c427315768$}
+		\end{center}
+		\end{figure}
+
+
+		For an easier understanding, Grover’s algorithm has a geometric interpretation, which provides insight into why it efficiently locates the marked item. The algorithm's core process—phase inversion and amplitude amplification—can be visualized as a sequence of rotations in a multi-dimensional space.
+
+		Imagine that the quantum state space is represented by a vector space where each possible basis state (each possible value of \( x \) in the search space) corresponds to a unique axis in the space. In this space, we can define two important vectors:
+
+		\begin{itemize}
+			\item (\( \ket{x_0} \)): This vector represents the quantum state corresponding to the marked item, which we want to identify.
+			\item (\( \ket{s} \)): This vector represents an equal probability amplitude over all possible states, constructed as:
+			\[
+			\ket{s} = \frac{1}{\sqrt{N}} \sum_{x=0}^{N-1} \ket{x}
+			\]
+			where \( N = 2^n \), the total number of possible states for \( n \) qubits.
+		\end{itemize}
+
+		The initial state of the algorithm, after applying Hadamard gates to all qubits, is \( \ket{s} \), a uniform superposition over all possible items.
+
+		We can think of \( \ket{s} \) as forming an angle with \( \ket{x_0} \) (the solution state). Since \( \ket{s} \) is an equal superposition of all possible states, it can be decomposed into two components:
+
+		\begin{itemize}
+			\item A component along the direction of \( \ket{x_0} \).
+			\item A component perpendicular to \( \ket{x_0} \) (we can call this the "non-solution" space).
+		\end{itemize}
+
+		Let \( \ket{w} \) represent the direction orthogonal to \( \ket{x_0} \), which spans all states except the marked state. Thus, we can decompose \( \ket{s} \) as:
+		\[
+		\ket{s} = \alpha \ket{x_0} + \beta \ket{w}
+		\]
+		where \( \alpha \) and \( \beta \) are real coefficients representing the projection of \( \ket{s} \) onto \( \ket{x_0} \) and \( \ket{w} \), respectively.
+
+		Grover's algorithm uses two main operations that act as rotations in this vector space:
+
+		\begin{enumerate}
+			\item The oracle marks the solution state by flipping the phase of \( \ket{x_0} \), effectively rotating \( \ket{s} \) through the angle between \( \ket{s} \) and \( \ket{x_0} \). This is equivalent to reflecting \( \ket{s} \) across the hyperplane orthogonal to \( \ket{x_0} \).
+
+			\item The Grover diffusion operator acts as a reflection about \( \ket{s} \). This reflection moves the vector closer to \( \ket{x_0} \) by effectively doubling the amplitude of the marked state (the component of \( \ket{s} \) in the \( \ket{x_0} \) direction).
+		\end{enumerate}
+
+		Each application of the oracle and diffusion operators constitutes one “Grover iteration.” These two reflections, applied in sequence, effectively rotate the state vector by a fixed angle closer to \( \ket{x_0} \) in each iteration.
+
+		The rotation angle per Grover iteration is approximately:
+		\[
+		\theta = 2 \arcsin\left( \frac{1}{\sqrt{N}} \right)
+		\]
+		This angle depends on the size of the search space, \( N \), and determines how quickly the algorithm converges to the solution state. To maximize the probability of measuring the marked state \( \ket{x_0} \), Grover’s algorithm requires approximately:
+		\[
+		k = \frac{\pi}{4} \sqrt{N}
+		\]
+		iterations, or applications of the oracle and diffusion operators, to rotate the state vector as close as possible to \( \ket{x_0} \).
+
+		After \( O(\sqrt{N}) \) iterations, the state vector will be very close to \( \ket{x_0} \), and a measurement of the state will yield the marked item with high probability. This geometric interpretation highlights why Grover’s algorithm is optimal for unstructured search: each iteration moves the state vector closer to the target solution, and the quadratic speedup comes from the number of rotations required to reach the solution state, which scales as \( \sqrt{N} \).
+
+		!!! colocar uma imagenzinha da interpretacao geometrica
+
+		
+
 	\subsection{Shor's algorithm}
 		
 

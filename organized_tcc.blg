@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'organized_tcc.blg'
-[42] biber:340> INFO - === ter out 29, 2024, 13:35:28
-[51] Biber.pm:418> INFO - Reading 'organized_tcc.bcf'
-[85] Biber.pm:972> INFO - Found 2 citekeys in bib section 0
-[91] Biber.pm:4383> INFO - Processing section 0
-[98] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[98] bibtex.pm:1713> INFO - LaTeX decoding ...
-[102] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[125] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[125] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[125] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[125] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[126] bbl.pm:654> INFO - Writing 'organized_tcc.bbl' with encoding 'UTF-8'
-[127] bbl.pm:757> INFO - Output to organized_tcc.bbl
+[53] biber:340> INFO - === ter out 29, 2024, 20:16:13
+[64] Biber.pm:418> INFO - Reading 'organized_tcc.bcf'
+[99] Biber.pm:972> INFO - Found 2 citekeys in bib section 0
+[107] Biber.pm:4383> INFO - Processing section 0
+[114] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[114] bibtex.pm:1713> INFO - LaTeX decoding ...
+[118] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[143] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[143] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[143] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[144] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[145] bbl.pm:654> INFO - Writing 'organized_tcc.bbl' with encoding 'UTF-8'
+[146] bbl.pm:757> INFO - Output to organized_tcc.bbl

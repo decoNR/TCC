@@ -986,6 +986,11 @@ INPUT ./images/simons.png
 INPUT images/simons.png
 INPUT ./images/simons.png
 INPUT ./images/simons.png
+INPUT ./images/grover.png
+INPUT ./images/grover.png
+INPUT images/grover.png
+INPUT ./images/grover.png
+INPUT ./images/grover.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT organized_tcc.aux
 INPUT ./organized_tcc.out
