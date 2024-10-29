@@ -11,9 +11,9 @@
 \contentsline {subsection}{\numberline {4.1}Deutsch's algorithm}{7}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Deutsch-Jozsa algorithm}{8}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Simon's algorithm}{9}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Grover's algorithm}{9}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Shor's algorithm}{9}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Introduction to Quantum Information}{9}{section.5}%
-\contentsline {section}{\numberline {6}Introduction to Quantum Walks}{9}{section.6}%
-\contentsline {section}{\numberline {7}Distributed Quantum Walk Control Plane for Quantum Networks}{9}{section.7}%
-\contentsline {section}{\numberline {8}Future Possibilities}{9}{section.8}%
+\contentsline {subsection}{\numberline {4.4}Grover's algorithm}{11}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Shor's algorithm}{11}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Introduction to Quantum Information}{11}{section.5}%
+\contentsline {section}{\numberline {6}Introduction to Quantum Walks}{11}{section.6}%
+\contentsline {section}{\numberline {7}Distributed Quantum Walk Control Plane for Quantum Networks}{11}{section.7}%
+\contentsline {section}{\numberline {8}Future Possibilities}{11}{section.8}%

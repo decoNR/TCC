@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  28 OCT 2024 16:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  29 OCT 2024 13:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -761,18 +761,34 @@ File: images/BlochSphere.png Graphic file (type png)
 <use images/BlochSphere.png>
 Package pdftex.def Info: images/BlochSphere.png  used on input line 149.
 (pdftex.def)             Requested size: 192.42035pt x 144.5411pt.
- [5 <./images/BlochSphere.png>] [6] [7] [8]
-<images/dj.png, id=164, 404.51125pt x 125.46875pt>
-File: images/dj.png Graphic file (type png)
-<use images/dj.png>
-Package pdftex.def Info: images/dj.png  used on input line 341.
-(pdftex.def)             Requested size: 369.88582pt x 114.73001pt.
+ [5 <./images/BlochSphere.png>] [6] [7]
+<images/Deutsch.png, id=155, 323.40825pt x 108.405pt>
+File: images/Deutsch.png Graphic file (type png)
+<use images/Deutsch.png>
+Package pdftex.def Info: images/Deutsch.png  used on input line 299.
+(pdftex.def)             Requested size: 369.88582pt x 123.98326pt.
+ [8 <./images/Deutsch.png>]
+<images/DeutschJozsa.png, id=166, 367.3725pt x 233.07076pt>
+File: images/DeutschJozsa.png Graphic file (type png)
+<use images/DeutschJozsa.png>
+Package pdftex.def Info: images/DeutschJozsa.png  used on input line 350.
+(pdftex.def)             Requested size: 369.88582pt x 234.6812pt.
+ [9 <./images/DeutschJozsa.png>]
+<images/simons.png, id=176, 776.9025pt x 697.60625pt>
+File: images/simons.png Graphic file (type png)
+<use images/simons.png>
+Package pdftex.def Info: images/simons.png  used on input line 408.
+(pdftex.def)             Requested size: 284.52756pt x 255.4917pt.
 
-Overfull \hbox (1.55266pt too wide) in paragraph at lines 354--354
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.55266pt too wide) in paragraph at lines 420--420
 []\OT1/cmr/bx/n/14.4 Distributed Quan-tum Walk Con-trol Plane for Quan-tum Net-
  []
 
-[9 <./images/dj.png>] [10] (./organized_tcc.aux)
+[10] [11 <./images/simons.png>] [12] (./organized_tcc.aux)
 Package rerunfilecheck Info: File `organized_tcc.out' has not changed.
 (rerunfilecheck)             Checksum: 350979497C60C6B4A24DE78D050A3A49;2686.
 Package logreq Info: Writing requests to 'organized_tcc.run.xml'.
@@ -780,18 +796,18 @@ Package logreq Info: Writing requests to 'organized_tcc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27379 strings out of 478287
- 495008 string characters out of 5849288
+ 27404 strings out of 478287
+ 495461 string characters out of 5849288
  1192941 words of memory out of 5000000
- 45196 multiletter control sequences out of 15000+600000
+ 45208 multiletter control sequences out of 15000+600000
  472518 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,117p,1073b,1810s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on organized_tcc.pdf (11 pages, 399449 bytes).
+Output written on organized_tcc.pdf (13 pages, 468958 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 280 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

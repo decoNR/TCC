@@ -230,7 +230,7 @@ sorting=ynt
 
 	One of the primary goals in developing quantum algorithms is to identify processes that can be executed with a polynomial number of quantum gates. In quantum computing, gates are the operations that manipulate qubits and thus form the steps of an algorithm. Algorithms requiring a polynomial number of gates are desirable because they remain efficient as problem sizes grow, ensuring that the quantum resources needed stay manageable.
 
-	By focusing on algorithms that require polynomial resources, researchers aim to make practical quantum computing a reality, enabling breakthroughs in fields such as cryptography, optimization, and materials science. In this section I will present some fundamentals and important quantum algorithms. Some of this content was based on learning provided by the IBM quantum material 
+	By focusing on algorithms that require polynomial resources, researchers aim to make practical quantum computing a reality, enabling breakthroughs in fields such as cryptography, optimization, and materials science. In this section I will present some fundamentals and important quantum algorithms. Some of this content was based on learning provided by the IBM quantum material !!!! and qiskit.org
 
 	\subsection{Deutsch's algorithm}
 
@@ -292,6 +292,15 @@ sorting=ynt
 		
 		The magic of Deutsch's algorithm lies in the ability of the quantum oracle and superposition to use interference (through the Hadamard gates) to reveal whether \( f(x) \) is constant or balanced with just one evaluation. This is impossible in classical computing, where we would need at least two evaluations to determine the nature of \( f(x) \). 
 
+		Below is the quantum circuit associated with Deutsch's algorithm.
+
+		\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=13cm]{images/Deutsch.png}
+		\caption{$https://www.researchgate.net/figure/Graphical-representation-of-the-quantum-circuit-for-the-Deutsch-algorithm_fig5_381574807$}
+		\end{center}
+		\end{figure}
+
 	\subsection{Deutsch-Jozsa algorithm}
 
 		The Deutsch-Jozsa algorithm is an extension of Deutsch’s algorithm. It deals with a specific type of function. Suppose we have a function \( f : \{0, 1\}^n \rightarrow \{0, 1\} \), meaning it takes an \( n \)-bit binary string as input and outputs either 0 or 1. The function \( f(x) \), again, can be of two types: constant or balanced. In this case balanced means that the function outputs 0 for half of the inputs and 1 for the other half. Constant has the same meaning as before.
@@ -334,15 +343,72 @@ sorting=ynt
 		
 		The Deutsch-Jozsa algorithm exploits quantum parallelism and interference. By putting the input qubits in a superposition, we can evaluate \( f(x) \) for all possible inputs at once. The phase kickback and interference through the Hadamard gates allow us to detect whether the function outputs are the same (constant) or balanced across the inputs, without needing multiple evaluations.
 		
-		Below is the quantum circuit associated with Deutsch's algorithm.
+		Below is the quantum circuit associated with Deutsch-Jozsa algorithm.
 
 		\begin{figure}[h]
 		\begin{center}
-		\includegraphics[width=13cm]{images/dj.png}
+		\includegraphics[width=13cm]{images/DeutschJozsa.png}
+		\caption{$https://www.researchgate.net/figure/Graphical-representation-of-the-quantum-circuit-for-the-Deutsch-Jozsa-algorithm_fig6_381574807$}
 		\end{center}
 		\end{figure}
 
 	\subsection{Simon's algorithm}
+
+		Simon's algorithm is one of the foundational quantum algorithms, demonstrating an exponential speedup over classical algorithms for a specific type of problem. It was a precursor to Shor's algorithm and is significant because it proved that quantum computing could solve certain problems exponentially faster than classical computing.
+		
+		In Simon's problem, we are given a black-box function \( f : \{0, 1\}^n \rightarrow \{0, 1\}^n \) with the promise that there exists a secret string \( s \in \{0, 1\}^n \) such that:
+		\begin{itemize}
+			\item If \( f(x) = f(y) \), then \( x \oplus y = s \).
+		\end{itemize}
+		This means that \( f(x) \) is 2-to-1: each output is produced by exactly two distinct inputs, and the difference (XOR) between these two inputs is the secret string \( s \). The goal of Simon's algorithm is to determine the value of \( s \).
+		
+		Classically, solving Simon's problem requires \( O(2^{n/2}) \) evaluations of \( f(x) \) to find \( s \) with high probability. In contrast, Simon's algorithm can find \( s \) using only \( O(n) \) queries to \( f(x) \) by taking advantage of quantum parallelism and interference.
+		
+		\begin{enumerate}
+			\item Start with \( 2n \) qubits, where the first \( n \) qubits represent the input \( x \) and the second \( n \) qubits will store the output of \( f(x) \). Initialize all qubits to \( \ket{0} \):
+			\[
+			\ket{\psi_0} = \ket{0}^{\otimes 2n}
+			\]
+		
+			\item Apply Hadamard gates to the first \( n \) qubits, putting them into a superposition of all possible inputs. The state becomes:
+			\[
+			\ket{\psi_1} = \frac{1}{\sqrt{2^n}} \sum_{x=0}^{2^n - 1} \ket{x} \otimes \ket{0}^{\otimes n}
+			\]
+		
+			\item Next, apply the oracle for \( f(x) \), which maps \( \ket{x} \otimes \ket{0} \) to \( \ket{x} \otimes \ket{f(x)} \). After the oracle query, the state becomes:
+			\[
+			\ket{\psi_2} = \frac{1}{\sqrt{2^n}} \sum_{x=0}^{2^n - 1} \ket{x} \otimes \ket{f(x)}
+			\]
+		
+			Since \( f(x) \) is 2-to-1, pairs of inputs differ by the secret string \( s \) and map to the same output. The result is an entangled state where knowing one \( x \) value gives a relationship to the other.
+		
+			\item Measure the second \( n \) qubits. This collapses the state, and we are left with a superposition of the first register that includes only those \( x \)-values satisfying \( x \oplus y = s \). This reduces our state to:
+			\[
+			\ket{\psi_3} = \frac{1}{\sqrt{2}} \left( \ket{x} + \ket{x \oplus s} \right)
+			\]
+			for some random \( x \).
+		
+			\item Apply Hadamard gates to the first \( n \) qubits. This transforms each \( \ket{x} \) and \( \ket{x \oplus s} \) component, giving us a new state where we can measure information about \( s \):
+			\[
+			\ket{\psi_4} = \frac{1}{\sqrt{2^n}} \sum_{z=0}^{2^n - 1} (-1)^{x \cdot z} \left( \ket{z} + (-1)^{s \cdot z} \ket{z} \right)
+			\]
+			The measurement yields a bitstring \( z \) that satisfies \( z \cdot s = 0 \mod 2 \), giving us information about the secret string \( s \).
+		
+			\item Repeat the process \( n \) times to get \( n \) linearly independent equations for \( s \). Solve this system of linear equations to determine \( s \).
+		\end{enumerate}
+		
+		This provides an exponential speedup, requiring only \( O(n) \) evaluations instead of \( O(2^{n/2}) \).
+		
+		Simon's algorithm was one of the first to demonstrate an exponential quantum speedup. It showcases how quantum algorithms can solve specific types of problems faster than classical algorithms by leveraging superposition and interference. The principles used in Simon's algorithm laid the groundwork for more complex algorithms, such as Shor's algorithm for factoring.
+
+		Below is the quantum circuit associated with Simon's algorithm.
+
+		\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=10cm]{images/simons.png}
+		\end{center}
+		\end{figure}
+	
 	\subsection{Grover's algorithm}
 	\subsection{Shor's algorithm}
 		
