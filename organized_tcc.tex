@@ -513,16 +513,106 @@ sorting=ynt
 		\[
 		k = \frac{\pi}{4} \sqrt{N}
 		\]
-		iterations, or applications of the oracle and diffusion operators, to rotate the state vector as close as possible to \( \ket{x_0} \).
+		iterations, or applications of the oracle and diffusion operators, to rotate the state vector as close as possible to \( \ket{x_0} \). Below is an exemplification image.
+
+		\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=5cm]{images/geometric_grovers.png}
+		\caption{$https://www.researchgate.net/figure/Geometric-visualization-of-Grovers-algorithm_fig1_47438604$}
+		\end{center}
+		\end{figure}
 
 		After \( O(\sqrt{N}) \) iterations, the state vector will be very close to \( \ket{x_0} \), and a measurement of the state will yield the marked item with high probability. This geometric interpretation highlights why Grover’s algorithm is optimal for unstructured search: each iteration moves the state vector closer to the target solution, and the quadratic speedup comes from the number of rotations required to reach the solution state, which scales as \( \sqrt{N} \).
 
 		!!! colocar uma imagenzinha da interpretacao geometrica
 
+
 		
 
 	\subsection{Shor's algorithm}
-		
+
+		Shor's algorithm is a quantum algorithm that efficiently finds the prime factors of a large integer \( N \), solving the integer factorization problem. This problem is crucial because the security of many classical cryptographic systems, such as RSA, relies on the difficulty of factoring large integers. Shor’s algorithm achieves exponential speedup over the best-known classical algorithms, making it a key example of quantum computing's potential.
+
+		Given a large integer \( N \), Shor’s algorithm aims to find a nontrivial factor of \( N \). The algorithm relies on the following insight from number theory:
+
+		\begin{itemize}
+			\item For a random integer \( a \) (where \( 1 < a < N \)), if \( a \) and \( N \) are coprime!!!, then there exists a smallest positive integer \( r \) (called the order) such that:
+			\[
+			a^r \equiv 1 \pmod{N}
+			\]
+
+			\item If \( r \) is even, then with high probability, the factors of \( N \) are given by the greatest common divisor of \( N \) with \( a^{r/2} - 1 \) and \( a^{r/2} + 1 \).
+		\end{itemize}
+
+		Thus, finding the period \( r \) allows us to factor \( N \). Classically, finding \( r \) would require exponential time, but quantum computing can efficiently determine \( r \) using a technique called the Quantum Fourier Transform (QFT). Following are the algorithm steps.
+
+		\begin{enumerate}
+			\item Choose a random integer \( a \) where \( 1 < a < N \) and \( \gcd(a, N) = 1 \).
+			
+			\item The main quantum component of Shor's algorithm is finding the period \( r \) of the function \( f(x) = a^x \mod N \). To find \( r \), we set up a quantum state that represents this function.
+
+			\item Initialize two quantum registers:
+				\begin{itemize}
+					\item The first register holds an equal superposition of all possible values of \( x \) (from \( 0 \) to some \( 2^n - 1 \)), created using Hadamard gates.
+					\item The second register starts in the \( \ket{0} \) state and will store the values \( f(x) = a^x \mod N \).
+				\end{itemize}
+
+				The initial state after applying Hadamard gates to the first register is:
+				\[
+				\ket{\psi_0} = \frac{1}{\sqrt{2^n}} \sum_{x=0}^{2^n - 1} \ket{x} \otimes \ket{0}
+				\]
+
+			\item Using a quantum circuit, apply the function \( f(x) = a^x \mod N \) to entangle the first register with the output in the second register:
+				\[
+				\ket{\psi_1} = \frac{1}{\sqrt{2^n}} \sum_{x=0}^{2^n - 1} \ket{x} \otimes \ket{f(x)}
+				\]
+				This state encodes periodicity information related to the order \( r \).
+
+			\item To extract the period \( r \), we apply the Quantum Fourier Transform to the first register. The QFT transforms a superposition of states into a frequency space that reveals periodic patterns.
+
+				\subsubsection*{Quantum Fourier Transform (QFT)}
+
+				The Quantum Fourier Transform is the quantum analog of the discrete Fourier transform (DFT) and is essential for finding periodicity in quantum algorithms. For a state \( \ket{x} = \sum_{k=0}^{N-1} x_k \ket{k} \), the QFT is defined as:
+				\[
+				\text{QFT}(\ket{x}) = \frac{1}{\sqrt{N}} \sum_{y=0}^{N-1} e^{2\pi i x y / N} \ket{y}
+				\]
+				where \( N = 2^n \) for an \( n \)-qubit system.
+
+				In Shor’s algorithm, the QFT allows us to move from a superposition over the computational basis to one where the periodicity of \( f(x) = a^x \mod N \) becomes measurable.
+
+				The QFT circuit consists of Hadamard gates and controlled phase rotations, with the following steps for an \( n \)-qubit register:
+				
+				\begin{enumerate}
+					\item Apply a Hadamard gate to the first qubit.
+					\item Apply controlled phase rotations between each qubit, such that each subsequent qubit has a phase shift based on the values of the previous qubits.
+					\item Repeat this process for each qubit, applying decreasing rotations as the circuit progresses.
+					\item Finally, perform a "swap" operation to reverse the order of the qubits.
+				\end{enumerate}
+
+				The QFT transforms the state so that measuring it will reveal information about the period \( r \) in the frequency domain.
+
+			\item After applying the QFT, measure the first register. The result will likely yield an integer \( k \) that is related to the period \( r \) by:
+				\[
+				k \approx \frac{j}{r}
+				\]
+				for some integer \( j \). Using continued fractions, we can compute \( r \) from \( k \) with high probability.
+
+			\item Once \( r \) is found, check if it is even. Then compute the factors of \( N \) as \( \gcd(a^{r/2} - 1, N) \) and \( \gcd(a^{r/2} + 1, N) \). If these values yield nontrivial factors, the algorithm is complete. Otherwise, repeat the process with a new random \( a \).
+		\end{enumerate}
+
+		Shor's algorithm leverages the quantum superposition and the Quantum Fourier Transform to efficiently find the period \( r \), a task that is exponentially hard on classical computers. By encoding the periodicity of \( f(x) = a^x \mod N \) in a quantum state and using the QFT to extract this periodicity, Shor's algorithm allows us to find factors of \( N \) with only polynomial quantum resources.
+
+		Shor's algorithm demonstrates the power of quantum computing for number-theoretic problems, achieving an exponential speedup in factoring large numbers. The algorithm combines classical number theory, modular exponentiation, and the Quantum Fourier Transform, which plays a central role in revealing periodicity. This algorithm has substantial implications for cryptography, as it provides an efficient means of breaking widely-used cryptographic systems like RSA.
+
+		Below is the associated quantum circuit.
+
+		\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=10cm]{images/shor_circuit.png}
+		\caption{$https://prefetch.eu/know/concept/shors-algorithm/$}
+		\end{center}
+		\end{figure}
+
 
 \section{Introduction to Quantum Information}
 

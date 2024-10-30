@@ -991,6 +991,16 @@ INPUT ./images/grover.png
 INPUT images/grover.png
 INPUT ./images/grover.png
 INPUT ./images/grover.png
+INPUT ./images/geometric_grovers.png
+INPUT ./images/geometric_grovers.png
+INPUT images/geometric_grovers.png
+INPUT ./images/geometric_grovers.png
+INPUT ./images/geometric_grovers.png
+INPUT ./images/shor_circuit.png
+INPUT ./images/shor_circuit.png
+INPUT images/shor_circuit.png
+INPUT ./images/shor_circuit.png
+INPUT ./images/shor_circuit.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT organized_tcc.aux
 INPUT ./organized_tcc.out
