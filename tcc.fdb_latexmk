@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber tcc"] 1722818483 "tcc.bcf" "tcc.bbl" "tcc" 1728953733
+["biber tcc"] 1722818483 "tcc.bcf" "tcc.bbl" "tcc" 1730590593
   "references.bib" 1728946509 2766 10e268047a3ae51c6e941a907ce17aca ""
-  "tcc.bcf" 1728953733 109029 12e137124611a17066e6e256ae22f660 "pdflatex"
+  "tcc.bcf" 1730590593 109029 12e137124611a17066e6e256ae22f660 "pdflatex"
   (generated)
   "tcc.bbl"
   "tcc.blg"
-["pdflatex"] 1728953730 "/home/andreribeiro/Documents/usp/TCC/tcc.tex" "tcc.pdf" "tcc" 1728953733
+["pdflatex"] 1730590592 "/home/andreribeiro/Documents/usp/TCC/tcc.tex" "tcc.pdf" "tcc" 1730590593
   "/etc/texmf/web2c/texmf.cnf" 1728947218 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/andreribeiro/Documents/usp/TCC/tcc.tex" 1728953730 133461 38d7e5e1e13cbac2e0168600a5c53554 ""
+  "/home/andreribeiro/Documents/usp/TCC/tcc.tex" 1730590591 133461 38d7e5e1e13cbac2e0168600a5c53554 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -176,12 +176,12 @@
   "images/rwalks_evolution.png" 1728946509 22582 f56d5ba42021c23ba36601d8315ffd5b ""
   "images/simons.png" 1728946509 51766 9052b0cdca0bce4e1708c4274ddb2e5a ""
   "images/umass_logo.png" 1728946509 9827 99d22d4eab6514f3b58b7d382186d244 ""
-  "tcc.aux" 1728953733 13188 e4759115d138ff7b1a71e705795a2eea "pdflatex"
+  "tcc.aux" 1730590593 13188 e4759115d138ff7b1a71e705795a2eea "pdflatex"
   "tcc.bbl" 1728946509 12688 5c469dd60b73283e8b742898e27400f2 "biber tcc"
-  "tcc.out" 1728953733 11015 02e059e7c61089fcd216c651cd9c75c6 "pdflatex"
-  "tcc.run.xml" 1728953733 2298 25fb744ecdc977791a563e81d81fec4a "pdflatex"
-  "tcc.tex" 1728953730 133461 38d7e5e1e13cbac2e0168600a5c53554 ""
-  "tcc.toc" 1728953733 6265 044717895bddb03aea47bd6c73c55df0 "pdflatex"
+  "tcc.out" 1730590593 11015 02e059e7c61089fcd216c651cd9c75c6 "pdflatex"
+  "tcc.run.xml" 1730590593 2298 25fb744ecdc977791a563e81d81fec4a "pdflatex"
+  "tcc.tex" 1730590591 133461 38d7e5e1e13cbac2e0168600a5c53554 ""
+  "tcc.toc" 1730590593 6265 044717895bddb03aea47bd6c73c55df0 "pdflatex"
   (generated)
   "tcc.aux"
   "tcc.bcf"

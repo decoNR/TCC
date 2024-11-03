@@ -616,6 +616,162 @@ sorting=ynt
 
 \section{Introduction to Quantum Information}
 
+	!!!!!! mudar esse paragrafo pra citar alguma coisa do artigo e do material do Abelem This study is based on the paper \textit{"Quantum Internet: A Vision for the Road Ahead" by Stephanie Wehner, David Elkouss, and Ronald Hanson}, along with materials on quantum communication from the XXXVIII Brazilian Symposium on Computer Networks and Distributed Systems, provided by Professor Antônio Jorge Abelém.
+
+	The vision behind developing a quantum internet is to enable new technologies through quantum communication between any two points on the planet. Significant applications of quantum communication have already been identified, including secure communication, clock synchronization, secure user identification, exponential savings in communication, and secure access to remote quantum computers via the cloud.
+
+	Quantum computing operates under principles that differ substantially from classical computing, as proposed by Alan Turing. Quantum communication utilizes the laws of quantum physics to protect and transmit information. This can be done through the transfer of a quantum state (entangled or otherwise), the creation of an entangled state, or the use of a pre-established entangled state.
+
+	However, achieving quantum communication at scale presents several challenges: the difficulty of creating and maintaining quantum states, the challenge of transmitting qubits, and the need for integrating quantum systems with classical systems.
+
+	Before delving deeper, it is essential to understand Bell states. Also known as EPR pairs or maximally entangled states, Bell states are four specific quantum states of two qubits, named after physicist John S. Bell, who discovered them in 1964. Bell states are critical in quantum information and communication because they are maximally entangled, meaning their states cannot be described independently. When one qubit in a Bell state pair is measured, the state of the other qubit is instantly determined, regardless of the distance between them. Bell states have applications in quantum teleportation, quantum key distribution, and other quantum communication protocols.
+
+	The four Bell states are:
+	\[
+	\begin{array}{l}
+		\ket{\Phi^+} = \frac{\ket{00} + \ket{11}}{\sqrt{2}} \\
+		\ket{\Phi^-} = \frac{\ket{00} - \ket{11}}{\sqrt{2}} \\
+		\ket{\Psi^+} = \frac{\ket{01} + \ket{10}}{\sqrt{2}} \\
+		\ket{\Psi^-} = \frac{\ket{01} - \ket{10}}{\sqrt{2}}
+	\end{array}
+	\]
+
+	% Through the video series "Understanding Quantum Information and Computation" available on Qiskit's YouTube channel, 
+	
+	A fundamental protocol in this field is quantum teleportation, which allows for the exact transfer of a qubit's quantum state to another qubit, essential because a qubit's state cannot be cloned. This protocol reflects a security advantage: quantum information cannot be copied or verified mid-process, making it inherently secure. Additionally, the entanglement property enables rapid and efficient communication, as it implies a correlation that is independent of the distance between the entangled particles. Below is the associated circuit.
+
+	\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=8cm]{images/quantum_teleportation.png}
+	\caption{$https://www.researchgate.net/figure/modified-quantum-teleportation-circuit_fig1_228663990$}
+	\end{center}
+	\end{figure}
+
+	Another interesting exercise is the CHSH game (Clauser-Horne-Shimony-Holt), a game involving two players, Alice and Bob, who can communicate beforehand. Once the game begins, each player receives a random bit (0 or 1) from a referee and must return one of two possible values. Without further communication, they win if the exclusive OR of their outputs equals the logical AND of their inputs. Classical strategies allow them to win 75\% of the time on average, but by using entangled qubits, they can increase their success rate, demonstrating a clear advantage of quantum communication. !!! Talvez explicar isso aqui 
+
+	Next I will explain two critical protocols in the field of quantum communication and the quantum internet, \textit{entanglement swapping} and \textit{quantum key distribution} (QKD).
+
+	\subsection{Entanglement Swapping}
+
+	Entanglement Swapping is a quantum communication protocol that enables two distant parties to share entanglement without any direct interaction between them. This protocol is fundamental for building quantum communication networks and creating long-distance entanglement across large distances, which is essential for secure quantum communication. Here’s a detailed explanation of the process:
+
+	\subsection*{Protocol Overview}
+
+	Entanglement Swapping involves two pairs of entangled qubits. We label these pairs as:
+	\begin{itemize}
+		\item Pair AB, where qubits \( A \) and \( B \) are entangled.
+		\item Pair CD, where qubits \( C \) and \( D \) are entangled.
+	\end{itemize}
+
+	Initially, the entangled pairs are in the following state:
+	\[
+	\ket{\Phi^+}_{AB} \otimes \ket{\Phi^+}_{CD} = \frac{1}{2} (\ket{00}_{AB} + \ket{11}_{AB}) \otimes (\ket{00}_{CD} + \ket{11}_{CD})
+	\]
+
+	\begin{enumerate}
+		\item The qubits from each pair are separated and sent to different locations:
+		- Qubit \( A \) is sent to Alice.
+		- Qubit \( D \) is sent to Bob.
+		- Qubits \( B \) and \( C \) are sent to an intermediate station, often referred to as a "measurement node."
+
+		\item  At the measurement node, a joint measurement is performed on qubits \( B \) and \( C \) to project them into one of the four possible Bell states. This measurement entangles the qubits at the measurement node and collapses them into a known entangled state. The four possible Bell states for qubits \( B \) and \( C \) are:
+		\[
+		\begin{array}{l}
+			\ket{\Phi^+} = \frac{\ket{00} + \ket{11}}{\sqrt{2}} \\
+			\ket{\Phi^-} = \frac{\ket{00} - \ket{11}}{\sqrt{2}} \\
+			\ket{\Psi^+} = \frac{\ket{01} + \ket{10}}{\sqrt{2}} \\
+			\ket{\Psi^-} = \frac{\ket{01} - \ket{10}}{\sqrt{2}}
+		\end{array}
+		\]
+
+		\item When qubits \( B \) and \( C \) are measured in a Bell state, this measurement "swaps" the entanglement. This means that qubits \( A \) and \( D \), which were previously unentangled, are now entangled with each other. The measurement on \( B \) and \( C \) projects the state of \( A \) and \( D \) into an entangled state. Importantly, this occurs without any direct interaction between qubits \( A \) and \( D \).
+		
+		\item After the measurement, qubits \( A \) and \( D \) are in one of the four possible Bell states, depending on the outcome of the measurement on qubits \( B \) and \( C \). The specific entangled state of \( A \) and \( D \) can be determined based on the measurement result at the measurement node. Alice and Bob can then use this shared entanglement for further quantum communication tasks, such as quantum teleportation or quantum key distribution (QKD).
+	\end{enumerate}
+
+	Entanglement Swapping has critical implications for quantum communication networks because it allows entanglement to be established over long distances without the need for a direct quantum link between the communicating parties. Instead of relying on a single quantum channel connecting Alice and Bob, entanglement swapping enables the creation of long-distance entanglement through intermediate nodes, which can be chained together to create a quantum repeater network.
+
+	By implementing entanglement swapping at multiple nodes, a "quantum repeater" architecture can be created, where entanglement is extended across increasingly larger distances. This process is crucial for overcoming the distance limitations of direct quantum communication, as qubits transmitted over long distances (e.g., via optical fiber or free-space optical links) are prone to errors and decoherence. Through entanglement swapping, secure quantum communication can be maintained across vast distances with high fidelity, providing a foundation for a global quantum internet.
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{images/entanglement-swap.png}
+	\caption{Illustration of Entanglement Swapping Protocol}
+	\end{figure}
+
+	\subsection{Quantum Key Distribution} 
+
+	Quantum Key Distribution (QKD) is a quantum cryptographic protocol that enables two parties to securely share an encryption key, making it impossible for a third party to intercept without detection. QKD relies on the principles of quantum mechanics to generate cryptographic keys that are intrinsically secure, as any attempt to eavesdrop on the key would disturb the quantum states and be immediately detectable.
+
+	QKD involves two main participants, commonly called Alice (the sender) and Bob (the receiver). They share a quantum channel (such as optical fiber or free-space optical links) for the transmission of qubits and a classical communication channel for error correction and verification. The basic idea is to use the properties of quantum mechanics to generate a shared, random key between Alice and Bob that can be used to encrypt and decrypt messages securely.
+
+	The most widely known implementation of QKD is the BB84 protocol, developed by Charles Bennett and Gilles Brassard in 1984. The steps of this protocol are as follows:
+
+	\begin{enumerate}
+		\item Alice prepares a sequence of qubits, each randomly polarized in one of two bases:
+			\begin{itemize}
+				\item The rectilinear basis (\( 0^\circ \) and \( 90^\circ \)) where \( \ket{0} \) and \( \ket{1} \) represent the two states.
+				\item The diagonal basis (\( 45^\circ \) and \( 135^\circ \)) where \( \ket{+} \) and \( \ket{-} \) represent the two states.
+			\end{itemize}
+			Alice randomly chooses the basis and polarization for each qubit and sends the sequence of qubits to Bob over the quantum channel.
+
+		\item Upon receiving the qubits, Bob measures each qubit in a randomly chosen basis (either rectilinear or diagonal). Due to the principles of quantum mechanics, if Bob chooses the correct basis (matching Alice’s choice), he will measure the correct state. If he chooses the wrong basis, he will measure a random result.
+
+		\item After all qubits have been transmitted and measured, Alice and Bob communicate over the classical channel to disclose the bases they used for each qubit. They do not reveal the actual measurement outcomes, only the choice of basis. They discard any measurements where they used different bases and retain only the results where their bases matched.
+
+		\item To ensure that no eavesdropping has occurred, Alice and Bob compare a subset of their remaining bits (the ones with matching bases) to check for errors. If the error rate is within an acceptable range (indicating that eavesdropping is unlikely), they proceed with the key generation process. Otherwise, they discard the key and restart the protocol.
+
+		\item After correcting for any detected errors, Alice and Bob perform a privacy amplification process to further secure the key. This step reduces any partial information an eavesdropper might have obtained by compressing the shared key, ensuring that only Alice and Bob have a secure and private encryption key.
+	\end{enumerate}
+
+	The security of QKD is guaranteed by the laws of quantum mechanics, particularly the no-cloning theorem and the disturbance caused by measurement. The no-cloning theorem states that it is impossible to create an identical copy of an unknown quantum state. Therefore, an eavesdropper (Eve) cannot intercept and reproduce the qubits without introducing detectable disturbances.
+
+	Furthermore, if Eve tries to measure the qubits in transit, she will introduce errors due to the random choice of measurement bases by Alice and Bob. This disturbance will reveal her presence, as the error rate in the transmitted key will increase. By comparing a subset of their key bits, Alice and Bob can detect any anomalies that indicate eavesdropping.
+
+	QKD has important applications in secure communications, especially in sectors requiring high levels of confidentiality, such as government communications, financial transactions, and military operations. By enabling the secure sharing of encryption keys, QKD provides a foundation for secure communication in a world where classical encryption could potentially be broken by quantum computers.
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[width=10cm]{images/qkd.png}
+	\caption{Illustration of Quantum Key Distribution (QKD) Protocol. Alice sends a sequence of qubits to Bob, who measures them. They then compare their measurement bases over a classical channel to generate a secure, shared encryption key.}
+	\end{figure}
+
+
+	\subsection{Quantum Internet} 
+
+	A quantum internet is a network designed to enable the secure and efficient transmission of quantum information, allowing for quantum communication and computing on a global scale. Unlike the classical internet, which transmits bits, a quantum internet transmits qubits, the fundamental units of quantum information. Establishing a quantum internet involves overcoming significant challenges and requires three essential components: a physical medium for qubit transmission, methods to extend transmission distances, and quantum processors connected to the network to process quantum information.
+
+	A functional quantum internet requires three main elements:
+
+	\begin{enumerate}
+		\item Physical Connection for Qubit Transmission: 
+		Qubits can be transmitted through various channels, including optical fibers and free-space optical communication. Optical fiber, commonly used in conventional telecommunications, can transmit qubits over short to medium distances, but standard fibers are inadequate for quantum communication over long distances due to high error rates and decoherence. To address this, researchers have developed specialized optical fibers, such as photonic crystal fibers, designed to minimize decoherence and better support qubit transmission. However, even with these advancements, error rates increase quadratically with distance in optical fibers, making long-distance transmission challenging.
+
+		Free-space optical communication, which uses lasers to transmit information through open air, is an alternative to fiber optics. This approach has been used to establish quantum communication links between ground stations and satellites in orbit, enabling much longer distances than achievable with fiber optics. While promising, free-space optical communication requires precise alignment and is subject to environmental disturbances, such as atmospheric conditions.
+
+		\item Quantum Repeaters for Extended Distances:
+		In both fiber-optic and free-space systems, extending transmission distances within a quantum network requires \textit{quantum repeaters}. Quantum repeaters are specialized devices that amplify and maintain quantum signals, effectively increasing the range of quantum communication. Each quantum repeater consists of various components, including information processors, entanglement generation mechanisms, and storage for qubits. The primary challenge for quantum repeaters is to preserve the fragile quantum information during signal amplification, which is accomplished using \textit{quantum error correction protocols} to maintain the integrity of the transmitted qubits.
+
+		Quantum repeaters create entanglement between distant nodes in the network by linking shorter segments of entangled qubits, a process known as entanglement swapping. This allows for the extension of quantum communication over vast distances, making long-distance secure quantum communication feasible.
+
+		\item Quantum Processors for Information Processing:
+		The final element of a quantum internet is the quantum processors connected to the network, which handle and process quantum information. Quantum processors act as nodes in the quantum network, receiving, manipulating, and transmitting quantum data. They play a crucial role in performing quantum operations required for tasks like quantum key distribution (QKD), entanglement generation, and quantum error correction. Quantum processors are essential for the execution of distributed quantum algorithms, enabling applications that rely on shared quantum resources.
+
+	\end{enumerate}
+
+	According to the article by Wehner et al., the purpose of a quantum internet is not to replace classical communication but to complement it. A quantum internet would enable applications that are impossible to achieve with classical networks alone, offering enhanced security and efficiency for specific types of data transmission and computational tasks. The integration of quantum and classical networks allows for hybrid systems where quantum communication protocols, such as QKD, secure classical channels or provide computational advantages.
+
+	The development of a quantum internet holds promise for a range of applications, including:
+
+	\begin{itemize}
+		\item \textbf{Secure Communication}: Quantum networks enable ultra-secure communication methods resistant to eavesdropping, as the principles of quantum mechanics prevent undetected interception.
+		\item \textbf{Distributed Quantum Computing}: A quantum internet would allow remote access to quantum computers, enabling distributed quantum computing where complex computations can be performed across multiple quantum processors.
+		\item \textbf{Enhanced Computational Protocols}: Quantum entanglement and superposition in a quantum internet enable computational protocols, such as quantum teleportation and entanglement swapping, for efficient communication and resource sharing.
+	\end{itemize}
+
+	In summary, a quantum internet would represent a paradigm shift in secure communication and computational power, enabling breakthroughs in fields that require advanced information security, distributed quantum computing, and new computational techniques. By combining quantum and classical systems, the quantum internet would open new frontiers in secure and efficient global communication.
+
+
 \section{Introduction to Quantum Walks}
 
 \section{Distributed Quantum Walk Control Plane for Quantum Networks}
