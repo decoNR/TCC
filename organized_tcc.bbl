@@ -75,6 +75,45 @@
       \field{title}{Quantum Walks, and Search Algorithms}
       \field{year}{2018}
     \endentry
+    \entry{vision_road_ahead}{article}{}
+      \name{author}{3}{}{%
+        {{hash=98cf6fd2ae64790372e8d76ca7025d1f}{%
+           family={Stephanie},
+           familyi={S\bibinitperiod},
+           given={Wehner},
+           giveni={W\bibinitperiod}}}%
+        {{hash=732112bfdff7373229fa38baa8367594}{%
+           family={David},
+           familyi={D\bibinitperiod},
+           given={Elkouss},
+           giveni={E\bibinitperiod}}}%
+        {{hash=a7871a25fc5274ce7089fd3c2aa4910c}{%
+           family={Ronald},
+           familyi={R\bibinitperiod},
+           given={Hanson},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{14f37ef7f0ee8cbb4478886b5d11126b}
+      \strng{fullhash}{14f37ef7f0ee8cbb4478886b5d11126b}
+      \strng{bibnamehash}{14f37ef7f0ee8cbb4478886b5d11126b}
+      \strng{authorbibnamehash}{14f37ef7f0ee8cbb4478886b5d11126b}
+      \strng{authornamehash}{14f37ef7f0ee8cbb4478886b5d11126b}
+      \strng{authorfullhash}{14f37ef7f0ee8cbb4478886b5d11126b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6412}
+      \field{title}{Quantum internet: A vision for the road ahead}
+      \field{volume}{362}
+      \field{year}{2018}
+      \field{pages}{eaam9288}
+      \range{pages}{-1}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

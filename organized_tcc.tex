@@ -65,9 +65,11 @@ sorting=ynt
 \newpage
 
 \section{Abstract}
-    Quantum computing emerged from the idea of building a machine capable of simulating complex quantum systems, a concept proposed by physicist Richard Feynman and mathematician Yuri Manin. The challenge with simulating quantum systems on classical computers is that the computational effort increases exponentially with the size of the system, making it impractical for any significantly large problems. In addition to this focus, research in quantum algorithms has also achieved notable success, with algorithms with better complexity than classical ones being proposed—such as Shor's algorithm for number factorization.
+    Quantum computing emerged from the idea of building a machine capable of simulating complex quantum systems, a concept proposed by physicist Richard Feynman and mathematician Yuri Manin. The challenge with simulating quantum systems on classical computers is that the computational effort increases exponentially with the size of the system, making it impractical for any significantly large problems. In addition to this focus, research in quantum algorithms has also achieved notable success. It has discovered algorithms with better complexity than classical ones being propose, such as Shor's algorithm for number factorization.
 
-    Quantum computing is also an exciting field of study, offering a wide range of unexplored possibilities, which makes it both intriguing and promising. Currently, companies like Google and IBM, have developed functional quantum machines that highlight the importance of this technology. These machines are capable of performing computations that are inaccessible to classical computers due to their distinct physical properties. Some of the main challenges in advancing quantum computers include increasing the number of qubits (the basic unit of memory in quantum computing), reducing noise, and extending coherence time (the duration of quantum phenomena needed to execute an algorithm).
+    Quantum computing is also an exciting field of study, offering a wide range of unexplored possibilities, which makes it both intriguing and promising. Currently, companies like Google and IBM, have developed functional quantum machines that highlight the importance of this technology. These machines are capable of performing computations that are inaccessible to classical computers due to their distinct physical properties. 
+	
+	Some of the main challenges in advancing quantum computers include increasing the number of qubits (the basic unit of memory in quantum computing), reducing noise, and extending coherence time (the duration of quantum phenomena needed to execute an algorithm).
 
 \section{Important Concepts}
 	This section describes some important concepts which will be needed to understand the content of this undergraduate thesis. You may read the concepts as they appear on this document.
@@ -76,17 +78,19 @@ sorting=ynt
 		\begin{itemize}
 			\item Hilbert space: A Hilbert space is a mathematical concept that extends the idea of Euclidean space to infinite dimensions. It is an inner product space, meaning it comes equipped with an inner product, which allows for the definition of norms. The space is also complete, meaning that any Cauchy sequence of vectors within the space converges to a point within the space. This property of completeness ensures that Hilbert spaces are well-suited for analysis, especially in quantum mechanics, where they provide the framework for representing quantum states and operators. The inner product in a Hilbert space allows for the measurement of orthogonality, projection, and distance, making it a foundational tool in functional analysis, quantum theory, and many other areas of mathematics and physics.
 			
-			\item $\bra{\psi}\ket{\phi}$ : Inner product common representation.
+			\item $\bra{\psi}\ket{\phi}$ : Notation for a inner product between $\psi$ and $\phi$.
 			
-			\item $\ket{\psi}\ket{\phi}$ : Tensor product.
+			\item $\ket{\psi}\ket{\phi}$ : Notation for a tensor product between $\psi$ and $\phi$.
 			
-			\item Normal Operator: An operator A on V is normal if $A^\dag A = A A^\dag$.\cite{portugal}
+			\item Normal Operator: An operator A on V is normal if $A^\dag A = A A^\dag$.
 			
-			\item Unitary evolution: An operator $U$ is unitary if $U^\dag U =  UU^\dag = I$ . Unitary operators are normal. They are diagonalizable with respect to an orthonormal basis. Eigenvectors of a unitary operator associated with different eigenvalues are orthogonal. The eigenvalues have unit modulus, that is, they have the form $e^{\imath\alpha}$ , where $\alpha$ is a real number . Unitary operators preserve the inner product, that is, the inner product of $U\ket{v1}$ and $U\ket{v2}$ is equal to the inner product of $\ket{v1}$ and $\ket{v2}$ . The action of a unitary operator on a vector preserves its norm \cite{portugal} . A complex square matrix $U$ is called unitary if the columns of $U$ form an orthonormal set.
-			
-			\item Hermitian Operator: An operator A on V is Hermitian or self-adjoint if $A^\dag = A$.\cite{portugal}
+			\item Unitary Operator: An operator \( U \) is called unitary if it satisfies the condition: $U^\dag U = UU^\dag = I$, where \( U^\dag \) is the conjugate transpose of \( U \), and \( I \) is the identity matrix. Unitary operators have several important properties: They are normal, meaning they are diagonalizable with respect to an orthonormal basis. The eigenvectors of a unitary operator associated with different eigenvalues are orthogonal, and each eigenvalue has unit modulus, meaning it has the form $e^{\imath \alpha}$ , where \( \alpha \) is a real number. Unitary operators preserve the inner product: for any vectors $\ket{v_1}$ and $\ket{v_2}$,
+			$\langle U v_1 | U v_2 \rangle = \langle v_1 | v_2 \rangle$.
+			As a result, the action of a unitary operator on a vector preserves its norm, ensuring that the vector's length remains unchanged.A complex square matrix \( U \) is unitary if its columns form an orthonormal set. Unitary evolution is fundamental in quantum mechanics, as unitary operators describe the evolution of closed quantum systems, maintaining consistent probabilities over time.
+			 
+			\item Hermitian Operator: An operator A on V is Hermitian or self-adjoint if $A^\dag = A$.
 
-			\item Positive Operator: A positive operator A is deﬁned to be an operator such that for any vector $\ket{v}$,($\ket{v}$, $A\ket{v}$) is a real, non-negative number. If ($\ket{v}$, $A\ket{v}$) is strictly greater than zero for all $\ket{v} \neq 0$ then we say that A is positive deﬁnite. In Exercise 2.24 on this page you will show that any positive operator is automatically Hermitian, and therefore by the spectral decomposition has diagonal representation $\sum_i \lambda_i \ket{i}\bra{i}$, with non-negative eigenvalues $\lambda_i$ . \cite{quantccompquantinfo}
+			\item Positive Operator: A positive operator A is deﬁned to be an operator such that for any vector $\ket{v}$, ($\ket{v}$, $A\ket{v}$) is a real, non-negative number. If ($\ket{v}$, $A\ket{v}$) is strictly greater than zero for all $\ket{v} \neq 0$ then we say that A is positive deﬁnite. Any positive operator is automatically Hermitian, and therefore by the spectral decomposition has diagonal representation $\sum_i \lambda_i \ket{i}\bra{i}$, with non-negative eigenvalues $\lambda_i$ . \cite{quantccompquantinfo}
 			
 			\item Wavefunction: On the quantum computing field, a wavefunction is a function that the x axis corresponds to the basis states and the y axis corresponds to the quantum amplitude of the state.
 			
@@ -111,6 +115,8 @@ sorting=ynt
 			
 			\item Pure or mixed state:  On a Bloch sphere, pure states are represented by a point on the surface of the sphere, whereas mixed states are represented by an interior point. The completely mixed state of a single qubit is represented by the center of the sphere, by symmetry. The purity of a state can be visualized as the degree in which it is close to the surface of the sphere. In quantum mechanics, the state of a quantum system is represented by a state vector (or ket) $\ket{\Psi}$ . A quantum system with a state vector $\ket{\Psi}$ is called a pure state. However, it is also possible for a system to be in a statistical ensemble of different state vectors: For example, there may be a 50\% probability that the state vector is $\ket{\Psi_{1}}$ and a 50\% chance that the state vector is $\ket{\Psi_{2}}$. This system would be in a mixed state. The density matrix is especially useful for mixed states, because any state, pure or mixed, can be characterized by a single density matrix. 
 			
+			% !!! add density matrix here
+			
 			\item Measurement: Quantum measurements are described by a collection ${M_m}$ of measurement operators. These are operators acting on the state space of the  system being measured. The index m refers to the measurement outcomes that may occur in the experiment. If the state of the quantum system is $\ket{\psi}$ immediately before the measurement then the probability that result m occurs is given by $p(m) = \bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}$ and the state of the system after the measurement is $\frac{M_{m}\ket{\psi}}{\sqrt{\bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}}}$ . The measurement operators satisfy the completeness equation, $\sum\limits_{m} M_{m}^{\dag}M_{m} = I$ . The completeness equation expresses the fact that probabilities sum to one: $1 = \sum\limits_{m} p(m) = \sum\limits_{m} \bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}$ . \cite{quantccompquantinfo}
 			
 			\item Projective measurement: A projective measurement is described by an observable, $M$ , a Hermitian operator on the state space of the system being observed. The observable has a spectral decomposition, $\sum\limits_m mP_m$ , where Pm is the projector onto the eigenspace of M with eigenvalue m. The possible outcomes of the measurement correspond to the eigenvalues, m, of the observable. Upon measuring the state $\ket{\psi}$, the probability of getting result m is given by $p(m) = \bra{\psi}P_m\ket{\psi}$ .Given that outcome m occurred, the state of the quantum system immediately after the measurement is $\frac{P_m\ket{\psi}}{\sqrt{p(m)}}$. The average value of the observable M is often written $\braket{M} = \bra{\psi}M\ket{\psi}$.\cite{quantccompquantinfo}
@@ -126,7 +132,8 @@ sorting=ynt
 
 \section{Introduction to Quantum Computing}
 
-	\paragraph{Qubit} A qubit (quantum bit) is the fundamental unit of memory in a quantum computer, and unlike classical bits, which are limited to being in a state of either 0 or 1, a qubit can exist in a superposition of both 0 and 1 simultaneously. This unique property is a consequence of quantum mechanics, which allows qubits to represent not just one of two discrete states, but an infinite number of possibilities between 0 and 1.
+	\subsection{Qubit}
+	A qubit (quantum bit) is the fundamental unit of memory in a quantum computer, and unlike classical bits, which are limited to being in a state of either 0 or 1, a qubit can exist in a superposition of both 0 and 1 simultaneously. This unique property is a consequence of quantum mechanics, which allows qubits to represent not just one of two discrete states, but an infinite number of possibilities between 0 and 1.
 
 	In more technical terms, a qubit's state is described as a quantum superposition, where it can be in a combination of both 0 and 1, weighted by complex numbers called probability amplitudes. However, this superposition exists only until the qubit is measured. Upon measurement, the qubit collapses to a definite state, either 0 or 1, with probabilities determined by its probability amplitudes before the measurement.
 
@@ -134,7 +141,9 @@ sorting=ynt
 
 	Moreover, qubits also exhibit another quantum property called entanglement, where the state of one qubit is intrinsically linked to the state of another, regardless of the distance between them. This further enhances the computational potential of quantum systems, enabling qubits to work together in ways that classical bits cannot, exponentially increasing the power of quantum computations.
 
-	\paragraph{Mathematical Model.} Studying quantum computing requires a understanding of linear algebra, as it forms the mathematical foundation for describing quantum systems. I will briefly cover the key concepts. Every quantum system can be represented as a vector in a Hilbert space. A qubit, the fundamental unit of information in a quantum computer, can be represented as a two-dimensional vector, and the operations, or quantum gates, that act on this qubit are represented by unitary matrices. Unitary matrices preserve the norm of the vector, ensuring the system's total probability remains 1.The state of a qubit is expressed as:
+	
+	\subsection{Mathematical model}
+	Studying quantum computing requires a understanding of linear algebra, as it forms the mathematical foundation for describing quantum systems. I will briefly cover the key concepts. Every quantum system can be represented as a vector in a Hilbert space. A qubit, the fundamental unit of information in a quantum computer, can be represented as a two-dimensional vector, and the operations, or quantum gates, that act on this qubit are represented by unitary matrices. Unitary matrices preserve the norm of the vector, ensuring the system's total probability remains 1.The state of a qubit is expressed as:
 	$$\ket{\psi} = a\ket{0} + b\ket{1}$$
 	where $\ket{0}$ and $\ket{1}$ are basis vectors, defined as $(1, 0)$ and $(0, 1)$ respectively. These basis states correspond to the classical bit values 0 and 1. The complex numbers $a$ and $b$ are the probability amplitudes. The squared magnitudes, $|a|^2$ and $|b|^2$, represent the probabilities of the qubit collapsing to the state 0 or 1, respectively, upon measurement. For these probabilities to make physical sense, the normalization condition must be satisfied:
 	$$|a^{2}| + |b^{2}| = 1$$
@@ -153,7 +162,7 @@ sorting=ynt
 
 	In addition to these representations, understanding quantum systems requires grasping the probabilistic nature of quantum mechanics. The outcomes of quantum measurements are not deterministic but are governed by probability distributions, dictated by the amplitudes of the quantum state vector. This probabilistic behavior, though counterintuitive from a classical perspective, is a key aspect of quantum computing and forms the basis for algorithms that can outperform their classical counterparts.
 
-	\paragraph{Quantum Gates} 
+	\subsection{Quantum Gates} 
 	In a quantum circuit, gates play a crucial role in manipulating the quantum information that passes through them. Unlike classical gates, which operate on bits, quantum gates operate on qubits and are represented mathematically by unitary matrices. These matrices are square, meaning that a gate acting on a single qubit is represented by a $2 \times 2$ matrix, while a gate acting on two qubits is represented by a $4 \times 4$ matrix. The unitary nature of these matrices ensures that the operations are reversible, a key property of quantum computations.
 
 	Quantum gates are the building blocks of quantum algorithms, and understanding how they function is essential for constructing and analyzing quantum circuits. Below are some important quantum gates commonly used in quantum computations:
@@ -220,8 +229,57 @@ sorting=ynt
 	\end{pmatrix}
 	\]
 
+	Quantum gates provide the essential operations needed to construct quantum circuits and perform quantum algorithms. Each gate manipulates the quantum state of one or more qubits in specific ways, and understanding these transformations is fundamental to working with quantum information. Below are examples of operations using some of the quantum gates introduced, along with the resulting states of the qubits:
 
-	!!!!!adicionar exemplos de circuitos e operacoes mais simples indicando a notacao utilizada
+	Consider a single qubit initially in the state \( \ket{0} \). Applying the Hadamard gate \( H \) to this qubit creates a superposition state:
+	\[
+	H \ket{0} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1})
+	\]
+
+	This operation transforms the qubit from a definite state \( \ket{0} \) to an equal superposition of \( \ket{0} \) and \( \ket{1} \), a foundational step in quantum algorithms that require exploring multiple states simultaneously.
+
+	Suppose a qubit is in the state \( \ket{0} \). Applying the Pauli-X gate, which acts as a quantum version of the classical NOT gate, flips the qubit's state:
+	\[
+	X \ket{0} = \ket{1}
+	\]
+	Similarly, if the qubit were initially in the state \( \ket{1} \), the Pauli-X gate would transform it back to \( \ket{0} \):
+	\[
+	X \ket{1} = \ket{0}
+	\]
+
+	Consider two qubits in the state \( \ket{0} \otimes \ket{0} = \ket{00} \). First, we apply the Hadamard gate to the first qubit, resulting in the state:
+	\[
+	(H \otimes I) \ket{00} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1}) \otimes \ket{0} = \frac{1}{\sqrt{2}} (\ket{00} + \ket{10})
+	\]
+
+	Then, applying the CNOT gate with the first qubit as the control and the second qubit as the target gives:
+
+	\[
+	\text{CNOT} \left(\frac{1}{\sqrt{2}} (\ket{00} + \ket{10})\right) = \frac{1}{\sqrt{2}} (\ket{00} + \ket{11})
+	\]
+
+	This operation creates an entangled state, a key resource for quantum communication and computation.
+
+	Now consider three qubits in the state \( \ket{110} \). Applying the Toffoli gate (CCX) to this state, with the first two qubits as controls and the third as the target, flips the state of the third qubit because both control qubits are in the state \( \ket{1} \):
+	\[
+	CCX \ket{110} = \ket{111}
+	\]
+
+	If either of the control qubits were \( \ket{0} \), the third qubit would remain unchanged, illustrating the conditional nature of the Toffoli gate.
+
+	Finally, consider a qubit in the state \( \ket{1} \). Applying the Phase gate \( S \) to this qubit adds a phase factor of \( i \) to the \( \ket{1} \) state:
+	\[
+	S \ket{1} = i \ket{1}
+	\]
+
+	Similarly, applying the T gate to \( \ket{1} \) introduces a phase shift of \( \frac{\pi}{4} \):
+	\[
+	T \ket{1} = e^{i \frac{\pi}{4}} \ket{1}
+	\]
+
+	These phase shifts are critical for creating complex interference patterns in quantum algorithms and are essential components in constructing universal quantum circuits.
+
+	Through the application of these gates, we observe how quantum operations differ significantly from classical logic gates. Quantum gates enable a variety of powerful transformations, including superposition, entanglement, and phase manipulation. Understanding and applying these gates allows for the construction of sophisticated quantum algorithms that leverage the unique properties of quantum mechanics to perform computations beyond the capabilities of classical systems.
 
     
 \section{Quantum Algorithms}
@@ -230,7 +288,7 @@ sorting=ynt
 
 	One of the primary goals in developing quantum algorithms is to identify processes that can be executed with a polynomial number of quantum gates. In quantum computing, gates are the operations that manipulate qubits and thus form the steps of an algorithm. Algorithms requiring a polynomial number of gates are desirable because they remain efficient as problem sizes grow, ensuring that the quantum resources needed stay manageable.
 
-	By focusing on algorithms that require polynomial resources, researchers aim to make practical quantum computing a reality, enabling breakthroughs in fields such as cryptography, optimization, and materials science. In this section I will present some fundamentals and important quantum algorithms. Some of this content was based on learning provided by the IBM quantum material !!!! and qiskit.org
+	By focusing on algorithms that require polynomial resources, researchers aim to make practical quantum computing a reality, enabling breakthroughs in fields such as cryptography, optimization, and materials science. In this section I will present some fundamentals and important quantum algorithms. Some of this content was based on learning provided by the IBM quantum material and qiskit.org
 
 	\subsection{Deutsch's algorithm}
 
@@ -513,21 +571,17 @@ sorting=ynt
 		\[
 		k = \frac{\pi}{4} \sqrt{N}
 		\]
-		iterations, or applications of the oracle and diffusion operators, to rotate the state vector as close as possible to \( \ket{x_0} \). Below is an exemplification image.
+		iterations, or applications of the oracle and diffusion operators, to rotate the state vector as close as possible to \( \ket{x_0} \). The figure \ref{geometric_grover} makes it more tangible.
 
 		\begin{figure}[h]
 		\begin{center}
 		\includegraphics[width=5cm]{images/geometric_grovers.png}
 		\caption{$https://www.researchgate.net/figure/Geometric-visualization-of-Grovers-algorithm_fig1_47438604$}
+		\label{geometric_grover}
 		\end{center}
 		\end{figure}
 
-		After \( O(\sqrt{N}) \) iterations, the state vector will be very close to \( \ket{x_0} \), and a measurement of the state will yield the marked item with high probability. This geometric interpretation highlights why Grover’s algorithm is optimal for unstructured search: each iteration moves the state vector closer to the target solution, and the quadratic speedup comes from the number of rotations required to reach the solution state, which scales as \( \sqrt{N} \).
-
-		!!! colocar uma imagenzinha da interpretacao geometrica
-
-
-		
+		After \( O(\sqrt{N}) \) iterations, the state vector will be very close to \( \ket{x_0} \), and a measurement of the state will yield the marked item with high probability. This geometric interpretation highlights why Grover’s algorithm is optimal for unstructured search: each iteration moves the state vector closer to the target solution, and the quadratic speedup comes from the number of rotations required to reach the solution state, which scales as \( \sqrt{N} \).	
 
 	\subsection{Shor's algorithm}
 
@@ -604,19 +658,21 @@ sorting=ynt
 
 		Shor's algorithm demonstrates the power of quantum computing for number-theoretic problems, achieving an exponential speedup in factoring large numbers. The algorithm combines classical number theory, modular exponentiation, and the Quantum Fourier Transform, which plays a central role in revealing periodicity. This algorithm has substantial implications for cryptography, as it provides an efficient means of breaking widely-used cryptographic systems like RSA.
 
-		Below is the associated quantum circuit.
+		On figure \ref{Shor} is the associated quantum circuit.
 
 		\begin{figure}[h]
 		\begin{center}
 		\includegraphics[width=10cm]{images/shor_circuit.png}
 		\caption{$https://prefetch.eu/know/concept/shors-algorithm/$}
+		\label{Shor}
 		\end{center}
 		\end{figure}
 
 
 \section{Introduction to Quantum Information}
 
-	!!!!!! mudar esse paragrafo pra citar alguma coisa do artigo e do material do Abelem This study is based on the paper \textit{"Quantum Internet: A Vision for the Road Ahead" by Stephanie Wehner, David Elkouss, and Ronald Hanson}, along with materials on quantum communication from the XXXVIII Brazilian Symposium on Computer Networks and Distributed Systems, provided by Professor Antônio Jorge Abelém.
+	% !!!!!! mudar esse paragrafo pra citar alguma coisa do artigo e do material do Abelem
+	Following, is an introduction to some quantum information concepts based on the paper \textit{"Quantum Internet: A Vision for the Road Ahead" by Stephanie Wehner, David Elkouss, and Ronald Hanson}, along with materials on quantum communication from the XXXVIII Brazilian Symposium on Computer Networks and Distributed Systems, provided by Professor Antônio Jorge Abelém.
 
 	The vision behind developing a quantum internet is to enable new technologies through quantum communication between any two points on the planet. Significant applications of quantum communication have already been identified, including secure communication, clock synchronization, secure user identification, exponential savings in communication, and secure access to remote quantum computers via the cloud.
 
@@ -647,17 +703,17 @@ sorting=ynt
 	\end{center}
 	\end{figure}
 
-	Another interesting exercise is the CHSH game (Clauser-Horne-Shimony-Holt), a game involving two players, Alice and Bob, who can communicate beforehand. Once the game begins, each player receives a random bit (0 or 1) from a referee and must return one of two possible values. Without further communication, they win if the exclusive OR of their outputs equals the logical AND of their inputs. Classical strategies allow them to win 75\% of the time on average, but by using entangled qubits, they can increase their success rate, demonstrating a clear advantage of quantum communication. !!! Talvez explicar isso aqui 
+	Another interesting exercise is the CHSH game (Clauser-Horne-Shimony-Holt), a game involving two players, Alice and Bob, who can communicate beforehand. Once the game begins, each player receives a random bit (0 or 1) from a referee and must return one of two possible values. Without further communication, they win if the exclusive OR of their outputs equals the logical AND of their inputs. Classical strategies allow them to win 75\% of the time on average, but by using entangled qubits, they can increase their success rate, demonstrating a clear advantage of quantum communication. 
+	
+	% !!! Talvez explicar isso aqui 
 
-	Next I will explain two critical protocols in the field of quantum communication and the quantum internet, \textit{entanglement swapping} and \textit{quantum key distribution} (QKD).
+	Next, I will explain two critical protocols in the field of quantum communication and the quantum internet, \textit{entanglement swapping} and \textit{quantum key distribution} (QKD).
 
 	\subsection{Entanglement Swapping}
 
 	Entanglement Swapping is a quantum communication protocol that enables two distant parties to share entanglement without any direct interaction between them. This protocol is fundamental for building quantum communication networks and creating long-distance entanglement across large distances, which is essential for secure quantum communication. Here’s a detailed explanation of the process:
 
-	\subsection*{Protocol Overview}
-
-	Entanglement Swapping involves two pairs of entangled qubits. We label these pairs as:
+	First, it involves two pairs of entangled qubits. We label these pairs as:
 	\begin{itemize}
 		\item Pair AB, where qubits \( A \) and \( B \) are entangled.
 		\item Pair CD, where qubits \( C \) and \( D \) are entangled.
@@ -759,14 +815,14 @@ sorting=ynt
 
 	\end{enumerate}
 
-	According to the article by Wehner et al., the purpose of a quantum internet is not to replace classical communication but to complement it. A quantum internet would enable applications that are impossible to achieve with classical networks alone, offering enhanced security and efficiency for specific types of data transmission and computational tasks. The integration of quantum and classical networks allows for hybrid systems where quantum communication protocols, such as QKD, secure classical channels or provide computational advantages.
+	The purpose of a quantum internet is not to replace classical communication but to complement it. A quantum internet would enable applications that are impossible to achieve with classical networks alone, offering enhanced security and efficiency for specific types of data transmission and computational tasks. The integration of quantum and classical networks allows for hybrid systems where quantum communication protocols, such as QKD, secure classical channels or provide computational advantages. \cite{vision_road_ahead}
 
 	The development of a quantum internet holds promise for a range of applications, including:
 
 	\begin{itemize}
-		\item \textbf{Secure Communication}: Quantum networks enable ultra-secure communication methods resistant to eavesdropping, as the principles of quantum mechanics prevent undetected interception.
-		\item \textbf{Distributed Quantum Computing}: A quantum internet would allow remote access to quantum computers, enabling distributed quantum computing where complex computations can be performed across multiple quantum processors.
-		\item \textbf{Enhanced Computational Protocols}: Quantum entanglement and superposition in a quantum internet enable computational protocols, such as quantum teleportation and entanglement swapping, for efficient communication and resource sharing.
+		\item Secure Communication: Quantum networks enable ultra-secure communication methods resistant to eavesdropping, as the principles of quantum mechanics prevent undetected interception.
+		\item Distributed Quantum Computing: A quantum internet would allow remote access to quantum computers, enabling distributed quantum computing where complex computations can be performed across multiple quantum processors.
+		\item Enhanced Computational Protocols: Quantum entanglement and superposition in a quantum internet enable computational protocols, such as quantum teleportation and entanglement swapping, for efficient communication and resource sharing.
 	\end{itemize}
 
 	In summary, a quantum internet would represent a paradigm shift in secure communication and computational power, enabling breakthroughs in fields that require advanced information security, distributed quantum computing, and new computational techniques. By combining quantum and classical systems, the quantum internet would open new frontiers in secure and efficient global communication.
