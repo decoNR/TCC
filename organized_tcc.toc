@@ -18,5 +18,5 @@
 \contentsline {subsection}{\numberline {5.2}Quantum Key Distribution}{19}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Quantum Internet}{20}{subsection.5.3}%
 \contentsline {section}{\numberline {6}Introduction to Quantum Walks}{21}{section.6}%
-\contentsline {section}{\numberline {7}Distributed Quantum Walk Control Plane for Quantum Networks}{21}{section.7}%
-\contentsline {section}{\numberline {8}Future Possibilities}{21}{section.8}%
+\contentsline {section}{\numberline {7}Distributed Quantum Walk Control Plane for Quantum Networks}{22}{section.7}%
+\contentsline {section}{\numberline {8}Future Possibilities}{24}{section.8}%

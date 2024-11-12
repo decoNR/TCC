@@ -2350,9 +2350,30 @@
     <bcf:citekey order="4">quantccompquantinfo</bcf:citekey>
     <bcf:citekey order="5">quantccompquantinfo</bcf:citekey>
     <bcf:citekey order="6">vision_road_ahead</bcf:citekey>
-    <bcf:citekey order="7">quantccompquantinfo</bcf:citekey>
+    <bcf:citekey order="7">universalcontrolplane</bcf:citekey>
     <bcf:citekey order="8">portugal</bcf:citekey>
-    <bcf:citekey order="9">vision_road_ahead</bcf:citekey>
+    <bcf:citekey order="9">controlplane</bcf:citekey>
+    <bcf:citekey order="10">universalcontrolplane</bcf:citekey>
+    <bcf:citekey order="11">universalcontrolplane</bcf:citekey>
+    <bcf:citekey order="12">controlplane</bcf:citekey>
+    <bcf:citekey order="13">relationship</bcf:citekey>
+    <bcf:citekey order="14">equivalence</bcf:citekey>
+    <bcf:citekey order="15">equivalence</bcf:citekey>
+    <bcf:citekey order="16">controlplane</bcf:citekey>
+    <bcf:citekey order="17">routing_entanglement</bcf:citekey>
+    <bcf:citekey order="18">experimental</bcf:citekey>
+    <bcf:citekey order="19">implementation</bcf:citekey>
+    <bcf:citekey order="20">universalcontrolplane</bcf:citekey>
+    <bcf:citekey order="21">quantccompquantinfo</bcf:citekey>
+    <bcf:citekey order="22">portugal</bcf:citekey>
+    <bcf:citekey order="23">vision_road_ahead</bcf:citekey>
+    <bcf:citekey order="24">universalcontrolplane</bcf:citekey>
+    <bcf:citekey order="25">controlplane</bcf:citekey>
+    <bcf:citekey order="26">relationship</bcf:citekey>
+    <bcf:citekey order="27">equivalence</bcf:citekey>
+    <bcf:citekey order="28">routing_entanglement</bcf:citekey>
+    <bcf:citekey order="29">experimental</bcf:citekey>
+    <bcf:citekey order="30">implementation</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">
