@@ -132,6 +132,8 @@ sorting=ynt
 
 \section{Introduction to Quantum Computing}
 
+	Quantum computing represents a transformative approach to computation, fundamentally different from classical computing. At its core, quantum computing leverages principles of quantum mechanics, such as superposition, entanglement, and interference, to process information in ways that classical computers cannot. This approach opens up new possibilities for solving complex problems in fields like cryptography, material science, and artificial intelligence. This section introduces the foundational concepts of quantum computing, beginning with the qubit and extending to the mathematical framework that describes quantum states and operations. Through an exploration of quantum gates and their applications, we lay the groundwork for understanding how quantum algorithms can achieve exponential speedups over their classical counterparts, demonstrating the remarkable potential of quantum computing.
+
 	\subsection{Qubit}
 	A qubit (quantum bit) is the fundamental unit of memory in a quantum computer, and unlike classical bits, which are limited to being in a state of either 0 or 1, a qubit can exist in a superposition of both 0 and 1 simultaneously. This unique property is a consequence of quantum mechanics, which allows qubits to represent not just one of two discrete states, but an infinite number of possibilities between 0 and 1.
 
@@ -832,6 +834,212 @@ sorting=ynt
 
 \section{Introduction to Quantum Walks}
 	Quantum walks are a powerful algorithmic tool in quantum computing. They have proven to be universal for quantum computing \cite{universalcontrolplane} and have provided quantum speed-ups in a myriad of applications. Despite all their generality and properties, quantum walks are simple. In particular, discrete-time coined quantum walks are described by the product of two operators, known as the coin and shift operators, which are sufficient to implement arbitrary quantum algorithms.
+
+	They are the quantum analog of classical random walks but, unlike them, which are probabilistic and rely on flipping a coin to determine the next position, quantum walks are inherently different due to the principles of quantum superposition and entanglement. This results in a richer, more complex behavior that can be useful in achieving quantum algorithms.
+
+	\subsection{One Dimensional Discrete Time Random Walks}
+
+		A one dimensional discrete time random walk is a simple yet powerful model that describes the path of a "walker" moving along a line. At each discrete time step, the walker makes a move to the left or right, depending on a random event, such as the outcome of a coin flip. This stochastic process is widely used in physics, economics, computer science, and many other fields to model systems that evolve over time under randomness.
+
+		In a one dimensional discrete time random walk, we define the following:
+		\begin{itemize}
+			\item Let \( X_t \) denote the position of the walker at time \( t \).
+			\item The initial position \( X_0 = 0 \) is usually set to the origin.
+			\item At each time step \( t \), the walker moves either one unit to the left or one unit to the right, based on a probabilistic rule.
+		\end{itemize}
+
+		The movement rule is simple:
+		\begin{itemize}
+			\item With probability \( p = \frac{1}{2} \), the walker moves one step to the right, increasing its position by 1.
+			\item With probability \( q = \frac{1}{2} \), the walker moves one step to the left, decreasing its position by 1.
+		\end{itemize}
+
+		We can describe the position of the walker after \( t \) steps as:
+		\[
+		X_t = X_0 + \sum_{i=1}^{t} S_i
+		\]
+		where \( S_i \) represents the \( i \)-th step, with \( S_i = +1 \) for a step to the right and \( S_i = -1 \) for a step to the left. Since each step is independent and equally likely, \( S_i \) is a random variable with an expectation \( E[S_i] = 0 \) and variance \( \text{Var}(S_i) = 1 \).
+
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=13cm]{images/rwalk.png}
+		\caption{Illustration of a One Dimensional Discrete Time Random Walk with start position equal to zero.}
+		\end{figure}
+
+		Below is an example of a one dimensional discrete time random walk over five steps. Starting at \( X_0 = 0 \), suppose we flip a fair coin to determine each step:
+		\begin{itemize}
+			\item \textbf{Step 1}: The coin lands on heads, so the walker moves right. \( X_1 = X_0 + 1 = 1 \).
+			\item \textbf{Step 2}: The coin lands on tails, so the walker moves left. \( X_2 = X_1 - 1 = 0 \).
+			\item \textbf{Step 3}: The coin lands on heads, so the walker moves right. \( X_3 = X_2 + 1 = 1 \).
+			\item \textbf{Step 4}: The coin lands on heads again, so the walker moves right. \( X_4 = X_3 + 1 = 2 \).
+			\item \textbf{Step 5}: The coin lands on tails, so the walker moves left. \( X_5 = X_4 - 1 = 1 \).
+		\end{itemize}
+
+		After five steps, the walker's final position is \( X_5 = 1 \).
+
+		For a large number of steps, the probability distribution of the walker's position \( X_t \) tends to follow a normal (Gaussian) distribution centered around the initial position, with a variance that increases with time. Specifically, after \( t \) steps, the expected value of \( X_t \) is zero:
+		\[
+		E[X_t] = 0
+		\]
+		and the variance is given by:
+		\[
+		\text{Var}(X_t) = t
+		\]
+		Thus, the standard deviation of the position after \( t \) steps is \( \sqrt{t} \). This implies that the probability of finding the walker at a specific position spreads out over time, following a bell curve centered at the origin.
+
+		The probability \( P(X_t = k) \) that the walker is at position \( k \) after \( t \) steps can be calculated using the binomial distribution. Since each step has an equal chance of being to the left or right, we can express this probability as:
+		\[
+		P(X_t = k) = \binom{t}{\frac{t + k}{2}} p^{\frac{t + k}{2}} q^{\frac{t - k}{2}}
+		\]
+		where \( \binom{t}{\frac{t + k}{2}} \) is the binomial coefficient, and \( \frac{t + k}{2} \) and \( \frac{t - k}{2} \) must be integers. This formula gives the exact probability distribution for the position of the walker at each step.
+
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=13cm]{images/rwalk_distibution.png}
+		\caption{Probability Distribution of a One Dimensional Discrete Time Random Walk with start position equal to zero.\cite{portugal}}
+		\end{figure}
+
+		For an easier understanding, consider a walker starting at position \( X_0 = 0 \) and taking four steps. The possible positions after four steps are \( X_4 = -4, -2, 0, 2, \) and \( 4 \). The probabilities for each position can be calculated as follows:
+
+		\begin{itemize}
+			\item \( P(X_4 = 4) = \binom{4}{4} \left(\frac{1}{2}\right)^4 = \frac{1}{16} \)
+			\item \( P(X_4 = 2) = \binom{4}{3} \left(\frac{1}{2}\right)^4 = \frac{4}{16} = \frac{1}{4} \)
+			\item \( P(X_4 = 0) = \binom{4}{2} \left(\frac{1}{2}\right)^4 = \frac{6}{16} = \frac{3}{8} \)
+			\item \( P(X_4 = -2) = \binom{4}{1} \left(\frac{1}{2}\right)^4 = \frac{4}{16} = \frac{1}{4} \)
+			\item \( P(X_4 = -4) = \binom{4}{0} \left(\frac{1}{2}\right)^4 = \frac{1}{16} \)
+		\end{itemize}
+
+		These probabilities give us a discrete probability distribution for the position of the walker after four steps. For large \( t \), this distribution approaches a normal distribution with mean 0 and variance \( t \).
+
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=13cm]{images/rwalks_evolution.png}
+		\caption{Intuition on the Probability Distribution of a One Dimensional Discrete Time Random Walk with start position equal to zero.\cite{portugal}}
+		\end{figure}
+
+	\subsection{Quantum Walks}
+		Quantum walks exist in both discrete-time and continuous-time variants. Here, we focus on the discrete-time quantum walk, starting with the one-dimensional case and then extending to multi-dimensional quantum walks.
+		
+		In a one-dimensional quantum walk, a "walker" moves along a line of discrete positions based on a quantum "coin" flip. This quantum coin introduces a superposition of states, allowing the walker to be in multiple positions simultaneously, unlike in a classical random walk.
+		
+		\paragraph{State Representation}
+		The state of the walker in a one-dimensional quantum walk consists of:
+		\begin{itemize}
+			\item \textbf{Position state} \( \ket{x} \): Represents the position of the walker along the line, where \( x \) is an integer.
+			\item \textbf{Coin state} \( \ket{c} \): Represents the direction of the walk, with \( \ket{0} \) indicating a move to the left and \( \ket{1} \) indicating a move to the right.
+		\end{itemize}
+		
+		The combined state of the walker at a given time \( t \) is represented as a superposition of coin and position states:
+		\[
+		\ket{\psi(t)} = \sum_{x} \left( \alpha_x(t) \ket{0} \otimes \ket{x} + \beta_x(t) \ket{1} \otimes \ket{x} \right)
+		\]
+		where \( \alpha_x(t) \) and \( \beta_x(t) \) are complex amplitudes associated with each position and coin state.
+		
+		\paragraph{Operators in Quantum Walks}
+		
+		Two main operators govern the evolution of the quantum walk:
+		\begin{itemize}
+			\item \textbf{Coin Operator (C)}: The coin operator acts on the coin state, creating a superposition of directions. A common choice for this operator is the Hadamard operator \( H \):
+			\[
+			H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}
+			\]
+			When applied to the coin state, \( H \) creates an equal superposition of moving left and right.
+			\item \textbf{Shift Operator (S)}: The shift operator acts on both the coin and position states, moving the walker to the left or right based on the coin state. The shift operator \( S \) is defined as:
+			\[
+			S(\ket{0} \otimes \ket{x}) = \ket{0} \otimes \ket{x-1}, \quad S(\ket{1} \otimes \ket{x}) = \ket{1} \otimes \ket{x+1}
+			\]
+		\end{itemize}
+		
+		The evolution of the quantum walk over one time step is given by:
+		\[
+		\ket{\psi(t+1)} = S \cdot (C \otimes I) \ket{\psi(t)}
+		\]
+		where \( I \) is the identity operator on the position space.
+		
+		\paragraph{Example of a One-Dimensional Quantum Walk}
+		
+		Let’s consider an example where the walker starts at position \( x = 0 \) with the initial state:
+		\[
+		\ket{\psi(0)} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1}) \otimes \ket{0}
+		\]
+		After applying the Hadamard coin operator and the shift operator for a single time step, the state evolves as:
+		\[
+		\ket{\psi(1)} = \frac{1}{2} \left( \ket{0} \otimes \ket{-1} + \ket{1} \otimes \ket{1} \right)
+		\]
+		At \( t = 2 \), another application of the coin and shift operators results in a superposition state with the walker having non-zero amplitudes at multiple positions, illustrating the parallel nature of quantum walks.
+		
+		\begin{figure}[h]
+			\centering
+			% Placeholder for one-dimensional quantum walk probability distribution
+			\caption{Probability distribution of a one-dimensional quantum walk after multiple steps, showing interference patterns.}
+		\end{figure}
+		
+		\paragraph{Probability Distribution}
+		
+		The probability distribution for the walker's position in a quantum walk differs from that of a classical random walk. Due to interference effects, the probability distribution typically has two peaks and is more spread out, allowing the walker to explore the line faster than in a classical walk. This behavior is crucial for the speedup offered by quantum algorithms based on quantum walks.
+		
+		\subsection*{Multi-Dimensional Quantum Walks}
+		
+		In multi-dimensional quantum walks, the walker moves in a space with multiple dimensions (e.g., a two-dimensional grid). Each dimension has its own coin state, allowing the walker to explore more complex spaces. These walks are particularly useful in problems involving graphs and spatial structures, such as image processing and quantum search algorithms on networks.
+		
+		\paragraph{Two-Dimensional Quantum Walk}
+		
+		For a two-dimensional quantum walk, the position state is given by \( \ket{x, y} \), where \( x \) and \( y \) represent the coordinates on a grid. The coin state now has four possible outcomes, as it must determine movement in both the \( x \)- and \( y \)-directions. A typical choice is to use a 4-dimensional coin operator, such as:
+		\[
+		C = \frac{1}{2} \begin{pmatrix} 1 & 1 & 1 & 1 \\ 1 & -1 & 1 & -1 \\ 1 & 1 & -1 & -1 \\ 1 & -1 & -1 & 1 \end{pmatrix}
+		\]
+		The shift operator \( S \) acts based on the coin state, moving the walker along the grid. For example:
+		\[
+		S(\ket{0} \otimes \ket{x, y}) = \ket{0} \otimes \ket{x+1, y} \quad \text{(right)}
+		\]
+		\[
+		S(\ket{1} \otimes \ket{x, y}) = \ket{1} \otimes \ket{x-1, y} \quad \text{(left)}
+		\]
+		\[
+		S(\ket{2} \otimes \ket{x, y}) = \ket{2} \otimes \ket{x, y+1} \quad \text{(up)}
+		\]
+		\[
+		S(\ket{3} \otimes \ket{x, y}) = \ket{3} \otimes \ket{x, y-1} \quad \text{(down)}
+		\]
+		
+		\paragraph{Example of a Two-Dimensional Quantum Walk}
+		
+		Consider a walker initially located at \( (x, y) = (0, 0) \) with an equal superposition over the four possible coin states:
+		\[
+		\ket{\psi(0)} = \frac{1}{2} (\ket{0} + \ket{1} + \ket{2} + \ket{3}) \otimes \ket{0, 0}
+		\]
+		After applying the coin and shift operators, the state at \( t = 1 \) evolves to:
+		\[
+		\ket{\psi(1)} = \frac{1}{2} \left( \ket{0} \otimes \ket{1, 0} + \ket{1} \otimes \ket{-1, 0} + \ket{2} \otimes \ket{0, 1} + \ket{3} \otimes \ket{0, -1} \right)
+		\]
+		After multiple steps, the walker’s state becomes a complex superposition over various positions, and the resulting probability distribution shows multiple peaks due to interference effects, enabling efficient exploration of the grid.
+		
+		\begin{figure}[h]
+			\centering
+			% Placeholder for two-dimensional quantum walk probability distribution
+			\caption{Probability distribution of a two-dimensional quantum walk on a grid, illustrating rapid exploration compared to a classical random walk.}
+		\end{figure}
+		
+		\paragraph{Higher-Dimensional Quantum Walks}
+		
+		In higher-dimensional quantum walks, the principles remain the same: each dimension has an associated coin state, and the shift operator moves the walker in each direction based on the coin state. These higher-dimensional walks are useful in applications such as quantum search algorithms on complex networks and in simulating quantum dynamics on large graphs.
+		
+		\paragraph{Summary}
+		
+		Quantum walks provide a framework for exploring complex spaces with quantum speedup, leveraging superposition and interference. One-dimensional and multi-dimensional quantum walks form the basis for many quantum algorithms, allowing for efficient exploration of structured and unstructured data spaces.
+	
+
+		\subsection*{Applications of Quantum Walks}
+
+		Quantum walks have applications in various quantum algorithms and protocols. Some key examples include:
+		\begin{itemize}
+			\item \textbf{Search Algorithms}: Quantum walks enhance search processes in large datasets, as seen in Grover's search algorithm.
+			\item \textbf{Quantum Network Protocols}: Quantum walks enable efficient information routing and entanglement distribution across quantum networks.
+			\item \textbf{Graph Algorithms}: Quantum walks offer faster solutions to problems on graphs, such as graph traversal and element distinctness.
+		\end{itemize}
+
+		In summary, quantum walks are a fundamental tool in quantum computing, leveraging superposition and interference to perform computations more efficiently than classical methods. Their unique properties make them essential for the advancement of quantum algorithms and networks.
+
 
 
     \textbf{Grover's graph search:}

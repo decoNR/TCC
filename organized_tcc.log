@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  11 NOV 2024 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.14)  12 NOV 2024 20:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -735,12 +735,12 @@ Package biblatex Info: ... file 'organized_tcc.bbl' found.
  (./organized_tcc.bbl)
 Package biblatex Info: Reference section=0 on input line 36.
 Package biblatex Info: Reference segment=0 on input line 36.
-<images/logo_ime.png, id=88, 1018.80624pt x 209.78375pt>
+<images/logo_ime.png, id=96, 1018.80624pt x 209.78375pt>
 File: images/logo_ime.png Graphic file (type png)
 <use images/logo_ime.png>
 Package pdftex.def Info: images/logo_ime.png  used on input line 42.
 (pdftex.def)             Requested size: 354.86412pt x 73.07008pt.
-<images/umass_logo.png, id=90, 359.3425pt x 141.52875pt>
+<images/umass_logo.png, id=98, 359.3425pt x 141.52875pt>
 File: images/umass_logo.png Graphic file (type png)
 <use images/umass_logo.png>
 Package pdftex.def Info: images/umass_logo.png  used on input line 51.
@@ -756,67 +756,75 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.65 \newpage
               [1] [2] [3] [4]
-<images/BlochSphere.png, id=156, 641.39626pt x 481.8pt>
+<images/BlochSphere.png, id=166, 641.39626pt x 481.8pt>
 File: images/BlochSphere.png Graphic file (type png)
 <use images/BlochSphere.png>
-Package pdftex.def Info: images/BlochSphere.png  used on input line 158.
+Package pdftex.def Info: images/BlochSphere.png  used on input line 160.
 (pdftex.def)             Requested size: 192.42035pt x 144.5411pt.
- [5 <./images/BlochSphere.png>] [6] [7] [8]
-<images/Deutsch.png, id=183, 323.40825pt x 108.405pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6 <./images/BlochSphere.png>] [7] [8]
+<images/Deutsch.png, id=193, 323.40825pt x 108.405pt>
 File: images/Deutsch.png Graphic file (type png)
 <use images/Deutsch.png>
-Package pdftex.def Info: images/Deutsch.png  used on input line 357.
+Package pdftex.def Info: images/Deutsch.png  used on input line 359.
 (pdftex.def)             Requested size: 369.88582pt x 123.98326pt.
  [9 <./images/Deutsch.png>]
-<images/DeutschJozsa.png, id=193, 367.3725pt x 233.07076pt>
+<images/DeutschJozsa.png, id=202, 367.3725pt x 233.07076pt>
 File: images/DeutschJozsa.png Graphic file (type png)
 <use images/DeutschJozsa.png>
-Package pdftex.def Info: images/DeutschJozsa.png  used on input line 408.
+Package pdftex.def Info: images/DeutschJozsa.png  used on input line 410.
 (pdftex.def)             Requested size: 369.88582pt x 234.6812pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10] [11 <./images/DeutschJozsa.png>]
-<images/simons.png, id=214, 776.9025pt x 697.60625pt>
+<images/simons.png, id=222, 776.9025pt x 697.60625pt>
 File: images/simons.png Graphic file (type png)
 <use images/simons.png>
-Package pdftex.def Info: images/simons.png  used on input line 466.
+Package pdftex.def Info: images/simons.png  used on input line 468.
 (pdftex.def)             Requested size: 284.52756pt x 255.4917pt.
  [12 <./images/simons.png>]
-<images/grover.png, id=223, 2007.5pt x 655.44875pt>
+<images/grover.png, id=232, 2007.5pt x 655.44875pt>
 File: images/grover.png Graphic file (type png)
 <use images/grover.png>
-Package pdftex.def Info: images/grover.png  used on input line 522.
+Package pdftex.def Info: images/grover.png  used on input line 524.
 (pdftex.def)             Requested size: 341.43306pt x 111.47481pt.
- [13 <./images/grover.png>]
-<images/geometric_grovers.png, id=235, 312.16624pt x 360.34625pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13]
+<images/geometric_grovers.png, id=243, 312.16624pt x 360.34625pt>
 File: images/geometric_grovers.png Graphic file (type png)
 <use images/geometric_grovers.png>
-Package pdftex.def Info: images/geometric_grovers.png  used on input line 578.
+Package pdftex.def Info: images/geometric_grovers.png  used on input line 580.
 (pdftex.def)             Requested size: 142.26378pt x 164.22173pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14] [15 <./images/geometric_grovers.png>]
-<images/shor_circuit.png, id=254, 621.32124pt x 393.47pt>
+[14 <./images/grover.png>] [15 <./images/geometric_grovers.png>]
+<images/shor_circuit.png, id=262, 621.32124pt x 393.47pt>
 File: images/shor_circuit.png Graphic file (type png)
 <use images/shor_circuit.png>
-Package pdftex.def Info: images/shor_circuit.png  used on input line 665.
+Package pdftex.def Info: images/shor_circuit.png  used on input line 667.
 (pdftex.def)             Requested size: 284.52756pt x 180.18185pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16]
-<images/quantum_teleportation.png, id=268, 517.935pt x 212.795pt>
+<images/quantum_teleportation.png, id=277, 517.935pt x 212.795pt>
 File: images/quantum_teleportation.png Graphic file (type png)
 <use images/quantum_teleportation.png>
-Package pdftex.def Info: images/quantum_teleportation.png  used on input line 701.
+Package pdftex.def Info: images/quantum_teleportation.png  used on input line 703.
 (pdftex.def)             Requested size: 227.62204pt x 93.51968pt.
 
-Underfull \hbox (badness 2285) in paragraph at lines 702--702
+Underfull \hbox (badness 2285) in paragraph at lines 704--704
 []\OT1/cmr/m/n/10 Figure 8: |$\OML/cmm/m/it/10 https \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 ==www:researchgate:net=figure=modified \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 quantum \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 teleportation \OMS/cmsy/m/n/10 ^^@
  []
 
@@ -824,34 +832,51 @@ Underfull \hbox (badness 2285) in paragraph at lines 702--702
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17 <./images/shor_circuit.png>] [18 <./images/quantum_teleportation.png>]
-<images/entanglement-swap.png, id=285, 793.96625pt x 258.9675pt>
+<images/entanglement-swap.png, id=295, 793.96625pt x 258.9675pt>
 File: images/entanglement-swap.png Graphic file (type png)
 <use images/entanglement-swap.png>
-Package pdftex.def Info: images/entanglement-swap.png  used on input line 754.
+Package pdftex.def Info: images/entanglement-swap.png  used on input line 756.
 (pdftex.def)             Requested size: 284.52756pt x 92.8054pt.
  [19 <./images/entanglement-swap.png>]
-<images/qkd.png, id=297, 413.545pt x 122.4575pt>
+<images/qkd.png, id=305, 413.545pt x 122.4575pt>
 File: images/qkd.png Graphic file (type png)
 <use images/qkd.png>
-Package pdftex.def Info: images/qkd.png  used on input line 791.
+Package pdftex.def Info: images/qkd.png  used on input line 793.
 (pdftex.def)             Requested size: 284.52756pt x 84.2547pt.
- [20 <./images/qkd.png>]
-Overfull \hbox (1.55266pt too wide) in paragraph at lines 841--841
+ [20 <./images/qkd.png>] [21]
+<images/rwalk.png, id=326, 2054.67625pt x 525.965pt>
+File: images/rwalk.png Graphic file (type png)
+<use images/rwalk.png>
+Package pdftex.def Info: images/rwalk.png  used on input line 865.
+(pdftex.def)             Requested size: 369.88582pt x 94.68565pt.
+ [22 <./images/rwalk.png>]
+<images/rwalk_distibution.png, id=333, 1103.12125pt x 688.5725pt>
+File: images/rwalk_distibution.png Graphic file (type png)
+<use images/rwalk_distibution.png>
+Package pdftex.def Info: images/rwalk_distibution.png  used on input line 898.
+(pdftex.def)             Requested size: 369.88582pt x 230.88597pt.
+<images/rwalks_evolution.png, id=336, 890.32625pt x 366.36874pt>
+File: images/rwalks_evolution.png Graphic file (type png)
+<use images/rwalks_evolution.png>
+Package pdftex.def Info: images/rwalks_evolution.png  used on input line 916.
+(pdftex.def)             Requested size: 369.88582pt x 152.2079pt.
+ [23 <./images/rwalk_distibution.png>] [24 <./images/rwalks_evolution.png>] [25]
+Overfull \hbox (1.55266pt too wide) in paragraph at lines 1049--1049
 []\OT1/cmr/bx/n/14.4 Distributed Quan-tum Walk Con-trol Plane for Quan-tum Net-
  []
 
-[21] [22] [23] [24] [25] (./organized_tcc.aux)
+[26] [27] [28] [29] [30] (./organized_tcc.aux)
 Package rerunfilecheck Info: File `organized_tcc.out' has not changed.
-(rerunfilecheck)             Checksum: 5FA017894AF551098371F009CA9D96C5;3537.
+(rerunfilecheck)             Checksum: EAAACA354F1F35987B062712D7F8BD7A;3946.
 Package logreq Info: Writing requests to 'organized_tcc.run.xml'.
 \openout1 = `organized_tcc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27546 strings out of 478287
- 498629 string characters out of 5849288
- 1193628 words of memory out of 5000000
- 45278 multiletter control sequences out of 15000+600000
+ 27591 strings out of 478287
+ 499488 string characters out of 5849288
+ 1191631 words of memory out of 5000000
+ 45298 multiletter control sequences out of 15000+600000
  472518 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,9n,117p,1073b,1810s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -860,10 +885,10 @@ pdfTeX warning (dest): name{https://journals.aps.org/pra/pdf/10.1103/PhysRevA.64
 pdfTeX warning (dest): name{https://algassert.com/post/1717} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on organized_tcc.pdf (26 pages, 654355 bytes).
+Output written on organized_tcc.pdf (31 pages, 808795 bytes).
 PDF statistics:
- 456 PDF objects out of 1000 (max. 8388607)
- 370 compressed objects within 4 object streams
- 124 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 518 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 146 named destinations out of 1000 (max. 500000)
+ 260 words of extra memory for PDF output out of 10000 (max. 10000000)
 

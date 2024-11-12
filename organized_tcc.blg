@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'organized_tcc.blg'
-[56] biber:340> INFO - === seg nov 11, 2024, 22:22:01
-[65] Biber.pm:418> INFO - Reading 'organized_tcc.bcf'
-[99] Biber.pm:972> INFO - Found 10 citekeys in bib section 0
-[106] Biber.pm:4383> INFO - Processing section 0
-[112] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[113] bibtex.pm:1713> INFO - LaTeX decoding ...
-[117] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[166] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[166] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[166] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[166] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[171] bbl.pm:654> INFO - Writing 'organized_tcc.bbl' with encoding 'UTF-8'
-[175] bbl.pm:757> INFO - Output to organized_tcc.bbl
-[175] Biber.pm:130> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[175] Biber.pm:132> INFO - WARNINGS: 1
+[43] biber:340> INFO - === ter nov 12, 2024, 20:50:23
+[51] Biber.pm:418> INFO - Reading 'organized_tcc.bcf'
+[86] Biber.pm:972> INFO - Found 10 citekeys in bib section 0
+[92] Biber.pm:4383> INFO - Processing section 0
+[99] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[99] bibtex.pm:1713> INFO - LaTeX decoding ...
+[104] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[152] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[152] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[152] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[152] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[157] bbl.pm:654> INFO - Writing 'organized_tcc.bbl' with encoding 'UTF-8'
+[160] bbl.pm:757> INFO - Output to organized_tcc.bbl
+[161] Biber.pm:130> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[161] Biber.pm:132> INFO - WARNINGS: 1
