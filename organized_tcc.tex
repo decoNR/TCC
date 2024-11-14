@@ -920,13 +920,12 @@ sorting=ynt
 	\subsection{Quantum Walks}
 		Quantum walks exist in both discrete-time and continuous-time variants. Here, we focus on the discrete-time quantum walk, starting with the one-dimensional case and then extending to multi-dimensional quantum walks.
 		
-		In a one-dimensional quantum walk, a "walker" moves along a line of discrete positions based on a quantum "coin" flip. This quantum coin introduces a superposition of states, allowing the walker to be in multiple positions simultaneously, unlike in a classical random walk.
-		
-		\paragraph{State Representation}
+		In a one-dimensional quantum walk, a "walker", represented by a quantum state, moves along a line of discrete positions based on a quantum "coin" flip. This quantum coin introduces a superposition of states, allowing the walker quantum state to represent multiple positions simultaneously, unlike in a classical random walk.
+
 		The state of the walker in a one-dimensional quantum walk consists of:
 		\begin{itemize}
-			\item \textbf{Position state} \( \ket{x} \): Represents the position of the walker along the line, where \( x \) is an integer.
-			\item \textbf{Coin state} \( \ket{c} \): Represents the direction of the walk, with \( \ket{0} \) indicating a move to the left and \( \ket{1} \) indicating a move to the right.
+			\item Position state \( \ket{x} \): Represents the position of the walker along the line, where \( x \) is an integer.
+			\item Coin state \( \ket{c} \): Represents the direction of the walk, with \( \ket{0} \) indicating a move to the left and \( \ket{1} \) indicating a move to the right.
 		\end{itemize}
 		
 		The combined state of the walker at a given time \( t \) is represented as a superposition of coin and position states:
@@ -935,30 +934,35 @@ sorting=ynt
 		\]
 		where \( \alpha_x(t) \) and \( \beta_x(t) \) are complex amplitudes associated with each position and coin state.
 		
-		\paragraph{Operators in Quantum Walks}
-		
-		Two main operators govern the evolution of the quantum walk:
+		On the evolution of a quantum walk, two main operators govern the evolution of the quantum walk:
 		\begin{itemize}
-			\item \textbf{Coin Operator (C)}: The coin operator acts on the coin state, creating a superposition of directions. A common choice for this operator is the Hadamard operator \( H \):
+			\item Coin Operator ($C$): The coin operator acts on the coin state, creating a superposition of directions. A common choice for this operator is the Hadamard operator \( H \):
 			\[
 			H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}
 			\]
 			When applied to the coin state, \( H \) creates an equal superposition of moving left and right.
-			\item \textbf{Shift Operator (S)}: The shift operator acts on both the coin and position states, moving the walker to the left or right based on the coin state. The shift operator \( S \) is defined as:
+			\item Shift Operator ($S$): The shift operator acts on both the coin and position states, moving the walker to the left or right based on the coin state. The shift operator \( S \) is defined as:
 			\[
 			S(\ket{0} \otimes \ket{x}) = \ket{0} \otimes \ket{x-1}, \quad S(\ket{1} \otimes \ket{x}) = \ket{1} \otimes \ket{x+1}
 			\]
+
+			This means that a $\ket{0}$ on the coin space indicates that the "walker" should move decrease his position. Similarly, a $\ket{1}$ on the coin space makes the "walker" position increase by one after a shift operation. Because of that, we can think that each combined quantum state (coin and position) represents an arc on a directed graph where the nodes are the possible positions and the arcs represent the allowed directions. Figure \ref{edge_walk} shows that ideia.
 		\end{itemize}
-		
+
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=13cm]{images/edge_walker.png}
+		\caption{One dimensional discrete time quantum walk representation.}
+		\label{edge_walk}
+		\end{figure}
+	
 		The evolution of the quantum walk over one time step is given by:
 		\[
 		\ket{\psi(t+1)} = S \cdot (C \otimes I) \ket{\psi(t)}
 		\]
-		where \( I \) is the identity operator on the position space.
+		where \( I \) is the identity operator on the position space. The identity operator is the one which does not change the state.
 		
-		\paragraph{Example of a One-Dimensional Quantum Walk}
-		
-		Let’s consider an example where the walker starts at position \( x = 0 \) with the initial state:
+		Consider an example of a one dimensional discrete time quantum walk where the walker starts at position \( x = 0 \) with the initial state:
 		\[
 		\ket{\psi(0)} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1}) \otimes \ket{0}
 		\]
@@ -967,22 +971,53 @@ sorting=ynt
 		\ket{\psi(1)} = \frac{1}{2} \left( \ket{0} \otimes \ket{-1} + \ket{1} \otimes \ket{1} \right)
 		\]
 		At \( t = 2 \), another application of the coin and shift operators results in a superposition state with the walker having non-zero amplitudes at multiple positions, illustrating the parallel nature of quantum walks.
+
+		To determine the position of the walker in a quantum walk, we rely on the quantum mechanical principle of measurement. The quantum state of the walker after \( t = 2 \) time steps is a superposition of multiple position states, each with a complex amplitude. These amplitudes encode the probabilities of finding the walker at a specific position when measured.
+
+		As stated before, after \( t \) steps, the quantum state of the walker is represented as:
+		\[
+		\ket{\psi(t)} = \sum_x \left( \alpha_x(t) \ket{0} \otimes \ket{x} + \beta_x(t) \ket{1} \otimes \ket{x} \right)
+		\]
+
+		\begin{itemize}
+			\item \( \ket{x} \) represents the position of the walker.
+			\item \( \alpha_x(t) \) and \( \beta_x(t) \) are the complex amplitudes corresponding to the two coin states \( \ket{0} \) (move left) and \( \ket{1} \) (move right) at position \( x \).
+		\end{itemize}
+
+		To find the walker’s position, we measure the state \( \ket{\psi(t)} \). The probability \( P(x) \) of finding the walker at position \( x \) is given by the sum of the squared magnitudes of the amplitudes associated with both coin states at that position:
+		\[
+		P(x) = |\alpha_x(t)|^2 + |\beta_x(t)|^2
+		\]
+		This ensures that the probability of finding the walker at any position is determined by the total amplitude contribution from both possible directions.
+
+		For instance, if the state of the walker at \( t = 2 \) is:
+		\[
+		\ket{\psi(2)} = \frac{1}{2} \ket{0} \otimes \ket{-2} + \frac{\sqrt{2}}{4} \ket{0} \otimes \ket{0} + \frac{\sqrt{2}}{4} \ket{1} \otimes \ket{0} + \frac{1}{2} \ket{1} \otimes \ket{2}
+		\]
+		then the probabilities of finding the walker at each position are:
+		\[
+		P(-2) = \left|\frac{1}{2}\right|^2 = \frac{1}{4}, \quad P(0) = \left|\frac{\sqrt{2}}{4}\right|^2 + \left|\frac{\sqrt{2}}{4}\right|^2 = \frac{1}{8} + \frac{1}{8} = \frac{1}{4}, \quad P(2) = \left|\frac{1}{2}\right|^2 = \frac{1}{4}
+		\]
+		The sum of probabilities over all positions equals 1, ensuring consistency with the probabilistic interpretation of quantum mechanics.
+
+		When the quantum state is measured, the walker collapses to a specific position \( x \) with a probability \( P(x) \). This collapse is non-deterministic, meaning the exact position cannot be predicted beforehand, but the probabilities reflect the likelihood of each outcome. The interference effects inherent in quantum walks lead to a probability distribution that is typically more spread out and skewed compared to classical random walks, enabling faster exploration of the state space. We usually say that it has a balistic behavior as the probaility of encountering the walker further from the initial position is higher than the probability to find it closer to the initial position.
+
+		This measurement process highlights the probabilistic and non-deterministic nature of quantum mechanics, which is central to understanding and utilizing quantum walks in algorithms and simulations.
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=13cm]{images/qwalks_evolution.png}
+			\caption{Initial steps of a one-dimensional quantum walk using hadamard coin and initial position $\ket{0}\otimes \ket{0}$.\cite{portugal}}
+		\end{figure}
+
 		
 		\begin{figure}[h]
 			\centering
-			% Placeholder for one-dimensional quantum walk probability distribution
-			\caption{Probability distribution of a one-dimensional quantum walk after multiple steps, showing interference patterns.}
+			\includegraphics[width=13cm]{images/qwalk_distribution.png}
+			\caption{Probability distribution of a one-dimensional quantum walk using hadamard coin and initial position $\ket{0}\otimes \ket{0}$.\cite{portugal}}
 		\end{figure}
 		
-		\paragraph{Probability Distribution}
-		
-		The probability distribution for the walker's position in a quantum walk differs from that of a classical random walk. Due to interference effects, the probability distribution typically has two peaks and is more spread out, allowing the walker to explore the line faster than in a classical walk. This behavior is crucial for the speedup offered by quantum algorithms based on quantum walks.
-		
-		\subsection*{Multi-Dimensional Quantum Walks}
-		
-		In multi-dimensional quantum walks, the walker moves in a space with multiple dimensions (e.g., a two-dimensional grid). Each dimension has its own coin state, allowing the walker to explore more complex spaces. These walks are particularly useful in problems involving graphs and spatial structures, such as image processing and quantum search algorithms on networks.
-		
-		\paragraph{Two-Dimensional Quantum Walk}
+		Moving to multi-dimensional quantum walks, the walker moves in a space with multiple dimensions (e.g., a two-dimensional grid). Each dimension has its own coin state, allowing the walker to explore more complex spaces. These walks are particularly useful in problems involving graphs and spatial structures, such as image processing and quantum search algorithms on networks.
 		
 		For a two-dimensional quantum walk, the position state is given by \( \ket{x, y} \), where \( x \) and \( y \) represent the coordinates on a grid. The coin state now has four possible outcomes, as it must determine movement in both the \( x \)- and \( y \)-directions. A typical choice is to use a 4-dimensional coin operator, such as:
 		\[
@@ -1002,8 +1037,6 @@ sorting=ynt
 		S(\ket{3} \otimes \ket{x, y}) = \ket{3} \otimes \ket{x, y-1} \quad \text{(down)}
 		\]
 		
-		\paragraph{Example of a Two-Dimensional Quantum Walk}
-		
 		Consider a walker initially located at \( (x, y) = (0, 0) \) with an equal superposition over the four possible coin states:
 		\[
 		\ket{\psi(0)} = \frac{1}{2} (\ket{0} + \ket{1} + \ket{2} + \ket{3}) \otimes \ket{0, 0}
@@ -1014,37 +1047,24 @@ sorting=ynt
 		\]
 		After multiple steps, the walker’s state becomes a complex superposition over various positions, and the resulting probability distribution shows multiple peaks due to interference effects, enabling efficient exploration of the grid.
 		
-		\begin{figure}[h]
-			\centering
-			% Placeholder for two-dimensional quantum walk probability distribution
-			\caption{Probability distribution of a two-dimensional quantum walk on a grid, illustrating rapid exploration compared to a classical random walk.}
-		\end{figure}
-		
-		\paragraph{Higher-Dimensional Quantum Walks}
+		%!!! talvez essa imagem faca sentido
+		% \begin{figure}[h]
+		% 	\centering
+		% 	% Placeholder for two-dimensional quantum walk probability distribution
+		% 	\caption{Probability distribution of a two-dimensional quantum walk on a grid, illustrating rapid exploration compared to a classical random walk.}
+		% \end{figure}
 		
 		In higher-dimensional quantum walks, the principles remain the same: each dimension has an associated coin state, and the shift operator moves the walker in each direction based on the coin state. These higher-dimensional walks are useful in applications such as quantum search algorithms on complex networks and in simulating quantum dynamics on large graphs.
-		
-		\paragraph{Summary}
-		
-		Quantum walks provide a framework for exploring complex spaces with quantum speedup, leveraging superposition and interference. One-dimensional and multi-dimensional quantum walks form the basis for many quantum algorithms, allowing for efficient exploration of structured and unstructured data spaces.
-	
 
-		\subsection*{Applications of Quantum Walks}
-
-		Quantum walks have applications in various quantum algorithms and protocols. Some key examples include:
+		To conclude, quantum walks have applications in various quantum algorithms and protocols. Some key examples include:
 		\begin{itemize}
-			\item \textbf{Search Algorithms}: Quantum walks enhance search processes in large datasets, as seen in Grover's search algorithm.
-			\item \textbf{Quantum Network Protocols}: Quantum walks enable efficient information routing and entanglement distribution across quantum networks.
-			\item \textbf{Graph Algorithms}: Quantum walks offer faster solutions to problems on graphs, such as graph traversal and element distinctness.
+			\item Search Algorithms: Quantum walks enhance search processes in large datasets, as seen in Grover's Search algorithm.
+			\item Quantum Network Protocols: Quantum walks enable information routing and entanglement distribution across quantum networks.
+			\item Graph Algorithms: Quantum walks offer faster solutions to problems on graphs, such as graph traversal and element distinctness.\cite{portugal}
 		\end{itemize}
 
-		In summary, quantum walks are a fundamental tool in quantum computing, leveraging superposition and interference to perform computations more efficiently than classical methods. Their unique properties make them essential for the advancement of quantum algorithms and networks.
+		% !!! talvez falar mais de grover algorithm
 
-
-
-    \textbf{Grover's graph search:}
-
-	Getting the idea of amplitude amplification provided by Grover's algorithm, they build a Grover's search on a graph. This algorithm aims to find a node on a graph starting at a random position. It is important to mention that it is better than any classical approach. After studying it on \cite{portugal}, it brought us the idea of using this in our research by using it on a network search. We did not have time to explore this, but it could be a future work.
 
 \section{Distributed Quantum Walk Control Plane for Quantum Networks}
 

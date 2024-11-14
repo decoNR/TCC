@@ -20,13 +20,5 @@
 \contentsline {section}{\numberline {6}Introduction to Quantum Walks}{21}{section.6}%
 \contentsline {subsection}{\numberline {6.1}One Dimensional Discrete Time Random Walks}{22}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Quantum Walks}{24}{subsection.6.2}%
-\contentsline {paragraph}{State Representation}{24}{section*.16}%
-\contentsline {paragraph}{Operators in Quantum Walks}{24}{section*.17}%
-\contentsline {paragraph}{Example of a One-Dimensional Quantum Walk}{25}{section*.18}%
-\contentsline {paragraph}{Probability Distribution}{25}{section*.20}%
-\contentsline {paragraph}{Two-Dimensional Quantum Walk}{25}{section*.22}%
-\contentsline {paragraph}{Example of a Two-Dimensional Quantum Walk}{26}{section*.23}%
-\contentsline {paragraph}{Higher-Dimensional Quantum Walks}{26}{section*.25}%
-\contentsline {paragraph}{Summary}{26}{section*.26}%
-\contentsline {section}{\numberline {7}Distributed Quantum Walk Control Plane for Quantum Networks}{26}{section.7}%
-\contentsline {section}{\numberline {8}Future Possibilities}{29}{section.8}%
+\contentsline {section}{\numberline {7}Distributed Quantum Walk Control Plane for Quantum Networks}{27}{section.7}%
+\contentsline {section}{\numberline {8}Future Possibilities}{30}{section.8}%
