@@ -129,6 +129,7 @@ sorting=ynt
 
 		\end{itemize}
 
+\newpage
 
 \section{Introduction to Quantum Computing}
 
@@ -283,7 +284,8 @@ sorting=ynt
 
 	Through the application of these gates, we observe how quantum operations differ significantly from classical logic gates. Quantum gates enable a variety of powerful transformations, including superposition, entanglement, and phase manipulation. Understanding and applying these gates allows for the construction of sophisticated quantum algorithms that leverage the unique properties of quantum mechanics to perform computations beyond the capabilities of classical systems.
 
-    
+\newpage
+
 \section{Quantum Algorithms}
 
 	Quantum algorithms are computational processes designed to harness the unique properties of quantum mechanics to solve certain problems more efficiently than classical algorithms.
@@ -670,6 +672,7 @@ sorting=ynt
 		\end{center}
 		\end{figure}
 
+\newpage
 
 \section{Introduction to Quantum Information}
 
@@ -831,6 +834,7 @@ sorting=ynt
 
 	% !!! adicionar quantum noise nessa section
 
+\newpage
 
 \section{Introduction to Quantum Walks}
 	Quantum walks are a powerful algorithmic tool in quantum computing. They have proven to be universal for quantum computing \cite{universalcontrolplane} and have provided quantum speed-ups in a myriad of applications. Despite all their generality and properties, quantum walks are simple. In particular, discrete-time coined quantum walks are described by the product of two operators, known as the coin and shift operators, which are sufficient to implement arbitrary quantum algorithms.
@@ -1065,142 +1069,131 @@ sorting=ynt
 
 		% !!! talvez falar mais de grover algorithm
 
+\newpage
 
 \section{Distributed Quantum Walk Control Plane for Quantum Networks}
 
-	This project explores quantum walks in the context of quantum networks. It has been previously demonstrated that quantum walks can be used to control distributed quantum operations in network nodes under the assumption that network nodes have access to ideal quantum gates and memories \cite{controlplane}. This project extends this initial formulation to consider a more physical implementation of the control plane \cite{universalcontrolplane}. For that, we developed simulations of the quantum walk protocol to investigate our implementation approaches.
+	The primary outcome of this project is the research paper included at the end of this document. To provide a better understanding and context for the paper, I will introduce its main ideas here.
 
-	\textbf{Quantum Walk Control Plane \cite{universalcontrolplane}:}
+	This project focuses on exploring quantum walks within the framework of quantum networks. Previous studies have demonstrated that quantum walks can be employed to control distributed quantum operations across network nodes, provided these nodes have access to ideal quantum gates and memories \cite{controlplane}. Our work builds upon this foundation by extending the initial formulation to include a more practical and physical implementation of the control plane \cite{universalcontrolplane}.
+
+	What follows is an introduction to the protocol outlined in the paper, as well as an explanation of the contributions we made to complement the original formulation.
     
-    Quantum Walks Utility in this scenario:
+    \subsection{Quantum Walks Utility in this scenario}
     
-    The protocol employs a quantum walk as a quantum control signal to execute distributed quantum operations. We generalize the discrete-time coined quantum walk model, which incorporates the interaction between a quantum walker system in the network graph with quantum registers inside the network nodes. The protocol abstracts hardware implementation and the transmission of quantum information through channels. The propagation of the walker system across the network represents the transmission of the control signal, while the application of coin operators integrates interactions between the control layer and the quantum registers. \cite{controlplane}.
+    	The protocol employs a quantum walk as a quantum control signal to execute distributed quantum operations. We generalize the discrete-time coined quantum walk model, which incorporates the interaction between a quantum walker system in the network graph with quantum registers inside the network nodes. The protocol abstracts hardware implementation and the transmission of quantum information through channels. The propagation of the walker system across the network represents the transmission of the control signal, while the application of coin operators integrates interactions between the control layer and the quantum registers. \cite{controlplane}.
     
     
-    Mathematical Background:
+    \subsection{Mathematical Background}
     
-    Consider a directed graph  $G = (V,E)$ obtained from a non-directed graph by introducing two directed edges for each initial one. The sets $N^{+}(v) \subseteq V and N^{-}(v) \subseteq V$ denote the sets of outward and inward neighbors of $v$, respectively.
+		Consider a directed graph  $G = (V,E)$ obtained from a non-directed graph by introducing two directed edges for each initial one. The sets $N^{+}(v) \subseteq V and N^{-}(v) \subseteq V$ denote the sets of outward and inward neighbors of $v$, respectively.
 
-    A complex vector in a Hilbert space $Hw \subseteq Hv \otimes Hc$  evolves through a discrete-time coined quantum walk on graph $G$, defined by the graph structure. The vertex space $Hv$ it is used to codify the vertices of the graph by assigning to each vertex a basis vector of $Hv$, which has dimension $|V|$. The coin space $Hc$ denotes the degrees of freedom of the walker(possible movements for the walker) and has a dimension given by the maximum degree of the graph $D = max{d(v): v \in V}$. The basis for $Hw$ is ${\ket{v,c} : v \in V, c \in Cv}$ , where $Cv = {0, ... , d(v) -1}$ is the integer set for the number of outward edges of a node v. \\
-    The basis for the spaces $Hc$ and $Hv$ are denoted as ${\ket{c}}$ and ${\ket{v}}$, respectively. Assuming $\ket{\Psi(t)}$ is the walker wavefunction at discrete time instant $t$, the evolution of the quantum walk is given by the action of two unitary operators $S: Hw \to Hw$ and $W: Hw \to Hw$ on the system state vector $$\ket{\Psi(t+1)}= SW\ket{\Psi(t)}$$\cite{relationship}
+		A complex vector in a Hilbert space $Hw \subseteq Hv \otimes Hc$  evolves through a discrete-time coined quantum walk on graph $G$, defined by the graph structure. The vertex space $Hv$ it is used to codify the vertices of the graph by assigning to each vertex a basis vector of $Hv$, which has dimension $|V|$. The coin space $Hc$ denotes the degrees of freedom of the walker(possible movements for the walker) and has a dimension given by the maximum degree of the graph $D = max{d(v): v \in V}$. The basis for $Hw$ is ${\ket{v,c} : v \in V, c \in Cv}$ , where $Cv = {0, ... , d(v) -1}$ is the integer set for the number of outward edges of a node v.
+
+		The basis for the spaces $Hc$ and $Hv$ are denoted as ${\ket{c}}$ and ${\ket{v}}$, respectively. Assuming $\ket{\Psi(t)}$ is the walker wavefunction at discrete time instant $t$, the evolution of the quantum walk is given by the action of two unitary operators $S: Hw \to Hw$ and $W: Hw \to Hw$ on the system state vector $$\ket{\Psi(t+1)}= SW\ket{\Psi(t)}$$ \cite{relationship}
     
-    Coin operator:
+    \subsection{Coin and Shift operators}
 
-    The walker's degrees of freedom are affected by the coin operator $(W)$. The general form of the coin operator is represented by:
+		The walker's degrees of freedom are affected by the coin operator $(W)$. The general form of the coin operator is represented by:
 
-    $$W = \sum_{v \in V} \ket{v} \bra{v} \otimes Wv$$ where $Wv$ is a unitary operator. The coin operator mixes the amplitude of a particular state $\ket{v,c}$ with states $\ket{v,c'}$ such that $c, c' \in Cv$, which are the degrees of freedom of the same vertex. \cite{equivalence}
-    
-    Shift operator:
+		$$W = \sum_{v \in V} \ket{v} \bra{v} \otimes Wv$$ where $Wv$ is a unitary operator. The coin operator mixes the amplitude of a particular state $\ket{v,c}$ with states $\ket{v,c'}$ such that $c, c' \in Cv$, which are the degrees of freedom of the same vertex. \cite{equivalence}
 
-    The shift operator, also known as the swap operator $(S)$, is responsible for moving the mixed amplitudes generated by the coin operator $W$ to outward edges. To define the operator, we introduce the function$ \eta: V \times C \to V$, which maps outward edges to outward neighbors of each vertex. Thus, for a vertex v and an index $c, \eta(v, c)$ denotes the c-th outward neighbor of $v$, which we denote by $u$. Additionally, we introduce $\sigma: V \times V \to C$, which maps an inward edge of a vertex to one of its outward edges.\\
-    The action of the shift operator is then formally defined as follows: for a state vector $\ket{u,c}$, the shift operator transforms it into $\ket{\eta(u,c), \sigma(u,\eta(u,c))}$. Note that $\eta$ and $\sigma$ can be defined arbitrarily as long as the operator remains unitary and respects the graph edges. In fact, different choices of $\eta$ and $\sigma$ can lead to different dynamics of state amplitudes. \cite{equivalence}
+		The shift operator, also known as the swap operator $(S)$, is responsible for moving the mixed amplitudes generated by the coin operator $W$ to outward edges. To define the operator, we introduce the function$ \eta: V \times C \to V$, which maps outward edges to outward neighbors of each vertex. Thus, for a vertex v and an index $c, \eta(v, c)$ denotes the c-th outward neighbor of $v$, which we denote by $u$. Additionally, we introduce $\sigma: V \times V \to C$, which maps an inward edge of a vertex to one of its outward edges.
+		
+		The action of the shift operator is then formally defined as follows: for a state vector $\ket{u,c}$, the shift operator transforms it into $\ket{\eta(u,c), \sigma(u,\eta(u,c))}$. Note that $\eta$ and $\sigma$ can be defined arbitrarily as long as the operator remains unitary and respects the graph edges. In fact, different choices of $\eta$ and $\sigma$ can lead to different dynamics of state amplitudes. \cite{equivalence}
 
-	The research goal was defined as implementing the quantum walk protocol described on \cite{controlplane}. By implementation, we mean a go from the logical approach to a more physical approach, including encoding considering the actual physical qubits and showing how we would perform the operations considering the non-locality. More explanations and details about the model are on \href{https://interscity.org/quantum-internet/}{https://interscity.org/quantum-internet/}, where it is a presentation about the quantum walk control plane implementation.
+	\subsection{Paper}
+	
+		Back to our work, the research goal was defined as implementing the quantum walk protocol described on \cite{controlplane}. By implementation, we mean a go from the logical approach to a more physical approach, including encoding considering the actual physical qubits and showing how we would perform the operations considering the non-locality. Also, there is a presentation about the quantum walk control plane implementation \href{https://interscity.org/quantum-internet/}{https://interscity.org/quantum-internet/}.
 
-    \textbf{Linear Approach}
-    \begin{itemize}
-        \item The linear approach means that we can use $O(|V|.d_{max})$ qubits,  where $d_{max}$ is the maximum degree of freedom of a node.
-        \item Use one qubit to encode each edge.
-        \item We used one hot encoding to encode the logical qubits on the physical qubits.
-        \item A controlled operation between two nodes needs a number of qubits proportional to the number of vertex in this approach.
-        \item The shift operation (swap teleportation gate in this case) can not be done with less then two EPR pairs.
-        \item The circuit used to do the shift operation is on \hyperlink{https://algassert.com/post/1717}{https://algassert.com/post/1717}. We programmed and tested this circuit using qiskit.
+		The paper explores two different implementations of the quantum walk control plane for quantum networks: the linear approach and the logarithmic approach. Both methods are analyzed for their encoding schemes, operational characteristics, and trade-offs in resource usage. 
+		
+	\subsection{Linear Approach}
+		
+		The linear approach leverages a straightforward encoding strategy, associating each edge in the network graph with a single qubit. This approach prioritizes simplicity in qubit representation and make the operations easier.
+		
+		In the linear approach:
+		\begin{itemize}
+			\item Each edge \( (u, v) \) in the directed graph is encoded using one qubit.
+			\item If the qubit associated with an edge \( (u, v) \) is in the state \( \ket{1} \), it indicates that the quantum walker is on that edge.
+			\item The total number of encoding qubits required is proportional to \( O(|V| \cdot d_{\text{max}}) \), where \( |V| \) is the number of vertices and \( d_{\text{max}} \) is the maximum degree of the graph.
+		\end{itemize}
+		
+		The linear approach employs:
+		\begin{itemize}
+			\item Local Coin Operator: Operates within a single node to mix the amplitudes associated with the outgoing edges.
+			\item Non-Local Shift Operator: Performs the movement of the walker across edges. This is implemented using gate teleportation, which requires two EPR pairs per edge to perform a swap operation remotely. The circuit used to do the shift operation is on \hyperlink{https://algassert.com/post/1717}{https://algassert.com/post/1717} and it is optimal \cite{swap}.
+		\end{itemize}
+		
+		The linear approach offers simple and intuitive encoding, making it easier to implement and understand. Additionally, it requires fewer EPR pairs for operations compared to the logarithmic approach, which can simplify the resource requirements in certain scenarios.
 
-        % \item What we think is good to find a 1 EPR pair circuit for swap teleportation:\\
-        
-        % We need a unitary $U$ such $U: input \to output$. \\
-        % $input = \ket{\psi_1}\ket{\psi_2} \otimes \frac{1}{\sqrt{2}}(\ket{00} + \ket{11}) $\\
-        % $output = \sum_{ij} \sqrt{\alpha_{ij}} U_{ij} \ket{\psi_2}\ket{\psi_1}\ket{ij} $, where $U_{ij}$ is the error associated with the output $\ket{ij}$ \\
-        % Because of the non locality constrain $U$ must be on the form $U = U_{1x3} \otimes U_{2x4} $.\\   
-        
-    \end{itemize}
+		Despite its simplicity, the linear approach has a high qubit overhead for encoding, as each edge in the graph requires a dedicated qubit. This makes the approach less efficient when the number of edges grow significantly, leading to scalability issues.
+		
+	\subsection{Logarithmic Approach}
+		
+		The logarithmic approach offers a more compact encoding by reducing the number of qubits required per node. This is achieved by leveraging a logarithmic representation of the graph's degrees.
+		
+		In the logarithmic approach:
+		\begin{itemize}
+			\item Each node uses \( \lceil \log_2(d(v) + 1) \rceil \) qubits, where \( d(v) \) is the degree of the vertex \( v \).
+			\item The encoding of an edge \( (u, v) \) is the same as the encoding of \( (v, u) \), enabling bidirectional representation.
+			\item The total number of encoding qubits required is proportional to \( O(|V| \cdot \log_2(d_{\text{max}})) \).
+		\end{itemize}
+		
+		The logarithmic approach utilizes:
+		\begin{itemize}
+			\item Local Coin Operator: Similar to the linear approach, operates within the node to mix amplitudes.
+			\item Non-Local Shift Operator: A more complex implementation than in the linear approach, involving complex unitary transformations. In the worst case, teleportation techniques can be used to perform the shift operation.
+		\end{itemize}
+		
+		The logarithmic approach significantly reduces the number of encoding qubits. It provides an efficient representation of graph degrees, which optimizes the use of quantum resources.
 
-    \textbf{Logarithmic Approach:}
-    \begin{itemize}
-        \item The logarithmic approach means that we can use $O(|V|.lg(d_{max}))$.
-        \item Use the $lg(d(v)+1)$ qubits in each node, where $d(v)$ is the degree of freedom of $v$. 
-        \item Same encoding for edges $(u,v)$ and $(v,u)$.
-        \item Edges $(u,v)$ and $(v,u)$ are in different nodes.
-        \item State $\ket{0...0}$ in a node means that the walker is not on this node. State $\ket{1..1}$ is associated with the self-loop.
-            
-    \end{itemize} 
+		However, this approach requires more complex operations for the shift, often involving additional EPR pairs. Moreover, it introduces higher implementation complexity for non-local operations, which can pose challenges during practical deployment.
+		
+	\subsection{Comparison of Approaches}
+		The linear and logarithmic approaches represent two different strategies for implementing the quantum walk control plane. The linear approach is straightforward but requires more qubits, while the logarithmic approach is more efficient in encoding qubit usage but introduces operational complexities.
+		
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{|c | c | c|} 
+				\hline
+				\textbf{Modeling details} & \textbf{Linear} & \textbf{Logarithmic} \\
+				\hline
+				required encoding qubits & $O(|V|d_{max})$ & $O(|V|lg(d_{max}))$ \\ 
+				\hline
+				coin operation & trivial & trivial\\ 
+				\hline
+				shift operation & remote swap & selected swap/non trivial\\
+				\hline
+				encoding qubits per shift & one & $lg(d_{max})$ \\
+				\hline
+				operation qubits per shift & two & $O(lg(d_{max}))^{*}$\\
+				\hline
+				one node shift & parallel & sequential or parallel(time is negligible)\\
+				\hline
+			\end{tabular}
+			\caption{Comparison of Linear and Logarithmic Approaches.}
+			\label{tab:comparison}
+		\end{table}
 
-    \textbf{Tradeoff between qubits, time and circuits:}
+	\subsection{Trade-Off Between Qubits, Time, and Circuits}
 
-        Given that the time to execute a shift is negligible if we have an epr pair, both approaches can be done with parallel shifts. The difference is that for the logarithmic approach we need more epr pairs to perform each shift, probably a number associated with the number of qubits used in the encoding. 
-
-        To do the shift you need the number of epr pairs to do one shift times the number of edges. On the linear approach we need two epr pairs per shift and on the logarithmic approach we do not know yet.
-
-        To perform parallel shifts we need more qubits to have more epr pairs at the same time and to perform sequential shifts we have a time delay because we have to wait one operation to start attempting to establish the others epr pairs.
-
-    \textbf{Shift Operation}:
-
-        To perform the Shift operation we need to do one shift for each edge. That introduces a tradeoff between number of bell pairs and time.
-
-        If we do all the shifts at the same time we will need $O(E.b(e))$ epr pairs, where $b(e)$ is the number of bell pairs needed to do a shift considering the current encoding. If we do less qubits we will spend more time to perform the operation since we gonna use the same qubits to make different epr pairs (add the time of stablishing a bell pair between two nodes).
-
-        In a two dimensional lattice, the minimum number of shift qubits in each node is $b(e)$, and using that, it seems that you need $O(n)$ rounds of shifts on a $n_xn$ lattice.
-
-    \textbf{Branches:}
-
-        What we called uncoupled system is the entire qubit system into two groups: encoding qubits and the operation qubits(epr pairs). Given that, we can work with three branches since we can use less epr pairs if we perform sequential shifts. 3 because it does not make sense to analyse the linear encoding with sequential shifts because the parallel version is also asymptotic linear.
-    
-    \begin{enumerate}
-        \item Linear encoding with parallel shift
-        \item Logarithmic encoding with sequential shift
-        \item Logarithmic encoding with parallel shift
-    \end{enumerate}
-
-    \textbf{Comparison between the two approaches:}
-    
-    \begin{tabular}{|c | c | c|} 
-     \hline
-     \textbf{Modeling details} & \textbf{Linear} & \textbf{Logarithmic} \\
-     \hline
-     required encoding qubits & $O(|V|d_{max})$ & $O(|V|lg(d_{max}))$ \\ 
-     \hline
-     coin operation & trivial & trivial\\ 
-     \hline
-     shift operation & remote swap & selected swap/non trivial\\
-     \hline
-     encoding qubits per shift & one & $lg(d_{max})$ \\
-     \hline
-     operation qubits per shift & two & $O(lg(d_{max}))^{*}$\\
-     \hline
-     one node shift & parallel & sequential or parallel(time is negligible)\\
-     \hline
-    \end{tabular}
-
-    \textbf{Notes about the project:}
-    \begin{itemize}
-    
-        \item We can not do the swap teleportation gate using less than 2 epr pairs.The proof relies on the fact that with a remote swap we can create two remote epr pairs, so it must need two epr pairs to do that (\hyperlink{https://journals.aps.org/pra/pdf/10.1103/PhysRevA.64.032302}{link to the paper}).
-
-        \item Quantum Error Correction (QEC) should not do better in the qw control plane. We do not know if quantum error correction is better for the quantum walk protocol then for the protocol that just teleport the gate to the end node. But, as we have the overhead on the resources it should be worse.
-        
-        \item Simulation aspects:
-        \begin{itemize}
-            \item Qubits being used.
-            \item Sequential shift or parallel.
-            \item Consider time decoherence.
-            \item Consider fidelity.
-        \end{itemize}
-
-    \end{itemize}
-
-    Clearly we went through some papers during the research. Here I will mention some of them that we analyze: Routing entanglement in the quantum internet \cite{routing_entanglement}, Experimental Implementation of Quantum Walks on IBM Quantum Computers \cite{experimental}, \href{https://quantumai.google/cirq/experiments/quantum_walks}{Google quantum AI about quantum walks} and Implementation of quantum random walk on a real quantum computer \cite{implementation}.
-
-	After the time at the University of  Massachusetts Amherst, we gonna write and publish a paper with the following topics:
-
-    \begin{itemize}
-        \item Introduction considering \cite{universalcontrolplane}.
-        \item Linear approach.
-        \item Logarithmic approach.
-        \item Comparison between the two approaches.
-        \item Conclusion considering future improvements on what was done.
-    \end{itemize}
-
-    It is important to remember that in this process, we use simulations and coding that we will show and explain in the paper. Also, we may include quantum error correction or other topics in the paper.
+		Both the linear and logarithmic approaches support parallel shifts when EPR pairs are available, with the time to execute shifts being negligible. However, the logarithmic approach requires more EPR pairs per shift, likely proportional to the number of qubits used in the encoding. The total number of EPR pairs needed for a global shift depends on the number of edges and the resources required per shift. In the linear approach, two EPR pairs are needed per shift, whereas in the logarithmic approach, the exact number is not known but is expected to scale logarithmically.
+		
+		Performing parallel shifts demands more qubits for simultaneous EPR pairs, while sequential shifts introduce time delays as operations must wait for an operation to end to start attempting to establish the others EPR pairs.
+		
+		In more details, each edge requires a shift operation, creating a trade-off between the number of Bell pairs and the time needed. Performing all shifts simultaneously requires \( O(E \cdot b(e)) \) EPR pairs, where \( b(e) \) is the number of Bell pairs needed per shift. Reducing qubit usage necessitates sequential shifts, increasing time due to repeated Bell pair establishment. For example, in a 2D lattice, the minimum shift qubits per node equals \( b(e) \), and \( O(n) \) rounds of shifts are required for an \( n \times n \) lattice.
+		
+		Given that, we divided the system into two groups: encoding qubits and operation qubits (EPR pairs). Three configurations van be analyzed:
+		\begin{enumerate}
+			\item Linear encoding with parallel shifts.
+			\item Logarithmic encoding with sequential shifts.
+			\item Logarithmic encoding with parallel shifts.
+		\end{enumerate}
+		
+		These configurations illustrate the trade-offs between resource usage and operational efficiency, guiding the choice of approach based on network size and constraints.
+		
+\newpage
 
 \section{Future Possibilities}
 

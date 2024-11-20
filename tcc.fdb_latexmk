@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber tcc"] 1722818483 "tcc.bcf" "tcc.bbl" "tcc" 1730590593
-  "references.bib" 1728946509 2766 10e268047a3ae51c6e941a907ce17aca ""
+["biber tcc"] 1732135652 "tcc.bcf" "tcc.bbl" "tcc" 1732135653
+  "references.bib" 1732135652 2933 fa66ecd85d2999ff5869c65e3aeea58d ""
   "tcc.bcf" 1730590593 109029 12e137124611a17066e6e256ae22f660 "pdflatex"
   (generated)
   "tcc.bbl"
   "tcc.blg"
-["pdflatex"] 1730590592 "/home/andreribeiro/Documents/usp/TCC/tcc.tex" "tcc.pdf" "tcc" 1730590593
+["pdflatex"] 1730590592 "/home/andreribeiro/Documents/usp/TCC/tcc.tex" "tcc.pdf" "tcc" 1732135653
   "/etc/texmf/web2c/texmf.cnf" 1728947218 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/andreribeiro/Documents/usp/TCC/tcc.tex" 1730590591 133461 38d7e5e1e13cbac2e0168600a5c53554 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -172,12 +172,12 @@
   "images/entanglement-swap.png" 1728946509 6777 c512a0b1691360b00bd3ae0e5678c3be ""
   "images/logo_ime.png" 1728946509 166005 4dccc1523fce837652cfcd8eda3dd3cf ""
   "images/qkd.png" 1728946509 9059 f3fc34943a42f5eeee40e769bd50eba5 ""
-  "images/qwalks_evolution.png" 1728946509 20858 72dfabff113e8faff87fdfabfeaae74f ""
+  "images/qwalks_evolution.png" 1731545534 20858 72dfabff113e8faff87fdfabfeaae74f ""
   "images/rwalks_evolution.png" 1728946509 22582 f56d5ba42021c23ba36601d8315ffd5b ""
   "images/simons.png" 1728946509 51766 9052b0cdca0bce4e1708c4274ddb2e5a ""
   "images/umass_logo.png" 1728946509 9827 99d22d4eab6514f3b58b7d382186d244 ""
   "tcc.aux" 1730590593 13188 e4759115d138ff7b1a71e705795a2eea "pdflatex"
-  "tcc.bbl" 1728946509 12688 5c469dd60b73283e8b742898e27400f2 "biber tcc"
+  "tcc.bbl" 1732135652 12688 5c469dd60b73283e8b742898e27400f2 "biber tcc"
   "tcc.out" 1730590593 11015 02e059e7c61089fcd216c651cd9c75c6 "pdflatex"
   "tcc.run.xml" 1730590593 2298 25fb744ecdc977791a563e81d81fec4a "pdflatex"
   "tcc.tex" 1730590591 133461 38d7e5e1e13cbac2e0168600a5c53554 ""

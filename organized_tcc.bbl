@@ -19,6 +19,42 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global}
+    \entry{swap}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8453baf43fca78296b7521bbbab39da2}{%
+           family={Collins},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=01673730c1ac13af872783b3b59b86fb}{%
+           family={Linden},
+           familyi={L\bibinitperiod},
+           given={Noah},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7e3d741bd6b9b760e9ff6df26cf0f263}{%
+           family={Popescu},
+           familyi={P\bibinitperiod},
+           given={Sandu},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{beb58fbbdd317300867266a397563964}
+      \strng{fullhash}{beb58fbbdd317300867266a397563964}
+      \strng{bibnamehash}{beb58fbbdd317300867266a397563964}
+      \strng{authorbibnamehash}{beb58fbbdd317300867266a397563964}
+      \strng{authornamehash}{beb58fbbdd317300867266a397563964}
+      \strng{authorfullhash}{beb58fbbdd317300867266a397563964}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev. A}
+      \field{month}{8}
+      \field{title}{Nonlocal content of quantum operations}
+      \field{year}{2001}
+    \endentry
     \entry{quantccompquantinfo}{book}{}
       \name{author}{1}{}{%
         {{hash=2168cb3878218a45b68ffdb53f7e26c9}{%
@@ -112,75 +148,6 @@
       \field{volume}{362}
       \field{year}{2018}
     \endentry
-    \entry{routing_entanglement}{article}{}
-      \name{author}{3}{}{%
-        {{hash=d3de5ea8aac2efa8f0584c7bbe887acf}{%
-           family={M.},
-           familyi={M\bibinitperiod},
-           given={Pant},
-           giveni={P\bibinitperiod}}}%
-        {{hash=bc2d734542ac482ec265f80a2cef315c}{%
-           family={H.},
-           familyi={H\bibinitperiod},
-           given={Krovi},
-           giveni={K\bibinitperiod}}}%
-        {{hash=3bf7f7be8156738f24f12da4fee41ef9}{%
-           family={Towsley},
-           familyi={T\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{038b9ca61afa69ab23d3eb82a58cfba5}
-      \strng{fullhash}{038b9ca61afa69ab23d3eb82a58cfba5}
-      \strng{bibnamehash}{038b9ca61afa69ab23d3eb82a58cfba5}
-      \strng{authorbibnamehash}{038b9ca61afa69ab23d3eb82a58cfba5}
-      \strng{authornamehash}{038b9ca61afa69ab23d3eb82a58cfba5}
-      \strng{authorfullhash}{038b9ca61afa69ab23d3eb82a58cfba5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{npj Quantum Inf 5}
-      \field{title}{Routing entanglement in the quantum internet}
-      \field{year}{2019}
-    \endentry
-    \entry{experimental}{article}{}
-      \name{author}{4}{}{%
-        {{hash=1542325aa16e9768a297ec59d9d8ec40}{%
-           family={Acasiete},
-           familyi={A\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod}}}%
-        {{hash=1e4dad455292eda11cd691634b9b5f68}{%
-           family={Agostini},
-           familyi={A\bibinitperiod},
-           given={Flavia\bibnamedelima P.},
-           giveni={F\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=3177648cbc5c3066c3665e370911417d}{%
-           family={Moqadam},
-           familyi={M\bibinitperiod},
-           given={Jalil\bibnamedelima Khatibi},
-           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=86115df2cb850b949dd39ce43866b630}{%
-           family={Portugal},
-           familyi={P\bibinitperiod},
-           given={Renato},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{1a339e530f88b4641f0cf738b2cc8a2d}
-      \strng{fullhash}{8aa119d8e7b37e366015ef615c2d2a67}
-      \strng{bibnamehash}{1a339e530f88b4641f0cf738b2cc8a2d}
-      \strng{authorbibnamehash}{1a339e530f88b4641f0cf738b2cc8a2d}
-      \strng{authornamehash}{1a339e530f88b4641f0cf738b2cc8a2d}
-      \strng{authorfullhash}{8aa119d8e7b37e366015ef615c2d2a67}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv}
-      \field{title}{Experimental Implementation of Quantum Walks on IBM Quantum Computers}
-      \field{year}{2020}
-    \endentry
     \entry{relationship}{article}{}
       \name{author}{1}{}{%
         {{hash=23d1179ea51738336fa0799e05ae4f7b}{%
@@ -269,28 +236,6 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE International Conference on Quantum Computing and Engineering (QCE)}
       \field{title}{A quantum walk control plane for distributed quantum computing in quantum networks}
-      \field{year}{2021}
-    \endentry
-    \entry{implementation}{article}{}
-      \name{author}{1}{}{%
-        {{hash=bb84a59cae11dc12c56de78980e93b76}{%
-           family={Puengtambol},
-           familyi={P\bibinitperiod},
-           given={Warat},
-           giveni={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{bb84a59cae11dc12c56de78980e93b76}
-      \strng{fullhash}{bb84a59cae11dc12c56de78980e93b76}
-      \strng{bibnamehash}{bb84a59cae11dc12c56de78980e93b76}
-      \strng{authorbibnamehash}{bb84a59cae11dc12c56de78980e93b76}
-      \strng{authornamehash}{bb84a59cae11dc12c56de78980e93b76}
-      \strng{authorfullhash}{bb84a59cae11dc12c56de78980e93b76}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{J. Phys.: Conf.}
-      \field{title}{Implementation of quantum random walk on a real quantum computer}
       \field{year}{2021}
     \endentry
     \entry{universalcontrolplane}{article}{}

@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber organized_tcc"] 1731546502 "organized_tcc.bcf" "organized_tcc.bbl" "organized_tcc" 1731546580
-  "organized_tcc.bcf" 1731546579 109039 6ac03998b9f42c457193b32bd5b56433 "pdflatex"
-  "references.bib" 1731372754 2521 cb9b8ae0b7a3b1d21915e07b40866468 ""
+["biber organized_tcc"] 1732137070 "organized_tcc.bcf" "organized_tcc.bbl" "organized_tcc" 1732137074
+  "organized_tcc.bcf" 1732137074 108655 6dd8842daf5544451d0ba072c41fa9d4 "pdflatex"
+  "references.bib" 1732135688 2763 b8c8339645d0cb34c72ea691c9efe9c1 ""
   (generated)
   "organized_tcc.bbl"
   "organized_tcc.blg"
-["pdflatex"] 1731546578 "/home/andreribeiro/Documents/usp/TCC/organized_tcc.tex" "organized_tcc.pdf" "organized_tcc" 1731546580
+["pdflatex"] 1732137072 "/home/andreribeiro/Documents/usp/TCC/organized_tcc.tex" "organized_tcc.pdf" "organized_tcc" 1732137074
   "/etc/texmf/web2c/texmf.cnf" 1728947218 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/andreribeiro/Documents/usp/TCC/organized_tcc.tex" 1731546575 99504 0c0d567a4661ef2a81753185481ba1a7 ""
+  "/home/andreribeiro/Documents/usp/TCC/organized_tcc.tex" 1732137069 99641 17cdb697b1f36ad954a5bed62b5cfcdd ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -171,12 +171,12 @@
   "images/shor_circuit.png" 1730326658 27594 300ac3753bd42439f62e9840cad06a5c ""
   "images/simons.png" 1728946509 51766 9052b0cdca0bce4e1708c4274ddb2e5a ""
   "images/umass_logo.png" 1728946509 9827 99d22d4eab6514f3b58b7d382186d244 ""
-  "organized_tcc.aux" 1731546579 11117 687e14189513975d986280e156af3e69 "pdflatex"
-  "organized_tcc.bbl" 1731546502 14139 ea3253f7cfb516afbfd284aafde0db86 "biber organized_tcc"
-  "organized_tcc.out" 1731546579 3946 eaaaca354f1f35987b062712d7f8bd7a "pdflatex"
-  "organized_tcc.run.xml" 1731546579 2368 9d149e32732b577e5903ed5b87bb3455 "pdflatex"
-  "organized_tcc.tex" 1731546575 99504 0c0d567a4661ef2a81753185481ba1a7 ""
-  "organized_tcc.toc" 1731546579 2002 2c12a92ec57ab6ace8a62635ecdb4924 "pdflatex"
+  "organized_tcc.aux" 1732137074 11970 12b33ce5fce2b4f9e7cf16821cdf6652 "pdflatex"
+  "organized_tcc.bbl" 1732137070 11665 674dd0bf3610b6c76983b3c0f022ce45 "biber organized_tcc"
+  "organized_tcc.out" 1732137074 5429 2e40df5de4bef157266f6d998392e2a3 "pdflatex"
+  "organized_tcc.run.xml" 1732137074 2368 9d149e32732b577e5903ed5b87bb3455 "pdflatex"
+  "organized_tcc.tex" 1732137069 99641 17cdb697b1f36ad954a5bed62b5cfcdd ""
+  "organized_tcc.toc" 1732137074 2732 e6a3c7d6665414f5bf4162a482235fa4 "pdflatex"
   (generated)
   "organized_tcc.aux"
   "organized_tcc.bcf"
