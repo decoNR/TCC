@@ -71,6 +71,10 @@ sorting=ynt
 	
 	Some of the main challenges in advancing quantum computers include increasing the number of qubits (the basic unit of memory in quantum computing), reducing noise, and extending coherence time (the duration of quantum phenomena needed to execute an algorithm).
 
+	This undergraduate thesis explores the application of quantum walks in quantum networks, building upon foundational principles of quantum computing, quantum information, and quantum communication. The document begins with an introduction to quantum computing, covering key concepts such as qubits, superposition, and entanglement, as well as their applications in quantum algorithms and information processing. Quantum walks, the quantum analog of classical random walks, are then presented as powerful algorithmic tools for achieving quantum speedups and implementing distributed quantum operations. 
+	
+	The research focuses on the development of a distributed quantum walk control plane for quantum networks, addressing practical challenges in encoding, resource allocation, and operational efficiency. Two distinct approaches, linear and logarithmic, are presented and analyzed for their encoding strategies, resource trade-offs, and scalability. The study contributes to advancing the practical implementation of quantum walk protocols in quantum network control, laying the groundwork for further explorations into quantum internet architectures and applications.
+
 \section{Important Concepts}
 	This section describes some important concepts which will be needed to understand the content of this undergraduate thesis. You may read the concepts as they appear on this document.
 
@@ -1195,7 +1199,32 @@ sorting=ynt
 		
 \newpage
 
-\section{Future Possibilities}
+\section{Conclusion}
+
+	This section explores the potential future work stemming from the research on the distributed quantum walk control plane and conclude this thesis. By extending the current approaches, we aim to further refine and evaluate their practical implications in quantum networks.
+
+	One of the most promising avenues for future work is the simulation of real quantum networks using both the linear and logarithmic approaches. Such simulations can provide practical insights into their performance, including:
+	\begin{itemize}
+		\item Resource consumption, such as qubits and EPR pairs.
+		\item Time efficiency for operations like coin and shift.
+		\item Scalability and adaptability to varying network topologies.
+	\end{itemize}
+
+	To achieve this, we propose leveraging tools like Quantum Savory, a quantum network simulator developed by the University of Massachusetts Amherst. Simulating realistic scenarios will allow for a comprehensive comparison between the two approaches, highlighting their strengths and weaknesses in practical environments.
+
+	Another exciting direction is integrating ideas from Grover's spatial search into the quantum walk control plane. Grover's algorithm provides a quadratic speedup for searching unstructured databases, and its spatial extension could enhance the efficiency of quantum walk protocols. We thought about using a similar idea to explore routing options.
+
+	Also, further exploration of alternative encoding schemes could lead to more efficient implementations. For instance:
+	\begin{itemize}
+		\item Hybrid encoding methods combining features of linear and logarithmic approaches.
+		\item Dynamic encoding strategies that adapt to changing network conditions.
+		\item Encodings that minimize qubit usage while maintaining high fidelity and speed.
+	\end{itemize}
+
+	This work highlights the development of a distributed quantum walk control plane for quantum networks, showcasing two implementation strategies—linear and logarithmic approaches. Each method presents unique trade-offs between encoding complexity, resource consumption, and operational efficiency. Through this research, we have advanced the understanding of how quantum walks can serve as robust control signals in quantum network architectures.
+
+	We would like to express our gratitude to Professor Don Towsley and Matheus Guedes from the University of Massachusetts Amherst for their invaluable partnership, which significantly enriched this research. Special thanks are also due to my supervisor, Professor Fabio Kon (IME/USP), and my co-supervisor, Professor Antônio Jorge Gomes Abelém (UFPA), for their guidance and support throughout the project. Lastly, we acknowledge the financial support provided by FAPESP, which made this research possible.
+		
 
 \pagebreak
 \printbibliography[]
