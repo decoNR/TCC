@@ -100,9 +100,9 @@ sorting=ynt
 			
 			\item Orthogonal Projector: An operator P on V is an orthogonal projector if $P^{2} = P\ and\ P^\dag = P$. \cite{portugal}
 
-			\item With high probability (WHP): In mathematics, an event that occurs with high probability is one whose probability depends on a certain number n and goes to 1 as n goes to infinity. %(wikipedia)\\
+			\item With high probability (WHP): In mathematics, an event that occurs with high probability is one whose probability depends on a certain number n and goes to 1 as n goes to infinity. 
 			
-			\item Matrix rank: In linear algebra, the rank of a matrix A is the dimension of the vector space generated (or spanned) by its columns. This corresponds to the maximal number of linearly independent columns of A.  %(wikipedia)\\
+			\item Matrix rank: In linear algebra, the rank of a matrix A is the dimension of the vector space generated (or spanned) by its columns. This corresponds to the maximal number of linearly independent columns of A. 
 		\end{itemize}
 
 	\subsection{Quantum Computation and Quantum Information}
@@ -115,21 +115,32 @@ sorting=ynt
 			
 			\item Global phase: In quantum computing, the global phase refers to an overall phase factor applied to a quantum state that does not affect measurement outcomes. A quantum state is typically represented as a vector, and multiplying the entire state by a complex number of unit magnitude (e.g., $e^{i\theta}$) introduces a global phase. This phase has no observable consequences, as quantum measurements are only sensitive to relative phases between components of a superposition. Therefore, global phase usually can be ignored in practical computations and is considered irrelevant to the behavior or outcomes of a quantum system.
 			
+			\item Measurement: Quantum measurements are described by a collection ${M_m}$ of measurement operators. These are operators acting on the state space of the  system being measured. The index m refers to the measurement outcomes that may occur in the experiment. If the state of the quantum system is $\ket{\psi}$ immediately before the measurement then the probability that result m occurs is given by $p(m) = \bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}$ and the state of the system after the measurement is $\frac{M_{m}\ket{\psi}}{\sqrt{\bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}}}$ . The measurement operators satisfy the completeness equation, $\sum\limits_{m} M_{m}^{\dag}M_{m} = I$ . The completeness equation expresses the fact that probabilities sum to one: $1 = \sum\limits_{m} p(m) = \sum\limits_{m} \bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}$ . \cite{quantccompquantinfo}
+			
+			\item Projective measurement: A projective measurement is described by an observable, $M$ , a Hermitian operator on the state space of the system being observed. The observable has a spectral decomposition, $\sum\limits_m mP_m$ , where Pm is the projector onto the eigenspace of M with eigenvalue m. The possible outcomes of the measurement correspond to the eigenvalues, m, of the observable. Upon measuring the state $\ket{\psi}$, the probability of getting result m is given by $p(m) = \bra{\psi}P_m\ket{\psi}$ .Given that outcome m occurred, the state of the quantum system immediately after the measurement is $\frac{P_m\ket{\psi}}{\sqrt{p(m)}}$. The average value of the observable M is often written $\braket{M} = \bra{\psi}M\ket{\psi}$.\cite{quantccompquantinfo}
+			
 			\item Quantum Error Correction: Quantum error correction is a set of techniques designed to protect quantum information from errors due to decoherence, noise, or other quantum disturbances. In quantum systems, qubits are fragile and susceptible to errors from their environment, which can lead to loss of information. Quantum error correction encodes logical qubits into entangled states of multiple physical qubits, allowing for the detection and correction of errors without directly measuring and collapsing the quantum state. It is a critical component in making quantum computers reliable and scalable for long computations, ensuring the integrity of quantum information over time.
 			
 			\item Pure or mixed state:  On a Bloch sphere, pure states are represented by a point on the surface of the sphere, whereas mixed states are represented by an interior point. The completely mixed state of a single qubit is represented by the center of the sphere, by symmetry. The purity of a state can be visualized as the degree in which it is close to the surface of the sphere. In quantum mechanics, the state of a quantum system is represented by a state vector (or ket) $\ket{\Psi}$ . A quantum system with a state vector $\ket{\Psi}$ is called a pure state. However, it is also possible for a system to be in a statistical ensemble of different state vectors: For example, there may be a 50\% probability that the state vector is $\ket{\Psi_{1}}$ and a 50\% chance that the state vector is $\ket{\Psi_{2}}$. This system would be in a mixed state. The density matrix is especially useful for mixed states, because any state, pure or mixed, can be characterized by a single density matrix. 
 			
-			% !!! add density matrix here
-			
-			\item Measurement: Quantum measurements are described by a collection ${M_m}$ of measurement operators. These are operators acting on the state space of the  system being measured. The index m refers to the measurement outcomes that may occur in the experiment. If the state of the quantum system is $\ket{\psi}$ immediately before the measurement then the probability that result m occurs is given by $p(m) = \bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}$ and the state of the system after the measurement is $\frac{M_{m}\ket{\psi}}{\sqrt{\bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}}}$ . The measurement operators satisfy the completeness equation, $\sum\limits_{m} M_{m}^{\dag}M_{m} = I$ . The completeness equation expresses the fact that probabilities sum to one: $1 = \sum\limits_{m} p(m) = \sum\limits_{m} \bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}$ . \cite{quantccompquantinfo}
-			
-			\item Projective measurement: A projective measurement is described by an observable, $M$ , a Hermitian operator on the state space of the system being observed. The observable has a spectral decomposition, $\sum\limits_m mP_m$ , where Pm is the projector onto the eigenspace of M with eigenvalue m. The possible outcomes of the measurement correspond to the eigenvalues, m, of the observable. Upon measuring the state $\ket{\psi}$, the probability of getting result m is given by $p(m) = \bra{\psi}P_m\ket{\psi}$ .Given that outcome m occurred, the state of the quantum system immediately after the measurement is $\frac{P_m\ket{\psi}}{\sqrt{p(m)}}$. The average value of the observable M is often written $\braket{M} = \bra{\psi}M\ket{\psi}$.\cite{quantccompquantinfo}
+			\item Density matrix: A density matrix, often denoted as \( \rho \), is a mathematical representation used to describe the state of a quantum system, whether pure or mixed. For a pure state \( \ket{\Psi} \), the density matrix is given by \( \rho = \ket{\Psi}\bra{\Psi} \). This matrix is Hermitian, positive semi-definite, and has a trace of 1. In contrast, for a mixed state, the density matrix is a weighted sum of pure states, representing a statistical ensemble of quantum states. Mathematically, for a system with \( N \) possible pure states \( \ket{\Psi_i} \), each with probability \( p_i \), the density matrix is:
+			\[
+			\rho = \sum_{i=1}^N p_i \ket{\Psi_i}\bra{\Psi_i}, \quad \text{where } \sum_{i=1}^N p_i = 1.
+			\]
+			The density matrix is particularly useful in quantum mechanics as it provides a complete description of the system's state, including information about coherence and probabilities. For pure states, \( \text{Tr}(\rho^2) = 1 \), whereas for mixed states, \( \text{Tr}(\rho^2) < 1 \). This property can be used to distinguish between pure and mixed states. Density matrices are essential in quantum information theory and quantum computation, enabling calculations for entanglement, decoherence, and state evolution.
+
+			\item Trace (\(\text{Tr}()\)): The trace of a matrix, denoted as \(\text{Tr}(A)\), is the sum of the elements on its main diagonal. For a square matrix \(A\) of dimension \(n \times n\), it is defined as:
+			\[
+			\text{Tr}(A) = \sum_{i=1}^n A_{ii}
+			\]
+			where \(A_{ii}\) are the diagonal elements of \(A\). In quantum mechanics, the trace plays a key role, especially for density matrices. The trace of the density matrix \(\rho\) is always 1, ensuring the total probability of all quantum states equals 1 and the trace of the square of the density matrix, \(\text{Tr}(\rho^2)\), indicates whether the state is pure or mixed.
+
+			\item Partial trace: It can be calculated as the $\sum_B \bra{\phi_B} \rho_A \otimes \rho_B \ket{\phi_B} = \rho_A \otimes \sum_B \bra{\phi_B} \rho_B \ket{\phi_B}$. In a more clarified way $tr_A(L_{AB}) =\sum_i \langle i|_A L_{AB} |i\rangle_A=\langle0|0\rangle\langle 0|0\rangle (|1\rangle\langle0|)_B+\langle1|0\rangle\langle 1|1\rangle \left(|0\rangle\langle0|\right)_B\\ =(|1\rangle\langle0|)_B$ . 
 
 			\item Fidelity: A second measure of distance between quantum states is the ﬁdelity. The ﬁdelity is not a metric on density operators, but we will see that it does give rise to a useful metric. This  section reviews the deﬁnition and basic properties of the ﬁdelity. The ﬁdelity of states $\rho$ and $\sigma$ is deﬁned to be $F(\rho,\sigma) = tr \sqrt{\rho^{\frac{1}{2}} \sigma \rho^{\frac{1}{2}}}$. Fidelity does satisfy many of the same properties as the trace distance. For example, it is invariant under unitary transformations: $F(U\rho U^{\dag}, U\sigma U^{\dag}) = F(\rho,\sigma)$. The ﬁdelity between a pure state $\ket{\psi}$ and an arbitrary state $\rho$ is $\bra{\psi}\rho\ket{\psi}$.\cite{quantccompquantinfo}
 
-			\item Quantum circuit depth: The depth of a circuit is a metric that calculates the longest path between the data input and the output. Each gate counts as a unit.  %(medium) \\
+			\item Quantum circuit depth: The depth of a circuit is a metric that calculates the longest path between the data input and the output. Each gate counts as a unit.
 
-			\item Partial trace: It can be calculated as the $\sum_B \bra{\phi_B} \rho_A \otimes \rho_B \ket{\phi_B} = \rho_A \otimes \sum_B \bra{\phi_B} \rho_B \ket{\phi_B}$. In a more clarified way $tr_A(L_{AB}) =\sum_i \langle i|_A L_{AB} |i\rangle_A=\langle0|0\rangle\langle 0|0\rangle (|1\rangle\langle0|)_B+\langle1|0\rangle\langle 1|1\rangle \left(|0\rangle\langle0|\right)_B\\ =(|1\rangle\langle0|)_B$ . 
 
 		\end{itemize}
 
@@ -680,14 +691,11 @@ sorting=ynt
 
 \section{Introduction to Quantum Information}
 
-	% !!!!!! mudar esse paragrafo pra citar alguma coisa do artigo e do material do Abelem
-	Following, is an introduction to some quantum information concepts based on the paper \textit{"Quantum Internet: A Vision for the Road Ahead" by Stephanie Wehner, David Elkouss, and Ronald Hanson}, along with materials on quantum communication from the XXXVIII Brazilian Symposium on Computer Networks and Distributed Systems, provided by Professor Antônio Jorge Abelém.
-
 	The vision behind developing a quantum internet is to enable new technologies through quantum communication between any two points on the planet. Significant applications of quantum communication have already been identified, including secure communication, clock synchronization, secure user identification, exponential savings in communication, and secure access to remote quantum computers via the cloud.
 
 	Quantum computing operates under principles that differ substantially from classical computing, as proposed by Alan Turing. Quantum communication utilizes the laws of quantum physics to protect and transmit information. This can be done through the transfer of a quantum state (entangled or otherwise), the creation of an entangled state, or the use of a pre-established entangled state.
 
-	However, achieving quantum communication at scale presents several challenges: the difficulty of creating and maintaining quantum states, the challenge of transmitting qubits, and the need for integrating quantum systems with classical systems.
+	However, achieving quantum communication at scale presents several challenges: the difficulty of creating and maintaining quantum states, the challenge of transmitting qubits, and the need for integrating quantum systems with classical systems. \cite{vision_road_ahead}
 
 	Before delving deeper, it is essential to understand Bell states. Also known as EPR pairs or maximally entangled states, Bell states are four specific quantum states of two qubits, named after physicist John S. Bell, who discovered them in 1964. Bell states are critical in quantum information and communication because they are maximally entangled, meaning their states cannot be described independently. When one qubit in a Bell state pair is measured, the state of the other qubit is instantly determined, regardless of the distance between them. Bell states have applications in quantum teleportation, quantum key distribution, and other quantum communication protocols.
 
@@ -714,7 +722,7 @@ sorting=ynt
 
 	Another interesting exercise is the CHSH game (Clauser-Horne-Shimony-Holt), a game involving two players, Alice and Bob, who can communicate beforehand. Once the game begins, each player receives a random bit (0 or 1) from a referee and must return one of two possible values. Without further communication, they win if the exclusive OR of their outputs equals the logical AND of their inputs. Classical strategies allow them to win 75\% of the time on average, but by using entangled qubits, they can increase their success rate, demonstrating a clear advantage of quantum communication. 
 	
-	% !!! Talvez explicar isso aqui 
+	% !!! Talvez explicar isso aqui - por enquanto nao vou
 
 	Next, I will explain two critical protocols in the field of quantum communication and the quantum internet, \textit{entanglement swapping} and \textit{quantum key distribution} (QKD).
 
@@ -836,7 +844,22 @@ sorting=ynt
 
 	In summary, a quantum internet would represent a paradigm shift in secure communication and computational power, enabling breakthroughs in fields that require advanced information security, distributed quantum computing, and new computational techniques. By combining quantum and classical systems, the quantum internet would open new frontiers in secure and efficient global communication.
 
-	% !!! adicionar quantum noise nessa section
+	As in all quantum field, quantum internet does suffer with noise. Following are some important types of noise which are studied in this area. Those provide an enormous challenge for making the technology possible. Also it makes the mathematical model more complex.
+
+	\begin{itemize}
+        \item Bit ﬂip: The bit ﬂip channel ﬂips the state of a qubit from $\ket{0}$ to $\ket{1}$ (and vice versa) with probability $1 - p$. On the Bloch sphere representation you can see that the states on the $\hat{x}$ axis are left alone, while the $\hat{y}-\hat{z}$ plane is uniformly contracted by a factor of $1 - 2p$. 
+        
+        \item Phase flip: The phase ﬂip channel has operation elements $E_0 = \sqrt{p}\ I , E_0 = \sqrt{1 - p}\ Z $. On the Bloch sphere, the states on the $\hat{z}$ axis  are left alone, while the  $\hat{x}-\hat{y}$ plane is uniformly contracted by a factor of $1 - 2p$.
+
+        \item Bit-phase flip: The bit-phase ﬂip channel has operation elements $E_0 = \sqrt{p}\ I , E_0 = \sqrt{1 - p}\ Y$, where $\ Y = \imath X Z $. On the Bloch sphere, the states on the $\hat{y}$  axis are left alone, while the $\hat{x}-\hat{z}$ plane is uniformly contracted by a factor of $1 - 2p$.
+
+        \item Depolarizing channel: The depolarizing channel is an important type of quantum noise. Imagine we take a single qubit, and with probability p that qubit is depolarized. That is, it is replaced by the completely mixed state, $I/2$. With probability $1 - p$ the qubit is left untouched. The state of the quantum system after this noise is  $\varepsilon (p) = \frac{pI}{2} + (1- p)\rho$. On the Bloch sphere, the entire sphere contracts uniformly as a function of p. \cite{quantccompquantinfo}
+        
+        \item Amplitude damping: In this case, the $E_1$ operation changes a $\ket{1}$ state into a $\ket{0}$ state, corresponding to the physical process of losing a quantum of energy to the environment. $E_0$ leaves $\ket{0}$ unchanged, but reduces the amplitude of a $\ket{1}$ state; physically, this happens because a quantum of energy was not lost to the environment, and thus the environment now perceives it to be more likely that the system is in the $\ket{0}$ state, rather than the $\ket{1}$ state. On the Bloch sphere, the entire sphere shrinks towards the north pole, the $\ket{0}$ state. \cite{quantccompquantinfo}
+        
+        \item Phase damping: A noise process that is uniquely quantum mechanical, which describes the loss of quantum information without loss of energy, is phase damping. A very simple model for this kind of quantum noise is the following. Suppose that we have a qubit $\ket{\psi} = a \ket{0} + b \ket{1}$ upon which the rotation operation $Rz (\theta)$ is applied, where the angle of rotation $\theta$ is random. The random phase kicking causes the expected value of the off-diagonal elements of the density matrix to decay exponentially to zero with time. That is a characteristic result of phase damping. \cite{quantccompquantinfo}
+    
+	\end{itemize}
 
 \newpage
 
@@ -1055,23 +1078,57 @@ sorting=ynt
 		\]
 		After multiple steps, the walker’s state becomes a complex superposition over various positions, and the resulting probability distribution shows multiple peaks due to interference effects, enabling efficient exploration of the grid.
 		
-		%!!! talvez essa imagem faca sentido
-		% \begin{figure}[h]
-		% 	\centering
-		% 	% Placeholder for two-dimensional quantum walk probability distribution
-		% 	\caption{Probability distribution of a two-dimensional quantum walk on a grid, illustrating rapid exploration compared to a classical random walk.}
-		% \end{figure}
-		
 		In higher-dimensional quantum walks, the principles remain the same: each dimension has an associated coin state, and the shift operator moves the walker in each direction based on the coin state. These higher-dimensional walks are useful in applications such as quantum search algorithms on complex networks and in simulating quantum dynamics on large graphs.
 
 		To conclude, quantum walks have applications in various quantum algorithms and protocols. Some key examples include:
 		\begin{itemize}
-			\item Search Algorithms: Quantum walks enhance search processes in large datasets, as seen in Grover's Search algorithm.
 			\item Quantum Network Protocols: Quantum walks enable information routing and entanglement distribution across quantum networks.
 			\item Graph Algorithms: Quantum walks offer faster solutions to problems on graphs, such as graph traversal and element distinctness.\cite{portugal}
 		\end{itemize}
 
-		% !!! talvez falar mais de grover algorithm
+		\subsection{Spatial Search Using Quantum Walks}
+
+			Spatial search using quantum walks is an algorithm designed to find a marked location on a graph \cite{portugal}. This method utilizes the properties of quantum walks to achieve a quadratic speedup over classical algorithms, similar to Grover's algorithm in unsorted databases. The key idea is to harness the interference and superposition of quantum walks to efficiently locate the target.
+
+			Consider a graph \( G = (V, E) \), where \( V \) is the set of vertices, \( E \) is the set of edges, and \( |V| = N \). The goal is to find a marked vertex \( m \in V \), starting from an initial uniform superposition over all vertices:
+			\[
+			\ket{\psi_0} = \frac{1}{\sqrt{N}} \sum_{v \in V} \ket{v}.
+			\]
+
+			The spatial search algorithm using quantum walks is structured as follows:
+
+			\begin{itemize}
+				\item Quantum Walk Operators: The algorithm relies on two unitary operators: the \textit{coin operator} \( C \) and the \textit{shift operator} \( S \). The coin operator acts on the internal degree of freedom (coin space) of the walker, while the shift operator moves the walker on the graph based on the coin state.
+
+				\item Marking the Target: To focus the quantum walk on the marked vertex \( m \), a phase flip operation is applied to the marked vertex:
+				\[
+				U_m = I - 2\ket{m}\bra{m}.
+				\]
+				This operator inverts the phase of the marked vertex, analogous to the oracle in Grover's search algorithm.
+
+				\item Evolution Operator: The evolution of the quantum walk is governed by a combined operator:
+				\[
+				U = S \cdot (C \otimes I).
+				\]
+				After applying \( U_m \), the state evolves iteratively under the influence of \( U \).
+
+				\item Amplitude Amplification: As the quantum walk progresses, the amplitude of the marked vertex increases due to constructive interference, while the amplitude of other vertices decreases due to destructive interference.
+
+				\item Measurement: After \( O(\sqrt{N}) \) iterations, the quantum state is highly concentrated on the marked vertex. A measurement in the computational basis collapses the state, revealing the marked vertex with high probability.
+			\end{itemize}
+
+			The spatial search algorithm benefits from the ballistic behavior of quantum walks, where the probability distribution is more spread out compared to classical random walks. This property enables faster exploration of the graph and more efficient localization of the marked vertex.
+
+			Additionally, the success probability depends on the structure of the graph. For regular graphs, such as hypercubes and complete graphs, the algorithm performs optimally. For irregular graphs, the performance can vary based on connectivity and symmetry.
+
+			Spatial search algorithms using quantum walks have broad applications, including:
+			\begin{itemize}
+				\item Searching for specific nodes in a network or database.
+				\item Solving graph traversal problems in quantum computing.
+				\item Applications in quantum simulation and optimization problems.
+			\end{itemize}
+
+
 
 \newpage
 

@@ -1001,12 +1001,12 @@ INPUT ./images/shor_circuit.png
 INPUT images/shor_circuit.png
 INPUT ./images/shor_circuit.png
 INPUT ./images/shor_circuit.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ./images/quantum_teleportation.png
 INPUT ./images/quantum_teleportation.png
 INPUT images/quantum_teleportation.png
 INPUT ./images/quantum_teleportation.png
 INPUT ./images/quantum_teleportation.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ./images/entanglement-swap.png
 INPUT ./images/entanglement-swap.png
 INPUT images/entanglement-swap.png
