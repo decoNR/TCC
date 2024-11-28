@@ -9,7 +9,6 @@
 
 % Useful packages
 \usepackage{amsmath}
-\usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{adjustbox}
 \usepackage{pgffor}
@@ -65,9 +64,9 @@ sorting=ynt
 \newpage
 
 \section{Abstract}
-    Quantum computing emerged from the idea of building a machine capable of simulating complex quantum systems, a concept proposed by physicist Richard Feynman and mathematician Yuri Manin. The challenge with simulating quantum systems on classical computers is that the computational effort increases exponentially with the size of the system, making it impractical for any significantly large problems. In addition to this focus, research in quantum algorithms has also achieved notable success. It has discovered algorithms with better complexity than classical ones being propose, such as Shor's algorithm for number factorization.
+    Quantum computing emerged from the idea of building a machine capable of simulating complex quantum systems, a concept proposed by physicist Richard Feynman and mathematician Yuri Manin. The challenge with simulating quantum systems on classical computers is that the computational effort increases exponentially with the size of the system, making it impractical for any significantly large problems. In addition to this focus, research in quantum algorithms has also achieved notable success. It has discovered algorithms with better complexity than classical ones being proposed, such as Shor's algorithm for number factorization.
 
-    Quantum computing is also an exciting field of study, offering a wide range of unexplored possibilities, which makes it both intriguing and promising. Currently, companies like Google and IBM, have developed functional quantum machines that highlight the importance of this technology. These machines are capable of performing computations that are inaccessible to classical computers due to their distinct physical properties. 
+    Quantum computing is also an exciting field of study, offering a wide range of unexplored possibilities, which makes it both intriguing and promising. Currently, companies like Google and IBM have developed functional quantum machines that highlight the importance of this technology. These machines are capable of performing computations that are inaccessible to classical computers due to their distinct physical properties. 
 	
 	Some of the main challenges in advancing quantum computers include increasing the number of qubits (the basic unit of memory in quantum computing), reducing noise, and extending coherence time (the duration of quantum phenomena needed to execute an algorithm).
 
@@ -86,19 +85,19 @@ sorting=ynt
 			
 			\item $\ket{\psi}\ket{\phi}$ : Notation for a tensor product between $\psi$ and $\phi$.
 			
-			\item Normal Operator: An operator A on V is normal if $A^\dag A = A A^\dag$.
+			\item Normal operator: An operator A on V is normal if $A^\dag A = A A^\dag$.
 			
-			\item Unitary Operator: An operator \( U \) is called unitary if it satisfies the condition: $U^\dag U = UU^\dag = I$, where \( U^\dag \) is the conjugate transpose of \( U \), and \( I \) is the identity matrix. Unitary operators have several important properties: They are normal, meaning they are diagonalizable with respect to an orthonormal basis. The eigenvectors of a unitary operator associated with different eigenvalues are orthogonal, and each eigenvalue has unit modulus, meaning it has the form $e^{\imath \alpha}$ , where \( \alpha \) is a real number. Unitary operators preserve the inner product: for any vectors $\ket{v_1}$ and $\ket{v_2}$,
+			\item Unitary operator: An operator \( U \) is called unitary if it satisfies the condition: $U^\dag U = UU^\dag = I$, where \( U^\dag \) is the conjugate transpose of \( U \), and \( I \) is the identity matrix. Unitary operators have several important properties: They are normal, meaning they are diagonalizable with respect to an orthonormal basis. The eigenvectors of a unitary operator associated with different eigenvalues are orthogonal, and each eigenvalue has unit modulus, meaning it has the form $e^{\imath \alpha}$ , where \( \alpha \) is a real number. Unitary operators preserve the inner product: for any vectors $\ket{v_1}$ and $\ket{v_2}$,
 			$\langle U v_1 | U v_2 \rangle = \langle v_1 | v_2 \rangle$.
 			As a result, the action of a unitary operator on a vector preserves its norm, ensuring that the vector's length remains unchanged.A complex square matrix \( U \) is unitary if its columns form an orthonormal set. Unitary evolution is fundamental in quantum mechanics, as unitary operators describe the evolution of closed quantum systems, maintaining consistent probabilities over time.
 			 
-			\item Hermitian Operator: An operator A on V is Hermitian or self-adjoint if $A^\dag = A$.
+			\item Hermitian operator: An operator A on V is Hermitian or self-adjoint if $A^\dag = A$.
 
-			\item Positive Operator: A positive operator A is deﬁned to be an operator such that for any vector $\ket{v}$, ($\ket{v}$, $A\ket{v}$) is a real, non-negative number. If ($\ket{v}$, $A\ket{v}$) is strictly greater than zero for all $\ket{v} \neq 0$ then we say that A is positive deﬁnite. Any positive operator is automatically Hermitian, and therefore by the spectral decomposition has diagonal representation $\sum_i \lambda_i \ket{i}\bra{i}$, with non-negative eigenvalues $\lambda_i$ . \cite{quantccompquantinfo}
+			\item Positive operator: A positive operator A is deﬁned to be an operator such that for any vector $\ket{v}$, ($\ket{v}$, $A\ket{v}$) is a real, non-negative number. If ($\ket{v}$, $A\ket{v}$) is strictly greater than zero for all $\ket{v} \neq 0$ then we say that A is positive deﬁnite. Any positive operator is automatically Hermitian, and therefore by the spectral decomposition has diagonal representation $\sum_i \lambda_i \ket{i}\bra{i}$, with non-negative eigenvalues $\lambda_i$ . \cite{quantccompquantinfo}
 			
 			\item Wavefunction: On the quantum computing field, a wavefunction is a function that the x axis corresponds to the basis states and the y axis corresponds to the quantum amplitude of the state.
 			
-			\item Orthogonal Projector: An operator P on V is an orthogonal projector if $P^{2} = P\ and\ P^\dag = P$. \cite{portugal}
+			\item Orthogonal Projector: An operator P on V is an orthogonal projector if $P^{2} = P\ \text{and}\ P^\dag = P$. \cite{portugal}
 
 			\item With high probability (WHP): In mathematics, an event that occurs with high probability is one whose probability depends on a certain number n and goes to 1 as n goes to infinity. 
 			
@@ -679,7 +678,7 @@ sorting=ynt
 
 		Shor's algorithm demonstrates the power of quantum computing for number-theoretic problems, achieving an exponential speedup in factoring large numbers. The algorithm combines classical number theory, modular exponentiation, and the Quantum Fourier Transform, which plays a central role in revealing periodicity. This algorithm has substantial implications for cryptography, as it provides an efficient means of breaking widely-used cryptographic systems like RSA.
 
-		On figure \ref{Shor} is the associated quantum circuit.
+		In figure \ref{Shor} is the associated quantum circuit.
 
 		\begin{figure}[h]
 		\begin{center}
@@ -713,7 +712,7 @@ sorting=ynt
 
 	% Through the video series "Understanding Quantum Information and Computation" available on Qiskit's YouTube channel, 
 	
-	A fundamental protocol in this field is quantum teleportation, which allows for the exact transfer of a qubit's quantum state to another qubit, essential because a qubit's state cannot be cloned. This protocol reflects a security advantage: quantum information cannot be copied or verified mid-process, making it inherently secure. Additionally, the entanglement property enables rapid and efficient communication, as it implies a correlation that is independent of the distance between the entangled particles. On figure \ref{teleport} is the associated circuit.
+	A fundamental protocol in this field is quantum teleportation, which allows for the exact transfer of a qubit's quantum state to another qubit, essential because a qubit's state cannot be cloned. This protocol reflects a security advantage: quantum information cannot be copied or verified mid-process, making it inherently secure. Additionally, the entanglement property enables rapid and efficient communication, as it implies a correlation that is independent of the distance between the entangled particles. In figure \ref{teleport} is the associated circuit.
 
 	\begin{figure}[h]
 	\begin{center}
@@ -970,12 +969,12 @@ sorting=ynt
 		
 		On the evolution of a quantum walk, two main operators govern the evolution of the quantum walk:
 		\begin{itemize}
-			\item Coin Operator ($C$): The coin operator acts on the coin state, creating a superposition of directions. A common choice for this operator is the Hadamard operator \( H \):
+			\item Coin operator ($C$): The coin operator acts on the coin state, creating a superposition of directions. A common choice for this operator is the Hadamard operator \( H \):
 			\[
 			H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}
 			\]
 			When applied to the coin state, \( H \) creates an equal superposition of moving left and right.
-			\item Shift Operator ($S$): The shift operator acts on both the coin and position states, moving the walker to the left or right based on the coin state. The shift operator \( S \) is defined as:
+			\item Shift operator ($S$): The shift operator acts on both the coin and position states, moving the walker to the left or right based on the coin state. The shift operator \( S \) is defined as:
 			\[
 			S(\ket{0} \otimes \ket{x}) = \ket{0} \otimes \ket{x-1}, \quad S(\ket{1} \otimes \ket{x}) = \ket{1} \otimes \ket{x+1}
 			\]
@@ -1109,7 +1108,7 @@ sorting=ynt
 				\]
 				This operator inverts the phase of the marked vertex, analogous to the oracle in Grover's search algorithm.
 
-				\item Evolution Operator: The evolution of the quantum walk is governed by a combined operator:
+				\item Evolution operator: The evolution of the quantum walk is governed by a combined operator:
 				\[
 				U = S \cdot (C \otimes I).
 				\]
@@ -1185,8 +1184,8 @@ sorting=ynt
 		
 		The linear approach employs:
 		\begin{itemize}
-			\item Local Coin Operator: Operates within a single node to mix the amplitudes associated with the outgoing edges.
-			\item Non-Local Shift Operator: Performs the movement of the walker across edges. This is implemented using gate teleportation, which requires two EPR pairs per edge to perform a swap operation remotely. The circuit used to do the shift operation is on \hyperlink{https://algassert.com/post/1717}{https://algassert.com/post/1717} and it is optimal \cite{swap}.
+			\item Local coin operator: Operates within a single node to mix the amplitudes associated with the outgoing edges.
+			\item Non-Local shift operator: Performs the movement of the walker across edges. This is implemented using gate teleportation, which requires two EPR pairs per edge to perform a swap operation remotely. The circuit used to do the shift operation is on \hyperlink{https://algassert.com/post/1717}{https://algassert.com/post/1717} and it is optimal \cite{swap}.
 		\end{itemize}
 		
 		The linear approach offers simple and intuitive encoding, making it easier to implement and understand. Additionally, it requires fewer EPR pairs for operations compared to the logarithmic approach, which can simplify the resource requirements in certain scenarios.
@@ -1206,8 +1205,8 @@ sorting=ynt
 		
 		The logarithmic approach utilizes:
 		\begin{itemize}
-			\item Local Coin Operator: Similar to the linear approach, operates within the node to mix amplitudes.
-			\item Non-Local Shift Operator: A more complex implementation than in the linear approach, involving complex unitary transformations. In the worst case, teleportation techniques can be used to perform the shift operation.
+			\item Local coin operator: Similar to the linear approach, operates within the node to mix amplitudes.
+			\item Non-Local shift operator: A more complex implementation than in the linear approach, involving complex unitary transformations. In the worst case, teleportation techniques can be used to perform the shift operation.
 		\end{itemize}
 		
 		The logarithmic approach significantly reduces the number of encoding qubits. It provides an efficient representation of graph degrees, which optimizes the use of quantum resources.
