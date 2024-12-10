@@ -1,9 +1,9 @@
-PWD /home/andreribeiro/Documents/usp/TCC
+PWD /home/andre/Documentos/USP/usp/8_sem/TCC
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/andreribeiro/Documents/usp/TCC/organized_tcc.tex
+INPUT /home/andre/Documentos/USP/usp/8_sem/TCC/organized_tcc.tex
 OUTPUT organized_tcc.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
