@@ -126,7 +126,7 @@ sorting=ynt
 			
 			\item Measurement: Quantum measurements are described by a collection ${M_m}$ of measurement operators. These are operators acting on the state space of the  system being measured. The index m refers to the measurement outcomes that may occur in the experiment. If the state of the quantum system is $\ket{\psi}$ immediately before the measurement then the probability that result m occurs is given by $p(m) = \bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}$ and the state of the system after the measurement is $\frac{M_{m}\ket{\psi}}{\sqrt{\bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}}}$ . The measurement operators satisfy the completeness equation, $\sum\limits_{m} M_{m}^{\dag}M_{m} = I$ . The completeness equation expresses the fact that probabilities sum to one: $1 = \sum\limits_{m} p(m) = \sum\limits_{m} \bra{\psi}M_{m}^{\dag}M_{m}\ket{\psi}$ . \cite{quantccompquantinfo}
 			
-			\item Projective measurement: A projective measurement is described by an observable, $M$ , a Hermitian operator on the state space of the system being observed. The observable has a spectral decomposition, $\sum\limits_m mP_m$ , where Pm is the projector onto the eigenspace of M with eigenvalue m. The possible outcomes of the measurement correspond to the eigenvalues, m, of the observable. Upon measuring the state $\ket{\psi}$, the probability of getting result m is given by $p(m) = \bra{\psi}P_m\ket{\psi}$ .Given that outcome m occurred, the state of the quantum system immediately after the measurement is $\frac{P_m\ket{\psi}}{\sqrt{p(m)}}$. The average value of the observable M is often written $\braket{M} = \bra{\psi}M\ket{\psi}$.\cite{quantccompquantinfo}
+			\item Projective measurement: A projective measurement is described by an observable, $M$ , a Hermitian operator on the state space of the system being observed. The observable has a spectral decomposition, $\sum\limits_m mP_m$ , where $P_m$ is the projector onto the eigenspace of $M$ with eigenvalue $m$. The possible outcomes of the measurement correspond to the eigenvalues, $m$, of the observable. Upon measuring the state $\ket{\psi}$, the probability of getting result $m$ is given by $p(m) = \bra{\psi}P_m\ket{\psi}$ .Given that outcome $m$ occurred, the state of the quantum system immediately after the measurement is $\frac{P_m\ket{\psi}}{\sqrt{p(m)}}$. The average value of the observable $M$ is often written $\braket{M} = \bra{\psi}M\ket{\psi}$.\cite{quantccompquantinfo}
 			
 			\item Quantum Error Correction: Quantum error correction is a set of techniques designed to protect quantum information from errors due to decoherence, noise, or other quantum disturbances. In quantum systems, qubits are fragile and susceptible to errors from their environment, which can lead to loss of information. Quantum error correction encodes logical qubits into entangled states of multiple physical qubits, allowing for the detection and correction of errors without directly measuring and collapsing the quantum state. It is a critical component in making quantum computers reliable and scalable for long computations, ensuring the integrity of quantum information over time.
 			
@@ -378,12 +378,13 @@ sorting=ynt
 		
 		The magic of Deutsch's algorithm lies in the ability of the quantum oracle and superposition to use interference (through the Hadamard gates) to reveal whether \( f(x) \) is constant or balanced with just one evaluation. This is impossible in classical computing, where we would need at least two evaluations to determine the nature of \( f(x) \). 
 
-		Below is the quantum circuit associated with Deutsch's algorithm.
+		Figure \ref{deutsch} presents the quantum circuit associated with Deutsch's algorithm.
 
 		\begin{figure}[h]
 		\begin{center}
 		\includegraphics[width=13cm]{images/Deutsch.png}
 		\caption{Deutsch's algorithm circuit - \href{https://www.researchgate.net/figure/Graphical-representation-of-the-quantum-circuit-for-the-Deutsch-algorithm_fig5_381574807}{source}.}
+		\label{deutsch}
 		\end{center}
 		\end{figure}
 
@@ -429,7 +430,7 @@ sorting=ynt
 		
 		The Deutsch-Jozsa algorithm exploits quantum parallelism and interference. By putting the input qubits in a superposition, we can evaluate \( f(x) \) for all possible inputs at once. The phase kickback and interference through the Hadamard gates allow us to detect whether the function outputs are the same (constant) or balanced across the inputs, without needing multiple evaluations.
 		
-		Figure \ref{dj} quantum circuit associated with Deutsch-Jozsa algorithm.
+		Figure \ref{dj} depicts the quantum circuit associated with Deutsch-Jozsa algorithm.
 
 		\begin{figure}[h]
 		\begin{center}
@@ -688,7 +689,7 @@ sorting=ynt
 
 		Shor's algorithm demonstrates the power of quantum computing for number-theoretic problems, achieving an exponential speedup in factoring large numbers. The algorithm combines classical number theory, modular exponentiation, and the Quantum Fourier Transform, which plays a central role in revealing periodicity. This algorithm has substantial implications for cryptography, as it provides an efficient means of breaking widely-used cryptographic systems like RSA.
 
-		In figure \ref{Shor} is the associated quantum circuit.
+		Figure \ref{Shor} presents the  associated quantum circuit.
 
 		\begin{figure}[h]
 		\begin{center}
@@ -722,7 +723,7 @@ sorting=ynt
 
 	% Through the video series "Understanding Quantum Information and Computation" available on Qiskit's YouTube channel, 
 	
-	A fundamental protocol in this field is quantum teleportation, which allows for the exact transfer of a qubit's quantum state to another qubit, essential because a qubit's state cannot be cloned. This protocol reflects a security advantage: quantum information cannot be copied or verified mid-process, making it inherently secure. Additionally, the entanglement property enables rapid and efficient communication, as it implies a correlation that is independent of the distance between the entangled particles. In figure \ref{teleport} is the associated circuit.
+	A fundamental protocol in this field is quantum teleportation, which allows for the exact transfer of a qubit's quantum state to another qubit, essential because a qubit's state cannot be cloned. This protocol reflects a security advantage: quantum information cannot be copied or verified mid-process, making it inherently secure. Additionally, the entanglement property enables rapid and efficient communication, as it implies a correlation that is independent of the distance between the entangled particles. Figure \ref{teleport} presents the associated circuit.
 
 	\begin{figure}[h]
 	\begin{center}
@@ -776,7 +777,7 @@ sorting=ynt
 
 	Entanglement Swapping has critical implications for quantum communication networks because it allows entanglement to be established over long distances without the need for a direct quantum link between the communicating parties. Instead of relying on a single quantum channel connecting Alice and Bob, entanglement swapping enables the creation of long-distance entanglement through intermediate nodes, which can be chained together to create a quantum repeater network.
 
-	By implementing entanglement swapping at multiple nodes, a "quantum repeater" architecture can be created, where entanglement is extended across increasingly larger distances. This process is crucial for overcoming the distance limitations of direct quantum communication, as qubits transmitted over long distances (e.g., via optical fiber or free-space optical links) are prone to errors and decoherence. Through entanglement swapping, secure quantum communication can be maintained across vast distances with high fidelity, providing a foundation for a global quantum internet.
+	By implementing entanglement swapping at multiple nodes, a ``quantum repeater" architecture can be created, where entanglement is extended across increasingly larger distances. This process is crucial for overcoming the distance limitations of direct quantum communication, as qubits transmitted over long distances (e.g., via optical fiber or free-space optical links) are prone to errors and decoherence. Through entanglement swapping, secure quantum communication can be maintained across vast distances with high fidelity, providing a foundation for a global quantum internet.
 
 	\begin{figure}[h]
 	\centering

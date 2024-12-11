@@ -147,8 +147,49 @@
       \field{volume}{362}
       \field{year}{2018}
     \endentry
-    \entry{relationship}{article}{}
-      \name{author}{1}{}{%
+    \entry{equivalence}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e0c59a20b3138aad1cf9f35d23551efc}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={Matheus\bibnamedelima G},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=7430fd48eb73f535fb86f76d17c2e178}{%
+           family={Lima\bibnamedelima Marquezino},
+           familyi={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Franklin},
+           giveni={F\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=9a7fefc56a6276c7382dca87bf240e61}{%
+           family={Figueiredo},
+           familyi={F\bibinitperiod},
+           given={Daniel\bibnamedelima R},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{635c9666f036173d5688320fabd86210}
+      \strng{fullhash}{635c9666f036173d5688320fabd86210}
+      \strng{bibnamehash}{635c9666f036173d5688320fabd86210}
+      \strng{authorbibnamehash}{635c9666f036173d5688320fabd86210}
+      \strng{authornamehash}{635c9666f036173d5688320fabd86210}
+      \strng{authorfullhash}{635c9666f036173d5688320fabd86210}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quantum Information Processing}
+      \field{number}{11}
+      \field{title}{On the equivalence between quantum and random walks on finite graphs}
+      \field{volume}{19}
+      \field{year}{2020}
+      \field{pages}{417}
+      \range{pages}{1}
+    \endentry
+    \entry{relationship}{inproceedings}{}
+      \name{author}{3}{}{%
         {{hash=23d1179ea51738336fa0799e05ae4f7b}{%
            family={Andrade},
            familyi={A\bibinitperiod},
@@ -156,46 +197,37 @@
            giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
            prefix={de},
            prefixi={d\bibinitperiod}}}%
-      }
-      \strng{namehash}{23d1179ea51738336fa0799e05ae4f7b}
-      \strng{fullhash}{23d1179ea51738336fa0799e05ae4f7b}
-      \strng{bibnamehash}{23d1179ea51738336fa0799e05ae4f7b}
-      \strng{authorbibnamehash}{23d1179ea51738336fa0799e05ae4f7b}
-      \strng{authornamehash}{23d1179ea51738336fa0799e05ae4f7b}
-      \strng{authorfullhash}{23d1179ea51738336fa0799e05ae4f7b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Rio de Janeiro:UFRJ/COPPE}
-      \field{title}{Characterizing the inherent relationship between unitary quantum walks and non-homogeneous random walks on finite graphs}
-      \field{year}{2020}
-    \endentry
-    \entry{equivalence}{article}{}
-      \name{author}{2}{}{%
-        {{hash=5339ca22cff602c428dffcb6b3444439}{%
-           family={M.G.\bibnamedelimi de\bibnamedelima Andrade},
-           familyi={M\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim A\bibinitperiod},
-           given={F.\bibnamedelimi de\bibnamedelimb Lima\bibnamedelima Marquezino},
-           giveni={F\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=346ccd126ccae158ec3175b59962c8d5}{%
+        {{hash=7430fd48eb73f535fb86f76d17c2e178}{%
+           family={Lima\bibnamedelima Marquezino},
+           familyi={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Franklin},
+           giveni={F\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=aebf490c32eaadf6c961a209a61ae36d}{%
            family={Figueiredo},
            familyi={F\bibinitperiod},
-           given={D.R.},
-           giveni={D\bibinitperiod}}}%
+           given={Daniel\bibnamedelima Ratton},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
-      \strng{namehash}{78d8e8f92b81815a76c14eb7130262c3}
-      \strng{fullhash}{78d8e8f92b81815a76c14eb7130262c3}
-      \strng{bibnamehash}{78d8e8f92b81815a76c14eb7130262c3}
-      \strng{authorbibnamehash}{78d8e8f92b81815a76c14eb7130262c3}
-      \strng{authornamehash}{78d8e8f92b81815a76c14eb7130262c3}
-      \strng{authorfullhash}{78d8e8f92b81815a76c14eb7130262c3}
+      \list{organization}{1}{%
+        {SBC}%
+      }
+      \strng{namehash}{751835d91a3f0039c0e993c35faea681}
+      \strng{fullhash}{751835d91a3f0039c0e993c35faea681}
+      \strng{bibnamehash}{751835d91a3f0039c0e993c35faea681}
+      \strng{authorbibnamehash}{751835d91a3f0039c0e993c35faea681}
+      \strng{authornamehash}{751835d91a3f0039c0e993c35faea681}
+      \strng{authorfullhash}{751835d91a3f0039c0e993c35faea681}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{On the equivalence between quantum and random walks on finite graphs in Quantum Information Processing}
-      \field{year}{2020}
+      \field{booktitle}{Concurso de Teses e Dissertações (CTD)}
+      \field{title}{Characterizing the Relationship Between Unitary Quantum Walks and Non-Homogeneous Random Walks}
+      \field{year}{2021}
+      \field{pages}{43\bibrangedash 48}
+      \range{pages}{6}
     \endentry
     \entry{controlplane}{article}{}
       \name{author}{4}{}{%
