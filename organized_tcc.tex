@@ -22,6 +22,7 @@
 \usepackage{dsfont}
 \usepackage{float}
 \usepackage{indentfirst}
+\usepackage{hyperref}
 
 \usepackage[
 backend=biber,
@@ -38,10 +39,8 @@ sorting=ynt
 
 \begin{titlepage}
 	\centering
-	\includegraphics[width=0.8\textwidth]{images/logo_ime.png}\par
+	\includegraphics[width=0.9\textwidth]{images/logo_ime.png}\par
 	\vspace{2cm}
- 
-	% {\scshape\LARGE Relatório Científico do projeto na modalidade Bolsa de Iniciação Científica, fomentado pela Fundação de Amparo à Pesquisa do Estado de São Paulo. \par}
 
 	%%%% PROJECT TITLE
 	{\huge\bfseries Quantum Walks and its Applications in Quantum Networks  \par}
@@ -56,6 +55,12 @@ sorting=ynt
     {\Large Co-supervisor:  Prof. Antonio Jorge Gomes Abelém (UFPA)}\par
     {\Large Supervisor at University of Massachusetts: Prof. Don Towsley(UMass)}\par
 	\vspace{1.5cm}
+
+	\begin{abstract}
+		This undergraduate thesis explores the foundations and applications of quantum computing, starting with an overview of key concepts like qubits, superposition, and entanglement, and their role in quantum algorithms such as Shor's algorithm. The document highlights the potential of quantum computers, which can perform tasks beyond the capabilities of classical systems, despite challenges like qubit scaling, noise reduction, and coherence time. The thesis focuses on quantum walks, a quantum analog of classical random walks, and their application in quantum networks. It presents the development of a distributed quantum walk control plane, analyzing two approaches, linear and logarithmic, for encoding strategies and resource management. The research contributes to practical advancements in quantum network control and offers a foundation for future exploration of quantum internet architectures.
+	\end{abstract}
+
+	\footnote{This work was supported by FAPESP, procs. 14/50937-1, 2022/07594-2 e 2023/06452-2.}
  
 \end{titlepage}
 
@@ -63,7 +68,8 @@ sorting=ynt
 \tableofcontents
 \newpage
 
-\section{Abstract}
+
+\section{Introduction}
     Quantum computing emerged from the idea of building a machine capable of simulating complex quantum systems, a concept proposed by physicist Richard Feynman and mathematician Yuri Manin. The challenge with simulating quantum systems on classical computers is that the computational effort increases exponentially with the size of the system, making it impractical for any significantly large problems. In addition to this focus, research in quantum algorithms has also achieved notable success. It has discovered algorithms with better complexity than classical ones being proposed, such as Shor's algorithm for number factorization.
 
     Quantum computing is also an exciting field of study, offering a wide range of unexplored possibilities, which makes it both intriguing and promising. Currently, companies like Google and IBM have developed functional quantum machines that highlight the importance of this technology. These machines are capable of performing computations that are inaccessible to classical computers due to their distinct physical properties. 
@@ -73,6 +79,11 @@ sorting=ynt
 	This undergraduate thesis explores the application of quantum walks in quantum networks, building upon foundational principles of quantum computing, quantum information, and quantum communication. The document begins with an introduction to quantum computing, covering key concepts such as qubits, superposition, and entanglement, as well as their applications in quantum algorithms and information processing. Quantum walks, the quantum analog of classical random walks, are then presented as powerful algorithmic tools for achieving quantum speedups and implementing distributed quantum operations. 
 	
 	The research focuses on the development of a distributed quantum walk control plane for quantum networks, addressing practical challenges in encoding, resource allocation, and operational efficiency. Two distinct approaches, linear and logarithmic, are presented and analyzed for their encoding strategies, resource trade-offs, and scalability. The study contributes to advancing the practical implementation of quantum walk protocols in quantum network control, laying the groundwork for further explorations into quantum internet architectures and applications.
+	
+	Part of the code produced during the research can be found in the \href{https://github.com/decoNR/Bepe-University-of-Massachusetts}{project repository}. Additionally, we have a \href{https://interscity.org/quantum-internet/}{project website} with more information and presentations.
+
+
+\newpage
 
 \section{Important Concepts}
 	This section describes some important concepts which will be needed to understand the content of this undergraduate thesis. You may read the concepts as they appear on this document.
@@ -1167,7 +1178,8 @@ sorting=ynt
 
 	\subsection{Paper}
 	
-		Back to our work, the research goal was defined as implementing the quantum walk protocol described on \cite{controlplane}. By implementation, we mean a go from the logical approach to a more physical approach, including encoding considering the actual physical qubits and showing how we would perform the operations considering the non-locality. Also, there is a presentation about the quantum walk control plane implementation \href{https://interscity.org/quantum-internet/}{https://interscity.org/quantum-internet/}.
+		Back to our work, the research goal was defined as implementing the quantum walk protocol described on \cite{controlplane}. By implementation, we mean a move from the logical approach to a more physical approach, including encoding considering the actual physical qubits and showing how we would perform the operations considering the non-locality. Also, one can find a presentation about the quantum walk control plane
+		implementation at  \href{https://interscity.org/quantum-internet/}{https://interscity.org/quantum-internet/}.
 
 		The paper explores two different implementations of the quantum walk control plane for quantum networks: the linear approach and the logarithmic approach. Both methods are analyzed for their encoding schemes, operational characteristics, and trade-offs in resource usage. 
 		
