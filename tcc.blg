@@ -1,17 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'tcc.blg'
-[51] biber:340> INFO - === qua nov 20, 2024, 17:47:32
-[60] Biber.pm:418> INFO - Reading 'tcc.bcf'
-[115] Biber.pm:972> INFO - Found 9 citekeys in bib section 0
-[122] Biber.pm:4383> INFO - Processing section 0
-[128] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[129] bibtex.pm:1713> INFO - LaTeX decoding ...
-[134] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[181] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[181] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[182] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[182] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[186] bbl.pm:654> INFO - Writing 'tcc.bbl' with encoding 'UTF-8'
-[189] bbl.pm:757> INFO - Output to tcc.bbl
-[190] Biber.pm:130> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[190] Biber.pm:132> INFO - WARNINGS: 1
+[65] biber:340> INFO - === qua dez 11, 2024, 17:39:11
+[77] Biber.pm:418> INFO - Reading 'tcc.bcf'
+[130] Biber.pm:972> INFO - Found 9 citekeys in bib section 0
+[141] Biber.pm:4383> INFO - Processing section 0
+[149] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[150] bibtex.pm:1713> INFO - LaTeX decoding ...
+[158] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[232] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[232] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[232] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[232] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[238] bbl.pm:654> INFO - Writing 'tcc.bbl' with encoding 'UTF-8'
+[242] bbl.pm:757> INFO - Output to tcc.bbl

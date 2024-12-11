@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber organized_tcc"] 1733949161 "organized_tcc.bcf" "organized_tcc.bbl" "organized_tcc" 1733949166
-  "organized_tcc.bcf" 1733949166 108952 e6df11196faa6ff98e6d3203dfd87d9c "pdflatex"
-  "references.bib" 1733949161 3433 a4bc915b3e83842185506a5611124ca2 ""
+["biber organized_tcc"] 1733949460 "organized_tcc.bcf" "organized_tcc.bbl" "organized_tcc" 1733949461
+  "organized_tcc.bcf" 1733949391 108952 e6df11196faa6ff98e6d3203dfd87d9c "pdflatex"
+  "references.bib" 1733949460 3487 53b30a68007774458f10722b556ddbb7 ""
   (generated)
   "organized_tcc.bbl"
   "organized_tcc.blg"
-["pdflatex"] 1733949164 "/home/andre/Documentos/USP/usp/8_sem/TCC/organized_tcc.tex" "organized_tcc.pdf" "organized_tcc" 1733949166
+["pdflatex"] 1733949389 "/home/andre/Documentos/USP/usp/8_sem/TCC/organized_tcc.tex" "organized_tcc.pdf" "organized_tcc" 1733949461
   "/etc/texmf/web2c/texmf.cnf" 1709902086 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/andre/Documentos/USP/usp/8_sem/TCC/organized_tcc.tex" 1733948699 112352 658393b2bfebb613c241088c797260aa ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -187,12 +187,12 @@
   "images/shor_circuit.png" 1733797254 27594 300ac3753bd42439f62e9840cad06a5c ""
   "images/simons.png" 1733797254 51766 9052b0cdca0bce4e1708c4274ddb2e5a ""
   "images/umass_logo.png" 1733797254 9827 99d22d4eab6514f3b58b7d382186d244 ""
-  "organized_tcc.aux" 1733949166 13972 6e68151bfff6046673cfc9eeb6c7f56b "pdflatex"
-  "organized_tcc.bbl" 1733949161 12620 d8d0aa63f6a3f26a4594758bbce9840e "biber organized_tcc"
-  "organized_tcc.out" 1733949166 5636 5df59f28c2aace66afac8994292f99f8 "pdflatex"
-  "organized_tcc.run.xml" 1733949166 2368 9d149e32732b577e5903ed5b87bb3455 "pdflatex"
+  "organized_tcc.aux" 1733949391 13972 0f267d7e06b3e251b36ff24663eec626 "pdflatex"
+  "organized_tcc.bbl" 1733949461 12758 32eefa43a4e6af7199943059aefd3c34 "biber organized_tcc"
+  "organized_tcc.out" 1733949391 5636 5df59f28c2aace66afac8994292f99f8 "pdflatex"
+  "organized_tcc.run.xml" 1733949391 2368 9d149e32732b577e5903ed5b87bb3455 "pdflatex"
   "organized_tcc.tex" 1733948699 112352 658393b2bfebb613c241088c797260aa ""
-  "organized_tcc.toc" 1733949166 2829 f2f27effcf05fd3df99eefd063ee575d "pdflatex"
+  "organized_tcc.toc" 1733949391 2829 f2f27effcf05fd3df99eefd063ee575d "pdflatex"
   (generated)
   "organized_tcc.aux"
   "organized_tcc.bcf"

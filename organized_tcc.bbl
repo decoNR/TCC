@@ -229,7 +229,7 @@
       \field{pages}{43\bibrangedash 48}
       \range{pages}{6}
     \endentry
-    \entry{controlplane}{article}{}
+    \entry{controlplane}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=23d1179ea51738336fa0799e05ae4f7b}{%
            family={Andrade},
@@ -238,36 +238,41 @@
            giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
            prefix={de},
            prefixi={d\bibinitperiod}}}%
-        {{hash=e71856544013998a6afdb111ae37b021}{%
+        {{hash=225b4622f68b04b45fb92a812abba8b0}{%
            family={Dai},
            familyi={D\bibinitperiod},
-           given={W.},
+           given={Wenhan},
            giveni={W\bibinitperiod}}}%
-        {{hash=518de0514d4ef504487ee43873527268}{%
+        {{hash=785e26cc90a2bd2d74724e8c7786bf09}{%
            family={Guha},
            familyi={G\bibinitperiod},
-           given={S.},
+           given={Saikat},
            giveni={S\bibinitperiod}}}%
-        {{hash=3bf7f7be8156738f24f12da4fee41ef9}{%
+        {{hash=294e701b042477b3b60dee2c602a0be7}{%
            family={Towsley},
            familyi={T\bibinitperiod},
-           given={D.},
+           given={Don},
            giveni={D\bibinitperiod}}}%
       }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
       \strng{namehash}{2c4849e101fce96ced62ab81b6d13f5d}
-      \strng{fullhash}{d5dec065dc0b5cc955fecfc2e221129c}
+      \strng{fullhash}{be7f1cefc5c153e751e6b11b4fd52216}
       \strng{bibnamehash}{2c4849e101fce96ced62ab81b6d13f5d}
       \strng{authorbibnamehash}{2c4849e101fce96ced62ab81b6d13f5d}
       \strng{authornamehash}{2c4849e101fce96ced62ab81b6d13f5d}
-      \strng{authorfullhash}{d5dec065dc0b5cc955fecfc2e221129c}
+      \strng{authorfullhash}{be7f1cefc5c153e751e6b11b4fd52216}
       \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE International Conference on Quantum Computing and Engineering (QCE)}
+      \field{booktitle}{2021 IEEE International Conference on Quantum Computing and Engineering (QCE)}
       \field{title}{A quantum walk control plane for distributed quantum computing in quantum networks}
       \field{year}{2021}
+      \field{pages}{313\bibrangedash 323}
+      \range{pages}{11}
     \endentry
     \entry{universalcontrolplane}{article}{}
       \name{author}{5}{}{%
