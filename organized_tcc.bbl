@@ -319,6 +319,48 @@
       \field{title}{Universal Quantum Walk Control Plane for Quantum Networks}
       \field{year}{2023}
     \endentry
+    \entry{meu}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=74533c909e82e9d3a94979ba42af3e22}{%
+           family={Ribeiro},
+           familyi={R\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+        {{hash=23d1179ea51738336fa0799e05ae4f7b}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={Matheus\bibnamedelima Guedes},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=aa1b6c9f1476bc0e2f4c7fed93737a5d}{%
+           family={Kon},
+           familyi={K\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=294e701b042477b3b60dee2c602a0be7}{%
+           family={Towsley},
+           familyi={T\bibinitperiod},
+           given={Don},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {SBC}%
+      }
+      \strng{namehash}{30ece11eb5840c236cf6f484645faebc}
+      \strng{fullhash}{7be7916b236a8b5b3989ffc847c8c126}
+      \strng{bibnamehash}{30ece11eb5840c236cf6f484645faebc}
+      \strng{authorbibnamehash}{30ece11eb5840c236cf6f484645faebc}
+      \strng{authornamehash}{30ece11eb5840c236cf6f484645faebc}
+      \strng{authorfullhash}{7be7916b236a8b5b3989ffc847c8c126}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Simpósio Brasileiro de Redes de Computadores e Sistemas Distribuídos}
+      \field{title}{Distributed Quantum Walk Control Plane Implementation}
+      \field{year}{2024}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -30,4 +30,4 @@
 \contentsline {subsection}{\numberline {7.6}Logarithmic Approach}{33}{subsection.7.6}%
 \contentsline {subsection}{\numberline {7.7}Comparison of Approaches}{34}{subsection.7.7}%
 \contentsline {subsection}{\numberline {7.8}Trade-Off Between Qubits, Time, and Circuits}{34}{subsection.7.8}%
-\contentsline {section}{\numberline {8}Conclusion}{35}{section.8}%
+\contentsline {section}{\numberline {8}Conclusion}{36}{section.8}%
